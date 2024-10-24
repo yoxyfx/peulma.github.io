@@ -82,7 +82,8 @@
             background-color: #b0e57c;
             border-radius: 10px;
         }
-        #survey{
+
+        #survey {
             display: flex; 
             flex-direction: column; /* 세로 정렬 */
             align-items: center; /* 가운데 정렬 */
@@ -93,6 +94,7 @@
             margin: 0; 
             padding: 50px;  
         }
+
         .survey-container {
             display: flex;
             justify-content: space-around; /* 그래프 사이에 공간 */
@@ -107,17 +109,6 @@
             border-radius: 10px;
         }
 
-        #survey{
-            display: flex; 
-            flex-direction: column; /* 세로 정렬 */
-            align-items: center; /* 가운데 정렬 */
-            justify-content: center;
-            background-color: #ffffff;
-            color: #000000;
-            width: 100%;
-            margin: 0; 
-            padding: 50px;  
-        }
         .persona-container {
             display: flex;
             justify-content: space-around; /* 그래프 사이에 공간 */
@@ -131,97 +122,141 @@
             background-color: #b0e57c;
             border-radius: 10px;
         }
+
         /* Brand 섹션 스타일 */
-#brand {
+        #brand {
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            align-items: flex-start; /* 왼쪽 정렬 */
+            background-color: #ffffff;
+            color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* 각 항목의 스타일 (Naming, Logo 등) */
+        #brand div {
+            width: 100%; /* 각 항목 전체 폭 */
+            margin-bottom: 20px; 
+        }
+
+        /* 각 항목의 제목 스타일 (h3 태그) */
+        #brand h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #388e3c;
+        }
+
+        /* 제목 아래에 사각형을 배치 */
+        #brand .rectangle {
+            width: 300px; /* 사각형의 너비 */
+            height: 150px; /* 사각형의 높이 */
+            background-color: #b0e57c;
+            border-radius: 10px; /* 모서리를 둥글게 */
+            margin-top: 10px; /* 제목과 사각형 사이의 간격 */
+        }
+
+        #team {
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            align-items: flex-start; /* 왼쪽 정렬 */
+            background-color:  #388e3c;
+            color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        
+            .circle-container {
+    display: flex; 
+    flex-wrap: wrap; /* 작은 화면에서도 자동 줄바꿈 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    gap: 20px; /* 원 사이 간격 */
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 중앙에 배치 */
+}
+
+.circle {
     display: flex;
     flex-direction: column; /* 세로 정렬 */
-    align-items: flex-start; /* 왼쪽 정렬 */
-    background-color: #ffffff;
-    color: #000000;
-    width: 100%;
-    margin: 0;
-    padding: 50px;
-    box-sizing: border-box;
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
 }
 
-/* 각 항목의 스타일 (Naming, Logo 등) */
-#brand div {
-    width: 100%; /* 각 항목 전체 폭 */
-    margin-bottom: 20px; 
-}
-
-/* 각 항목의 제목 스타일 (h3 태그) */
-#brand h3 {
-    margin: 0;
-    font-size: 24px;
-    color: #388e3c;
-}
-
-/* 제목 아래에 사각형을 배치 */
-#brand .rectangle {
-    width: 300px; /* 사각형의 너비 */
-    height: 150px; /* 사각형의 높이 */
+.circle-shape {
+    width: 150px;
+    height: 150px;
     background-color: #b0e57c;
-    border-radius: 10px; /* 모서리를 둥글게 */
-    margin-top: 10px; /* 제목과 사각형 사이의 간격 */
-}
-
-#team {
+    border-radius: 50%; /* 원 모양 */
     display: flex;
-    flex-direction: column; /* 세로 정렬 */
-    align-items: flex-start; /* 왼쪽 정렬 */
-    background-color:  #388e3c;
-    color: #000000;
-    width: 100%;
-    margin: 0;
-    padding: 50px;
-    box-sizing: border-box;
-}
-#character {
-    display: flex;
-    flex-direction: column; /* 세로 정렬 */
-    align-items: flex-start; /* 왼쪽 정렬 */
-    background-color:  #388e3c;
-    color: #000000;
-    width: 100%;
-    margin: 0;
-    padding: 50px;
-    box-sizing: border-box;
-}
-
-
-/* 공통 스타일 */
-section {
-    /*border: 1px solid #ccc;*/
-    padding: 20px;
-    margin: 0; /* 섹션 마진 제거 */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-section h2 {
-    margin-top: 0;
-}
-
-section p {
-    color: inherit;
-}
-
-.text-content {
-    flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
-    padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
-}
-
-/* 푸터 스타일 */
-footer {
-    background-color: #388e3c;
+    align-items: center; /* 내용 수직 정렬 */
+    justify-content: center; /* 내용 수평 정렬 */
+    font-size: 20px;
     color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    bottom: 0; /* 항상 하단에 위치 */
+    margin-bottom: 10px; /* 원과 텍스트 사이 간격 */
 }
+
+.circle-text {
+    text-align: center;
+    line-height: 1.5; /* 줄 간격 */
+    font-size: 16px;
+    color: #333;
+}
+
+        #character {
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            align-items: flex-start; /* 왼쪽 정렬 */
+            background-color:  #388e3c;
+            color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* 공통 스타일 */
+        section {
+            padding: 20px;
+            margin: 0; /* 섹션 마진 제거 */
+            width: 100%;
+            box-sizing: border-box;
+            opacity: 0; /* 초기 상태는 투명 */
+            transition: opacity 0.6s ease; /* 페이드인 효과 */
+        }
+
+        section.visible {
+            opacity: 1; /* visible 클래스가 추가되면 불투명 */
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        section p {
+            color: inherit;
+        }
+
+        .text-content {
+            flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
+            padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #388e3c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            bottom: 0; /* 항상 하단에 위치 */
+        }
     </style>
 </head>
 <body>
@@ -229,7 +264,7 @@ footer {
         <h1>플마</h1>
     </header>
 
-    <section id="main">
+    <section id="main" class="visible">
         <div class="rectangle"></div> <!-- 직사각형 -->
         <div class="text-content">
             <h2>작심삼일도 식물과 함께, 갓생으로 가는 길</h2>
@@ -284,15 +319,6 @@ footer {
         </div>
     </section>
 
-    <section id="logo">
-        <h2>로고</h2>
-        <div class="persona-container">
-            <div class="persona"></div>
-            <div class="persona"></div>
-            <div class="persona"></div>
-        </div>
-    </section>
-    
     <section id="brand">
         <div class="Naming">
             <h3>Naming</h3>
@@ -321,19 +347,59 @@ footer {
     </section>
 
     <section id="team">
-        <h2>로고</h2>
-        <div class="persona-container">
-            <div class="persona"></div>
-            <div class="persona"></div>
-            <div class="persona"></div>
+        <h2>팀</h2>
+        <div class="circle-container">
+            <div class="circle">
+                <div class="circle-shape">1</div>
+                <div class="circle-text">PLANNER<br>서연우</div>
+            </div>
+            <div class="circle">
+                <div class="circle-shape">2</div>
+                <div class="circle-text">DESIGNER<br>권규린</div>
+            </div>
+            <div class="circle">
+                <div class="circle-shape">3</div>
+                <div class="circle-text">DESIGNER<br>박소정</div>
+            </div>
+            <div class="circle">
+                <div class="circle-shape">4</div>
+                <div class="circle-text">DESIGNER<br>이경진</div>
+            </div>
+            <div class="circle">
+                <div class="circle-shape">5</div>
+                <div class="circle-text">DESIGNER<br>정해린</div>
+            </div>
+            <div class="circle">
+                <div class="circle-shape">6</div>
+                <div class="circle-text">PROGRAMMER<br>임승현</div>
+            </div>
         </div>
     </section>
+    
+
     <section id="character">
         <h2>플마와 함께<p>식물 키우기로 계획 쉽고 재밌게 실천하자!</p></h2>
+     <div class="circle">
+            <div class="circle-shape"></div>
+            
+        </div>
     </section>
+
     <footer>
         <p>© 2024 플마.</p>
     </footer>
-    
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            sections.forEach(section => {
+                if (section.offsetTop < scrollPosition) {
+                    section.classList.add('visible'); // 스크롤 시 섹션이 보이면 visible 클래스 추가
+                }
+            });
+        });
+    </script>
 </body>
 </html>
