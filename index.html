@@ -132,7 +132,6 @@
             border-radius: 10px;
         }
         /* Brand 섹션 스타일 */
-/* Brand 섹션 스타일 */
 #brand {
     display: flex;
     flex-direction: column; /* 세로 정렬 */
@@ -167,28 +166,38 @@
     margin-top: 10px; /* 제목과 사각형 사이의 간격 */
 }
 
+/* 공통 스타일 */
+section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0; /* 섹션 마진 제거 */
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        /* 공통 스타일 */
-        section {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 0; /* 섹션 마진 제거 */
-            width: 100%;
-            box-sizing: border-box;
-        }
+section h2 {
+    margin-top: 0;
+}
 
-        section h2 {
-            margin-top: 0;
-        }
+section p {
+    color: inherit;
+}
 
-        section p {
-            color: inherit;
-        }
+.text-content {
+    flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
+    padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
+}
 
-        .text-content {
-            flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
-            padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
-        }
+/* 푸터 스타일 */
+footer {
+    background-color: #388e3c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0; /* 항상 하단에 위치 */
+}
     </style>
 </head>
 <body>
@@ -259,6 +268,7 @@
             <div class="persona"></div>
         </div>
     </section>
+    
     <section id="brand">
         <div class="Naming">
             <h3>Naming</h3>
@@ -285,7 +295,10 @@
             <div class="rectangle"></div>
         </div>
     </section>
-    
+
+    <footer>
+        <p>© 2024 플마.</p>
+    </footer>
     
 </body>
 </html>
