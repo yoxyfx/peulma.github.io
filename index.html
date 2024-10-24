@@ -166,9 +166,33 @@
     margin-top: 10px; /* 제목과 사각형 사이의 간격 */
 }
 
+#team {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    background-color:  #388e3c;
+    color: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#character {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    background-color:  #388e3c;
+    color: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+
 /* 공통 스타일 */
 section {
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     padding: 20px;
     margin: 0; /* 섹션 마진 제거 */
     width: 100%;
@@ -296,6 +320,17 @@ footer {
         </div>
     </section>
 
+    <section id="team">
+        <h2>로고</h2>
+        <div class="persona-container">
+            <div class="persona"></div>
+            <div class="persona"></div>
+            <div class="persona"></div>
+        </div>
+    </section>
+    <section id="character">
+        <h2>플마와 함께<p>식물 키우기로 계획 쉽고 재밌게 실천하자!</p></h2>
+    </section>
     <footer>
         <p>© 2024 플마.</p>
     </footer>
