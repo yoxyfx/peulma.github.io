@@ -208,17 +208,24 @@
     color: #333;
 }
 
-        #character {
-            display: flex;
-            flex-direction: column; /* 세로 정렬 */
-            align-items: flex-start; /* 왼쪽 정렬 */
-            background-color:  #388e3c;
-            color: #000000;
-            width: 100%;
-            margin: 0;
-            padding: 50px;
-            box-sizing: border-box;
-        }
+#character {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    background-color:  #388e3c;
+    color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center; /* 텍스트 가운데 정렬 추가 */
+}
+#character .circle-shape {
+    width: 400px; /* 원의 너비를 더 크게 */
+    height: 400px; /* 원의 높이를 더 크게 */
+    font-size: 24px; /* 텍스트 크기도 조정 */
+}
+
 
         /* 공통 스타일 */
         section {
