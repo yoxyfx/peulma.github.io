@@ -10,60 +10,58 @@
             src: url('Pretendard-Regular.otf') format('truetype');
         }
 
+        /* 텍스트 요소에만 기본 마진 적용 */
+        h1, h2, p {
+            margin: 10px 20px; /* 가로 20px, 세로 10px */
+        }
+
         body {
             font-family: 'Pretendard', sans-serif;
             margin: 0;
             padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* 가로 스크롤 제거 */
         }
 
         h1 {
             text-align: left;
-            margin: 20px 0;
+            font-size: 50px;
         }
-        header{
+
+        header {
             background-color: #388e3c;
             padding: 20px;
             color: white;
             text-align: center;
+            margin: 0; /* 마진 제거해서 헤더가 화면에 꽉 차게 */
         }
+
         /* 각 section 별로 스타일을 다르게 설정 */
         #main {
-            background-color: #e3f2fd;
-            color: #0d47a1;
+            display: flex; /* 플렉스박스를 사용하여 직사각형과 텍스트를 가로로 나란히 배치 */
+            align-items: center; /* 수직 정렬 */
+            justify-content: space-between; /* 좌우 여백 균등 */
+            background-color: #ffffff;
+            color: #000000;
+            width: 100%; /* 가로 여백 제거 */
+            margin: 0; /* 마진 제거 */
+            padding: 50px; /* 섹션 내 여백 */
         }
 
-        #services {
-            background-color: #ffebee;
-            color: #d32f2f;
-        }
-
-        #portfolio {
-            background-color: #e8f5e9;
-            color: #388e3c;
-        }
-
-        #testimonials {
-            background-color: #fff3e0;
-            color: #f57c00;
-        }
-
-        #blog {
-            background-color: #f3e5f5;
-            color: #8e24aa;
-        }
-
-        #contact {
-            background-color: #ede7f6;
-            color: #4527a0;
+        .rectangle {
+            width: 400px;
+            height: 770px;
+            background-color: #b0e57c;
+            border-radius: 10px;
         }
 
         /* 공통 스타일 */
         section {
             border: 1px solid #ccc;
             padding: 20px;
-            margin: 20px auto;
+            margin: 0; /* 섹션 마진 제거 */
             width: 100%;
-         
+            box-sizing: border-box;
         }
 
         section h2 {
@@ -73,58 +71,30 @@
         section p {
             color: inherit;
         }
+
+        .text-content {
+            flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
+            padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>플마</h1>
     </header>
-    
 
     <section id="main">
-        <h2>작심삼일도 식물과 함께, 갓생으로 가는 길<p>플마</p></h2>
-        <p></p>
+        <div class="rectangle"></div> <!-- 직사각형 -->
+        <div class="text-content">
+            <h2>작심삼일도 식물과 함께, 갓생으로 가는 길</h2>
+            <h1>플마</h1>
+            <p>플마는 스트레스를 줄여주는 습관 형성 서비스입니다. 이 서비스를 통해 좋은 습관은 플러스 나쁜 습관은 마이너스 한다는 의미에서 착안되었습니다.</p>
+        </div> <!-- 텍스트 내용 -->
     </section>
 
     <section id="intro">
         <h2>플마?</h2>
         <p>요즘 트렌드 갓생 abcdefg</p>
-    </section>
-
-    <section id="introimg">
-        <h2></h2>
-        <p></p>
-    </section>
-
-    <section id="info">
-        <h2></h2>
-        <p></p>
-    </section>
-
-    <section id="graph">
-        <h2>배경</h2>
-        <p>그래프</p>
-    </section>
-
-    <section id="survey">
-        <h2>설문</h2>
-        <p></p>
-    </section>
-    <section id="persona">
-        <h2>페르소나</h2>
-        <p></p>
-    </section>
-    <section id="proslo">
-        <h2>Problem&Solution</h2>
-        <p></p>
-    </section>
-    <section id="servicekeyword">
-        <h2>Service Keyword</h2>
-        <p></p>
-    </section>
-    <section id="servicekeyword">
-        <h2>Service Keyword</h2>
-        <p></p>
     </section>
 </body>
 </html>
