@@ -191,6 +191,35 @@
     max-width: 100%; /* 이미지의 최대 너비를 부모 요소에 맞게 설정 */
     height: auto; /* 비율 유지 */
 }
+        #stress{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url(img/stressimg.png);
+            background-color: #A9D675;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #021502;
+            width: 100%;
+            height: 1080px;
+            padding: 50px;
+         
+        }
+        #user{ 
+            display: flex; 
+            flex-direction: column; /* 세로 정렬 */
+            align-items: center; /* 가로 중앙 정렬 */
+            justify-content: center;
+            text-align: center; /* 텍스트 중앙 정렬 */
+            background-color: #A9D675;
+            color: #ffffff;
+            width: 100%;
+            padding: 50px; 
+           
+        }
         .persona-container {
             display: flex;
             justify-content: space-around; /* 그래프 사이에 공간 */
@@ -201,8 +230,20 @@
         .persona {
             width: 500px;
             height: 200px;
-            background-color: #b0e57c;
             border-radius: 10px;
+        }
+        
+        #problemsolution{ 
+            display: flex; 
+            flex-direction: column; /* 세로 정렬 */
+            align-items: center; /* 가로 중앙 정렬 */
+            justify-content: center;
+            text-align: center; /* 텍스트 중앙 정렬 */
+            background-color: #A9D675;
+            color: #ffffff;
+            width: 100%;
+            margin: 0; 
+            padding: 50px; 
         }
         #servicekeyword {
     display: flex; 
@@ -283,7 +324,7 @@
         .styleguide img {
             margin-top: 100px;
             margin-left:-50px;
-            width: 110%;
+            width: 105%;
             height: auto;
             max-width: 2000px;
             object-fit: cover;
@@ -298,7 +339,14 @@
     text-align: center; /* 텍스트 중앙 정렬 */
     padding: 50px 0; /* 상하 여백 추가 */
 }
-
+.Typography img {
+    display: block; /* 이미지를 블록 요소로 설정 */
+    margin: 30px auto; /* 이미지 중앙 배치를 위한 마진 */
+    max-width: 100%; /* 이미지의 최대 너비를 부모에 맞추기 */
+    height: auto; /* 비율에 맞춰 세로 크기 자동 조정 */
+    width:1200px;
+    margin-top: 100px;
+}
 
 
         .uikit {
@@ -317,7 +365,7 @@
 }
 
 
-                #explanation {
+    #explanation {
     display: flex;
     flex-direction: column; /* 세로 정렬 */
     align-items: center; /* 가로 가운데 정렬 */
@@ -431,18 +479,64 @@
     height: 1080px;
     padding: 50px;
 }
-        #team {
+#team {
     display: flex;
-    flex-direction: column; /* 세로 정렬 */
-    align-items: center; /* 가로 가운데 정렬 */
-    background-color:  #ffffff;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
     color: #3E7443;
     width: 100%;
     margin: 0;
     padding: 50px;
     box-sizing: border-box;
-    text-align: center; /* 텍스트 가운데 정렬 */
+    text-align: center;
 }
+
+.profileimg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+}
+
+.profile-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-item p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.profile-item .name {
+    font-size: 1.1em; /* 팀원 이름의 폰트 크기 */
+    font-weight: bold; /* 팀원 이름을 굵게 */
+    color: #3E7443; /* 팀원 이름의 색상 */
+}
+
+.profile-item .description {
+    font-size: 0.85em; /* 설명글의 폰트 크기 */
+    color: #7A7A7A; /* 설명글의 색상 */
+    margin-top: 5px;
+}
+.profile-item .phonenumber {
+    font-size: 0.85em; /* 설명글의 폰트 크기 */
+    color: #7A7A7A; /* 설명글의 색상 */
+    margin-top: 5px;
+}
+
+
         
             .circle-container {
     display: flex; 
@@ -549,6 +643,7 @@
             position: relative;
             width: 100%;
             bottom: 0; /* 항상 하단에 위치 */
+            height: 200px;
         }
     </style>
 </head>
@@ -617,18 +712,34 @@
         <h1>"계획한 루틴을 달성하지 못해서"</h1>
         <p>사용자가 습관형성을 재밌고 쉽게 할 수 있도록 하기 위해!</p>
     </section>
+    
+    
+ <section id="stress">
+
+ </section>
+
+ <section id="user">
+<h1>사용자가 습관형성을<br>재밌고 쉽게 할 수 있도록 하기 위해!</h1>
+ </section>
 
     <section id="persona">
-        <h2>페르소나 작성</h2>
+        <h2>Persona</h2>
         <div class="persona-container">
-            <div class="persona"></div>
-            <div class="persona"></div>
-            <div class="persona"></div>
+            <div class="persona">
+                <img src="img/profile1.png">
+            </div>
+        </div>
+        <div class="persona-container">
+            <div class="persona">
+                <img src="img/profile2.png">
+            </div>
+           
         </div>
     </section>
 
-    <section id="problem&solution">
+    <section id="problemsolution">
         <h2>Problem&Solution</h2>
+        <p>유저들의 앱 서비스 사용 후기를 작성했습니다.</p>
         <div class="persona-container">
             <div class="persona"></div>
             <div class="persona"></div>
@@ -667,6 +778,7 @@
     <div class="Typography">
         <h8>Typography</h8>
         <h2>친근함이 느껴질 수 있는 둥근 폰트의<p>나무스퀘어라운드를 사용하였습니다.</p></h2>
+        <img src="img/typography.png">
     </div>
     <div class="uikit">
         <h8>UI Kit</h8>
@@ -690,7 +802,6 @@
         <div class="video-container">
             <video controls>
                 <source src="img/플마 영상.mp4" type="video/mp4">
-                <!-- 다른 포맷 지원용 추가 옵션 (예: webm) -->
             </video>
         </div>
     </section>
@@ -719,13 +830,66 @@
     </section>
 
     <section id="img1">
+        <h1>갓생, 쉽게 이뤄보아요!</h1>
+        <p>힘들고 지치기만한 습관 형성<br>플마와 함께 재밌게 만들어 보아요!</p>
     </section>
 
+   
     <section id="team">
         <h4>작심삼일도 식물과 함께, 갓생으로 가는 길</h4>
         <h1>Team. 플마</h1>
-
+        <div class="profileimg">
+            <div class="profile-item">
+                <img src="img/profileimg.png" alt="Profile 1">
+                <p>
+                    <span class="name">서연우</span><br>
+                    <span class="description">Planner</span><br><br>
+                    <span class="phonenumber">010-9206-4960</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <img src="img/profileimg.png" alt="Profile 2">
+                <p>
+                    <span class="name">권규린</span><br>
+                    <span class="description">Designer</span><br><br>
+                    <span class="phonenumber">010-2833-8320</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <img src="img/profileimg.png" alt="Profile 3">
+                <p>
+                    <span class="name">박소정</span><br>
+                    <span class="description">Designer</span><br><br>
+                    <span class="phonenumber">010-7922-6868</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <img src="img/profileimg.png" alt="Profile 4">
+                <p>
+                    <span class="name">이경진</span><br>
+                    <span class="description">Designer</span><br><br>
+                    <span class="phonenumber">010-6890-1436</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <img src="img/profileimg.png" alt="Profile 5">
+                <p>
+                    <span class="name">정해린</span><br>
+                    <span class="description">Designer</span><br><br>
+                    <span class="phonenumber">010-4609-0545</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <img src="img/profileimg.png" alt="Profile 6">
+                <p>
+                    <span class="name">임승현</span><br>
+                    <span class="description">Programer</span><br><br>
+                    <span class="phonenumber">010-2842-6429</span>
+                </p>
+            </div>
+        </div>
     </section>
+    
     
 
     <section id="character">
