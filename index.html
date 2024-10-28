@@ -346,6 +346,22 @@
             z-index: 1; /* 이미지의 z-index도 조정 */
             position: relative; /* z-index 적용을 위해 position 설정 */
         }
+       
+        #video-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFFE5;
+    padding: 50px;
+    text-align: center;
+}
+
+.video-container video {
+    width: 80%; /* 필요에 따라 비디오 크기 조정 */
+    max-width: 800px;
+    border-radius: 8px; /* 비디오 모서리를 둥글게 만듦 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
 
         #information {
     display: flex;
@@ -440,20 +456,31 @@
     text-align: center;
     line-height: 1.5; /* 줄 간격 */
     font-size: 16px;
-    color: #333;
+    color: #030303;
 }
 
 #character {
+    font-style: bold;
     display: flex;
     flex-direction: column; /* 세로 정렬 */
     align-items: center; /* 가운데 정렬 */
-    background-color:  #388e3c;
-    color: #ffffff;
+    background-color:  #ffffff;
+    color: #3E7443;
     width: 100%;
     margin: 0;
     padding: 50px;
     box-sizing: border-box;
     text-align: center; /* 텍스트 가운데 정렬 추가 */
+}
+.characterimg{
+            width: 100%; 
+            height: auto; 
+            max-width: 500px; 
+            object-fit: cover; 
+            z-index: 1; /* 이미지의 z-index도 조정 */
+            position: relative; /* z-index 적용을 위해 position 설정 */
+            margin-top: 200px;
+            margin-bottom: 200px;
 }
 #character .circle-shape {
     width: 400px; /* 원의 너비를 더 크게 */
@@ -491,7 +518,7 @@
 
         /* 푸터 스타일 */
         footer {
-            background-color: #388e3c;
+            background-color: #3E7443;
             color: white;
             text-align: center;
             padding: 20px;
@@ -632,6 +659,14 @@
      <div class="bgcircle">
         <img src="img/Ellipse278.png">
      </div>
+     <section id="video-player">
+        <div class="video-container">
+            <video controls>
+                <source src="video파일경로.mp4" type="video/mp4">
+                <!-- 다른 포맷 지원용 추가 옵션 (예: webm) -->
+            </video>
+        </div>
+    </section>
      
     </section>
     
@@ -696,8 +731,8 @@
 
     <section id="character">
         <h2>플마와 함께<p>식물 키우기로 계획 쉽고 재밌게 실천하자!</p></h2>
-     <div class="circle">
-            
+     <div class="characterimg">
+            <img src="img/캐릭터 움직임.png">
         </div>
     </section>
 
