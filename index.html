@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @font-face {
-            font-family: 'Pretendard', sans-serif;
-            src: url('Pretendard-Regular.otf') format('truetype');
-        }
+ @font-face {
+    font-family: 'NanumSquareRound';
+    src: url('font/NanumSquareRoundOTFR.woff2') format('woff2'),
+         url('font/NanumSquareRoundOTFR.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('font/NanumSquareRoundOTFB.woff2') format('woff2'),
+         url('font/NanumSquareRoundOTFB.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
         /* 텍스트 요소에만 기본 마진 적용 */
         h1, h2, p {
             margin: 10px 20px; /* 가로 20px, 세로 10px */
         }
 
-        html,body {
-            font-family: 'Pretendard', sans-serif;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            overflow-x: hidden; /* 가로 스크롤 제거 */
-        }
+        html, body {
+    font-family: 'NanumSquareRound', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 
         h1 {
             text-align: left;
