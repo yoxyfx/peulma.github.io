@@ -291,6 +291,62 @@
             border-radius: 10px; /* 모서리를 둥글게 */
             margin-top: 10px; /* 제목과 사각형 사이의 간격 */
         }
+        #explanation {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 가운데 정렬 */
+    background-color: #B1DA73; /* 섹션 배경색 */
+    color: #ffffff;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 200px;
+    box-sizing: border-box;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    position: relative; /* 원을 절대 위치로 설정하기 위해 relative 설정 */
+    z-index: 4;
+}
+.imockup {
+    position: relative; /* 자식 요소의 z-index를 위한 position 설정 */
+    z-index: 3; /* 목업 이미지의 z-index 조정 */
+    margin-top: 100px; /* 위쪽 여백 추가 */
+}
+.imockup img {
+     margin-top: 100px;
+            width: 400px; 
+            height: auto; 
+            max-width: 700px; 
+            object-fit: cover; 
+            z-index: 3; /* 이미지의 z-index도 조정 */
+            position: relative; /* z-index 적용을 위해 position 설정 */
+        }
+        .bgcircle {
+    position: absolute; /* 절대 위치 설정 */
+    top: 50%; /* 섹션의 상단에 위치 */
+    left: 50%; /* 가로 가운데 정렬 */
+    transform: translateX(-50%); /* 이미지의 중앙 정렬 */
+    z-index: 2; /* 배경 이미지의 z-index 조정 */
+}   
+.bgcircle img {
+    width: 1920px; 
+    height: auto; 
+    object-fit: cover; 
+    /* 원의 위치 조정 */
+    position: absolute; /* 절대 위치로 변경 */
+    top: 95%; /* 이미지가 목업 이미지 밑으로 들어가도록 설정 */
+    left: 50%; /* 가운데 정렬 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    z-index: 1; /* z-index 조정 */
+}
+.explanation img {
+            width: 100%; 
+            height: auto; 
+            max-width: 700px; 
+            object-fit: cover; 
+            z-index: 1; /* 이미지의 z-index도 조정 */
+            position: relative; /* z-index 적용을 위해 position 설정 */
+        }
+
 
         #team {
     display: flex;
@@ -506,27 +562,34 @@
             <h8>Typography</h8>
             <h6>친근함이 느껴질 수 있는 둥근 폰트의<p>나무스퀘어라운드를 사용하였습니다.</p></h8>
         </div>
+        <div class="uikit">
+            <h8>UI Kit</h8>
+            <h2>플마의 개성을 담아 UI를 제작하였습니다.</h2>
+        </div>
         <div class="Naming">
-            <h3>Naming</h3>
-            <div class="rectangle">plan plant + mindcare = 플마</div>
+           
         </div>
         <div class="logo">
-            <h3>Logo</h3>
-            <div class="rectangle"></div>
+         
         </div>
         <div class="character">
-            <h3>Character</h3>
-            <div class="rectangle"></div>
+          
         </div>
         <div class="Color">
             <h3>Color</h3>
-            <div class="rectangle"></div>
+          
         </div>
-      
-        <div class="uikit">
-            <h3>UI Kit</h3>
-            <div class="rectangle"></div>
+    </section>
+    
+    <section id="explanation">
+        <h1>이제 플마를 만나러 가볼까요?</h1>
+        <div class="imockup">
+            <img src="img/iMockup.png">
         </div>
+     <div class="bgcircle">
+        <img src="img/Ellipse278.png">
+     </div>
+       
     </section>
 
     <section id="team">
