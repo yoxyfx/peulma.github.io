@@ -298,7 +298,7 @@
     background-color: #B1DA73; /* 섹션 배경색 */
     color: #ffffff;
     width: 100%;
-    height: auto;
+    height: 1800px;
     margin: 0;
     padding: 200px;
     box-sizing: border-box;
@@ -328,7 +328,7 @@
     z-index: 2; /* 배경 이미지의 z-index 조정 */
 }   
 .bgcircle img {
-    width: 1920px; 
+    width: 1800px; 
     height: auto; 
     object-fit: cover; 
     /* 원의 위치 조정 */
@@ -347,6 +347,21 @@
             position: relative; /* z-index 적용을 위해 position 설정 */
         }
 
+        #infomation {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 이미지와 텍스트를 수직 가운데 정렬 */
+    justify-content: center;
+    text-align: center;
+    background-color: #FBFFE5;
+    color:#021502;
+    width:100%;
+    padding:50px;
+    margin-top: 500px;
+}
+.custom-heading {
+    color: #3E7443; /* 원하는 색상 코드로 변경 */
+}
 
         #team {
     display: flex;
@@ -589,8 +604,30 @@
      <div class="bgcircle">
         <img src="img/Ellipse278.png">
      </div>
-       
+     
     </section>
+    
+    <section id="information">
+        <div class="home">
+            <p class="custom-heading">Home</p>
+            <h4>오늘의 루틴을 수행할 수 있는 홈 화면입니다.</h4>
+            <h4>루틴을 수행 할수록 당신의 식물은 무럭무럭 자라날거예요</h4>
+        </div>
+        <div class="routine">
+            <p class="custom-heading">Routine</p>
+            <h4>진행중인 루틴을 확인할 수 있는 루틴 화면입니다.</h4>
+            <h4>플마와 함께 지속가능한 루틴을 저장해봐요.</h4>
+        </div>
+        <div class="garden">
+            <p class="custom-heading">Routine</p>
+            <h4>성공한 루틴들이 모여 식물이 된 루틴이 모인 온실화면<br>입니다. 자신이 획득한 꽃과 식물을 모아 감상해보세요.</h4>   
+        </div>
+        <div class="growth">
+            <p class="custom-heading">Routine</p>
+            <h4>나의 성장을 통계로 알아볼 수 있는 성장 화면입니다.<br>완벽하지 않아도 괜찮으니 하루를 작성해봐요.</h4>   
+        </div>
+    </section>
+    
 
     <section id="team">
        
@@ -628,7 +665,6 @@
     <section id="character">
         <h2>플마와 함께<p>식물 키우기로 계획 쉽고 재밌게 실천하자!</p></h2>
      <div class="circle">
-            <div class="circle-shape"></div>
             
         </div>
     </section>
