@@ -111,6 +111,7 @@
             object-fit: cover; 
             z-index: 1; /* 이미지의 z-index도 조정 */
             position: relative; /* z-index 적용을 위해 position 설정 */
+            margin-left: 100px;
         }
 
       
@@ -131,11 +132,31 @@
             flex-direction: column; /* 세로 정렬 */
             align-items: center; /* 가운데 정렬 */
             justify-content: center;
+            text-align: center;
             background-color: #ffffff;
             color: #000000;
             width: 100%;
             margin: 0; 
             padding: 50px; 
+        }
+        .sub{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 100%;
+            height:auto;
+        }
+        #bg {
+            display: flex; 
+            flex-direction: column; /* 세로 정렬 */
+            align-items: center; /* 가운데 정렬 */
+            justify-content: center;
+            text-align: center;
+            background-color: #A9D675;
+            color: #ffffff;
+            width: 100%;
+            margin: 0;
+            padding: 50px;
+            overflow: hidden; /* 섹션 내부에서 넘치는 콘텐츠 숨기기 */
         }
         /* 그래프 섹션 */
         #graph {
@@ -558,8 +579,24 @@
 </section>
 <section id="background">
     <h2>플마</h2>
-    <p>갓생으로 살기 위해 노력이 강박과 스트레스 유발로 이어져 힘드신가요?</p>
-    <p>플마는 스트레스 줄여주는 습관 형성 서비스 입니다. 이 서비스를 통해 좋은 습관은 플러스 나쁜 습관은 마이너스한다는 의미에서 착안되었습니다.</p>   
+    <p>갓생으로 살기 위해 노력이<br>강박과 스트레스 유발로 이어져 힘드신가요?</p>
+    <p>플마는 스트레스 줄여주는 습관 형성 서비스 입니다.<br>이 서비스를 통해 좋은 습관은 플러스 나쁜 습관은 마이너스<br>한다는 의미에서 착안되었습니다.</p> 
+    <div class="sub">
+        <img src="img/Frame34043.png">
+    </div>  
+    <div class="subinfo">
+        plant plan mindcare
+    </div>
+</section>
+
+<section id="bg">
+    <h8>Background</h8>
+    <h4>갓생은 '행복'이라는 키워드로 MZ세대는 일상생활에 작은 목표를
+        <br>설정하고 실천함으로써 얻게 되는 행복에 가치를 두는 것을 의미합니다.
+        <br>그렇지만, 갓생을 살기 위해 하는 노력이 사용자에게 스트레스와 강박을
+        <br>유발함으로써 갓생 답지 못한 갓생을 사는 사람들이 생기기 시작했습니다.
+    </h4>
+    <img src="img/graph.png">
 </section>
     <section id="graph">
         <h2>그래프</h2>
@@ -700,32 +737,7 @@
     <section id="team">
         <h4>작심삼일도 식물과 함께, 갓생으로 가는 길</h4>
         <h1>Team. 플마</h1>
-        <div class="circle-container">
-            <div class="circle">
-                <div class="circle-shape">1</div>
-                <div class="circle-text">PLANNER<br>서연우</div>
-            </div>
-            <div class="circle">
-                <div class="circle-shape">2</div>
-                <div class="circle-text">DESIGNER<br>권규린</div>
-            </div>
-            <div class="circle">
-                <div class="circle-shape">3</div>
-                <div class="circle-text">DESIGNER<br>박소정</div>
-            </div>
-            <div class="circle">
-                <div class="circle-shape">4</div>
-                <div class="circle-text">DESIGNER<br>이경진</div>
-            </div>
-            <div class="circle">
-                <div class="circle-shape">5</div>
-                <div class="circle-text">DESIGNER<br>정해린</div>
-            </div>
-            <div class="circle">
-                <div class="circle-shape">6</div>
-                <div class="circle-text">PROGRAMMER<br>임승현</div>
-            </div>
-        </div>
+
     </section>
     
 
