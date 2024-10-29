@@ -390,21 +390,35 @@ a {
          
         }
         #user {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 섹션 내 모든 요소 중앙 정렬 */
-    justify-content: center;
-    background-color: #A9D675;
-    color: #ffffff;
-    width: 100%;
-    padding: 50px;
-    text-align: center;
-}
-
-#user h1 {
-    margin: 0; /* 불필요한 여백 제거 */
-    text-align: center;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 섹션 내 모든 요소 중앙 정렬 */
+            justify-content: center;
+            background-color: #A9D675;
+            color: #ffffff;
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        #user h1 {
+            margin: 0; /* 불필요한 여백 제거 */
+            text-align: center;
+        }
+        
+        .make {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 100px;
+        }
+        
+        .rectangle img {
+            width: 80px; /* 이미지 크기를 줄임 */
+            height: auto; /* 비율에 맞게 자동 조정 */
+        }
+        
 
 .image-container {
     display: flex;
