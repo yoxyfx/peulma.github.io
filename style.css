@@ -714,12 +714,12 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     background-image: url('img/bg2.png'); /* 이미지 파일 경로로 변경 */
     background-size: cover; /* 이미지를 전체 영역에 맞게 채움 */
     background-position: center; /* 이미지를 중앙에 배치 */
     background-repeat: no-repeat; /* 이미지 반복 없음 */
-    color: #021502;
+    color: #ffffff;
     width: 100%;
     height: 1080px;
     padding: 50px;
