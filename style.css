@@ -672,6 +672,7 @@ a {
     justify-content: center;
     background-color: #FBFFE5;
     text-align: center;
+    margin-bottom: 300px;
 }
 
 .video-container video {

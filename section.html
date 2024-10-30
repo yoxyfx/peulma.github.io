@@ -18,6 +18,20 @@
             align-items: center;
             background-color: #FBFFE5; /* 배경 색상 변경 */
         }
+        #video-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFFE5;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+.video-container video {
+    width: 100%; /* 필요에 따라 비디오 크기 조정 */
+    border-radius: 8px; /* 비디오 모서리를 둥글게 만듦 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
 
         .slider {
             width: 120%;
@@ -31,6 +45,7 @@
         .slide {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            height: 1000px; /* 여기서 높이를 1000px로 설정 */
         }
 
         .thumbnail-container {
@@ -79,46 +94,85 @@
             filter: brightness(0.7);
         }
 
-        /* 추가된 스타일: 섹션 사이의 마진 */
-        section {
-            width: 100%; /* 1920px 대신 100%로 설정 */
-            margin-top: 20px; /* 위쪽 여백 */
-            margin-bottom: 20px; /* 아래쪽 여백 */
-            padding: 0 20px; /* 좌우 여백 추가 */
-            box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+      
+         /* 공통 스타일 */
+         section {
+            padding: 20px;
+            margin: 0; /* 섹션 마진 제거 */
+            width: 100%;
+            box-sizing: border-box;
+            opacity: 1; 
+            transition: opacity 0.6s ease; /* 페이드인 효과 */
+        }
+
+        section.visible {
+            opacity: 1; /* visible 클래스가 추가되면 불투명 */
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        section p {
+            color: inherit;
+        }
+
+        .text-content {
+            flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
+            padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
         }
     </style>
 </head>
 <body>
+    <section id="video-player">
+        <div class="video-container">
+            <video controls>
+                <source src="img/플마 영상.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
     <section id="greenhouse-slider-1">
         <div class="slider">
             <div class="slide">
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실.png" alt="Mockup 1" class="thumbnail">
+                    <img src="img/iMockup홈.png" alt="Mockup 1" class="thumbnail">
                     <div class="description" data-position="left">
-                        <span class="main-text">Mockup 1</span><br>
-                        <span class="sub-text">Short description here</span>
+                        <span class="main-text">홈</span><br>
+                        <span class="sub-text">
+                            오늘의 루틴을 수행할 수 있는 홈 화면입니다.<br>
+                            루틴을 수행 할수록 당신의 식물은 무럭무럭 자라날거예요.
+                        </span>
                     </div>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실1.png" alt="Mockup 2" class="thumbnail">
+                    <img src="img/iMockup홈1.png" alt="Mockup 2" class="thumbnail">
                     <div class="description" data-position="left">
-                        <span class="main-text">Mockup 2</span><br>
-                        <span class="sub-text">Another short description</span>
+                        <span class="main-text">루틴 설정</span><br>
+                        <span class="sub-text">
+                            루틴의 난이도를 설정할 수 있습니다.<br>
+                            자신에게 딱 맞는 난이도로 습관형성 해봐요!
+                        </span>
                     </div>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실2.png" alt="Mockup 3" class="thumbnail">
+                    <img src="img/iMockup홈2.png" alt="Mockup 3" class="thumbnail">
                     <div class="description" data-position="right">
-                        <span class="main-text">Mockup 3</span><br>
-                        <span class="sub-text">Description for third image</span>
+                        <span class="main-text">도전과제</span><br>
+                        <span class="sub-text">
+                            특별 배지를 얻을 수 있습니다.<br>
+                            예쁜 탄생화 배지로 온실을 꾸며보세요.
+                        </span>
                     </div>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실3.png" alt="Mockup 4" class="thumbnail">
+                    <img src="img/iMockup홈3.png" alt="Mockup 4" class="thumbnail">
                     <div class="description" data-position="right">
-                        <span class="main-text">Mockup 4</span><br>
-                        <span class="sub-text">Final image description</span>
+                        <span class="main-text">도전 챌린지</span><br>
+                        <span class="sub-text">
+                            챌린지를 통해 이웃들과 함께 경쟁할 수 있습니다.<br>
+                            당신의 승부욕을 보여주세요!
+                        </span>
                     </div>
                 </div>
             </div>
@@ -129,31 +183,157 @@
         <div class="slider">
             <div class="slide">
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실.png" alt="Mockup 1" class="thumbnail">
+                    <img src="img/iMockup루틴.png" alt="Mockup 1" class="thumbnail">
                     <div class="description" data-position="left">
-                        <span class="main-text">Mockup 1</span><br>
-                        <span class="sub-text">Short description here</span>
+                        <span class="main-text">루틴</span><br>
+                        <span class="sub-text">
+                            진행중인 루틴을 확인할 수 있는 루틴 화면입니다.<br>
+                            플마와 함께 지속가능한 루틴을 저장해봐요.
+                        </span>
                     </div>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실1.png" alt="Mockup 2" class="thumbnail">
+                    <img src="img/iMockup루틴1.png" alt="Mockup 2" class="thumbnail">
                     <div class="description" data-position="left">
-                        <span class="main-text">Mockup 2</span><br>
-                        <span class="sub-text">Another short description</span>
+                        <span class="main-text">루틴 상세 설정</span><br>
+                        <span class="sub-text">
+                            진행중인 루틴의 날짜를 설정할 수 있습니다.<br>
+                            루틴의 시간이 맞지 않다면 편리하게 수정해보세요!
+                        </span>
                     </div>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실2.png" alt="Mockup 3" class="thumbnail">
+                    <img src="img/iMockup루틴2.png" alt="Mockup 3" class="thumbnail">
                     <div class="description" data-position="right">
-                        <span class="main-text">Mockup 3</span><br>
-                        <span class="sub-text">Description for third image</span>
+                        <span class="main-text">기상 루틴</span><br>
+                        <span class="sub-text">
+                            플마가 제공하는 기상 루틴을 정할 수 있습니다.<br>
+                            루틴이 고민될 땐 플마에게 맡기세요.
+                        </span>
                     </div>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="img/iMockup온실3.png" alt="Mockup 4" class="thumbnail">
+                    <img src="img/iMockup루틴3.png" alt="Mockup 4" class="thumbnail">
                     <div class="description" data-position="right">
-                        <span class="main-text">Mockup 4</span><br>
-                        <span class="sub-text">Final image description</span>
+                        <span class="main-text">루틴 이벤트</span><br>
+                        <span class="sub-text">
+                            시간에 맞춰 새로운 루틴을 추천해줍니다.<br>
+                            이웃들과 함께할 수 있으니 확인 해보세요!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="greenhouse-slider-3">
+        <div class="slider">
+            <div class="slide">
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실.png" alt="Mockup 5" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">온실</span><br>
+                        <span class="sub-text">
+                            성공한 루틴들이 모여 식물이 된 루틴이 모인 온실화면<br>
+                            입니다. 자신이 획득한 꽃과 식물을 모아 감상해보세요.
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실1.png" alt="Mockup 6" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">온실</span><br>
+                        <span class="sub-text">
+                            성공한 루틴들이 모여 식물이 된 루틴이 모인 온실화면<br>
+                            입니다. 자신이 획득한 꽃과 식물을 모아 감상해보세요.
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실2.png" alt="Mockup 7" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">배지</span><br>
+                        <span class="sub-text">
+                            획득한 배지를 자세히 볼 수 있습니다.<br>
+                            즐겨찾기도 있으니 감상하며 추억을 회상해봐요.
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실3.png" alt="Mockup 8" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">온실 꾸미기</span><br>
+                        <span class="sub-text">
+                            획득한 배지로 나만의 온실을 꾸며보세요.<br>
+                            방명록은 물론, 이웃들에게도 자랑할 수 있답니다.
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실4.png" alt="Mockup 8" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">온실</span><br>
+                        <span class="sub-text">
+                            성공한 루틴들이 모여 식물이 된 루틴이 모인 온실 화면<br>
+                            입니다. 자신이 획득한 꽃과 식물을 모아 감상해보세요.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="greenhouse-slider-4">
+        <div class="slider">
+            <div class="slide">
+                <div class="thumbnail-container">
+                    <img src="img/iMockup성장.png" alt="Mockup 9" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">일기 작성</span><br>
+                        <span class="sub-text">
+                            플러스 버튼을 통해 나의 기분을 표시할 수 있습니다.<br>
+                            당신의 하루를 이모티콘과 글로 표현해보세요.
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup성장1.png" alt="Mockup 10" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">일기</span><br>
+                        <span class="sub-text">
+                            날마다 일기를 작성하고 볼 수 있습니다.<br>
+                            과거에 쓴 기록들을 읽어보며 추억에 잠겨보세요.
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup성장2.png" alt="Mockup 11" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">달성률</span><br>
+                        <span class="sub-text">
+                            기간별 나의 달성률을 그래프로 확인할 수 있습니다.<br>
+                            나의 노력이 모여 식물에게 비료가 되니 힘을 내요!
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup성장3.png" alt="Mockup 12" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">달성률</span><br>
+                        <span class="sub-text">
+                            기간별 나의 달성률을 그래프로 확인할 수 있습니다.<br>
+                            나의 기록을 점점 갱신해보세요!
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup성장4.png" alt="Mockup 12" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">성장</span><br>
+                        <span class="sub-text">
+                            나의 성장을 통계로 알아볼 수 있는 성장 화면입니다.<br>
+                            완벽하지 않아도 괜찮으니 하루를 작성해봐요.
+                        </span>
                     </div>
                 </div>
             </div>
