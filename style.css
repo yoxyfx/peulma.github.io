@@ -879,14 +879,64 @@ a {
             padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
         }
 
-        /* 푸터 스타일 */
         footer {
             background-color: #3E7443;
             color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
             width: 100%;
-            bottom: 0; /* 항상 하단에 위치 */
-            height: 200px;
+        }
+    
+        /* footer-content을 flex로 설정하여 이미지와 텍스트 그룹이 가로로 정렬 */
+        .footer-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        /* 이미지 왼쪽 정렬 */
+        footer img {
+            align-self: flex-start;
+        }
+    
+        /* name-group을 가로로 정렬하여 각 name 요소가 한 줄에 오도록 설정 */
+        .name-group {
+            display: flex;
+            gap: 80px; /* 각 name 요소 사이 간격 */
+        }
+    
+        /* .name 내부 텍스트 왼쪽 정렬 */
+        .name {
+            text-align: left;
+        }
+    
+        .name p {
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+    
+        .name a {
+            display: block;
+            color: white;
+            font-size: 0.9em;
+            margin-left: 0; /* <p>와 동일한 시작점에 맞춤 */
+        }
+    
+        /* 수평선 스타일 */
+        hr {
+            border: none;
+            border-top: 1px solid white;
+            width: 80%;
+            margin: 20px auto;
+        }
+    
+        /* Copyright 텍스트 스타일 */
+        footer p {
+            text-align: center;
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 10px;
         }
