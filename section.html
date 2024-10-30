@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .slider {
+            width: 80%; /* 전체 슬라이더 크기를 설정 */
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto; /* 화면 중앙에 배치 */
+        }
+
+        .slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* 부드러운 전환 효과 */
+        }
+
+        .slide img {
+            width: 20%; /* 각 이미지의 기본 크기 */
+            cursor: pointer;
+            margin: 0 10px; /* 이미지 간의 여백 */
+            transition: transform 0.3s ease; /* 클릭 시 크기 변화 효과 */
+        }
+
+        .selected {
+            transform: scale(1.5); /* 클릭된 이미지를 확대 */
+            z-index: 10; /* 다른 이미지보다 위에 표시 */
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide">
+            <img src="img/iMockup온실.png" alt="Mockup 1" class="thumbnail">
+            <img src="img/iMockup온실1.png" alt="Mockup 2" class="thumbnail">
+            <img src="img/iMockup온실2.png" alt="Mockup 3" class="thumbnail">
+            <img src="img/iMockup온실3.png" alt="Mockup 4" class="thumbnail">
+        </div>
+    </div>
+      
+    <script>
+        const slideContainer = document.querySelector('.slide');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                // 모든 이미지에서 'selected' 클래스를 제거
+                thumbnails.forEach(img => img.classList.remove('selected'));
+                
+                // 클릭된 이미지에 'selected' 클래스 추가
+                thumbnail.classList.add('selected');
+
+                // 슬라이더 위치 조정 (왼쪽 고정)
+                const offset = index * (thumbnail.clientWidth + 20) - (0.5 * (thumbnail.clientWidth + 20)); // 왼쪽으로 이동
+                slideContainer.style.transform = `translateX(-${offset}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
