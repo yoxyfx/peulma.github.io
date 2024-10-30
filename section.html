@@ -15,27 +15,32 @@
         }
 
         .slider {
-            width: 80%; /* 전체 슬라이더 크기를 설정 */
-            overflow: hidden;
+            width: 120%;
             position: relative;
-            margin: 0 auto; /* 화면 중앙에 배치 */
+            padding-left: 200px;
+            margin: 0 auto;
         }
 
         .slide {
             display: flex;
-            transition: transform 0.5s ease-in-out; /* 부드러운 전환 효과 */
+            transition: transform 0.5s ease-in-out;
         }
 
         .slide img {
-            width: 20%; /* 각 이미지의 기본 크기 */
+            width: 15%;
             cursor: pointer;
-            margin: 0 10px; /* 이미지 간의 여백 */
-            transition: transform 0.3s ease; /* 클릭 시 크기 변화 효과 */
+            margin: 0 40px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .selected {
-            transform: scale(1.5); /* 클릭된 이미지를 확대 */
-            z-index: 10; /* 다른 이미지보다 위에 표시 */
+            transform: scale(1.2);
+            z-index: 10;
+        }
+
+        .faded {
+            opacity: 0.5;
+            filter: brightness(0.7);
         }
     </style>
 </head>
@@ -53,17 +58,39 @@
         const slideContainer = document.querySelector('.slide');
         const thumbnails = document.querySelectorAll('.thumbnail');
 
+        function setSelectedImage(index) {
+            // 모든 이미지에서 'selected' 클래스를 제거하고 'faded' 클래스 추가
+            thumbnails.forEach((img) => {
+                img.classList.remove('selected');
+                img.classList.add('faded');
+            });
+            
+            // 클릭된 이미지에 'selected' 클래스 추가하고 나머지 'faded' 클래스 제거
+            thumbnails[index].classList.add('selected');
+            thumbnails[index].classList.remove('faded');
+
+            // 클릭된 이미지의 크기 고려하여 슬라이더 중앙 위치 조정
+            const totalMargin = 40;
+            const baseImageWidth = thumbnails[0].clientWidth;
+            const selectedImageWidth = baseImageWidth * 1.2; // 확대된 이미지 크기
+
+            // 확대된 이미지가 중앙에 오도록 오프셋 계산
+            const offset = index * (baseImageWidth + totalMargin) - ((selectedImageWidth - baseImageWidth) / 2) + 100;
+            slideContainer.style.transform = `translateX(-${offset}px)`;
+        }
+
+        // 페이지 로드 시 첫 번째 이미지 선택
+        window.onload = () => {
+            setSelectedImage(0);
+        };
+
         thumbnails.forEach((thumbnail, index) => {
             thumbnail.addEventListener('click', () => {
-                // 모든 이미지에서 'selected' 클래스를 제거
-                thumbnails.forEach(img => img.classList.remove('selected'));
-                
-                // 클릭된 이미지에 'selected' 클래스 추가
-                thumbnail.classList.add('selected');
-
-                // 슬라이더 위치 조정 (왼쪽 고정)
-                const offset = index * (thumbnail.clientWidth + 20) - (0.5 * (thumbnail.clientWidth + 20)); // 왼쪽으로 이동
-                slideContainer.style.transform = `translateX(-${offset}px)`;
+                if (thumbnails[index].classList.contains('selected')) {
+                    setSelectedImage(0); // 첫 번째 이미지로 돌아가기
+                } else {
+                    setSelectedImage(index);
+                }
             });
         });
     </script>
