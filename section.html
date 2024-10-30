@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html, body {
+            height: 100%; /* html과 body의 높이를 100%로 설정 */
+            margin: 0;
+            overflow-x: hidden; /* 가로 스크롤 숨기기 */
+        }
+
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* 세로 방향으로 정렬 */
+            justify-content: flex-start; /* 위쪽 정렬 */
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            background-color: #FBFFE5; /* 배경 색상 변경 */
         }
 
         .slider {
             width: 120%;
+            height: 800px; /* 슬라이더 높이 변경 */
             position: relative;
             padding-left: 500px;
             margin: 0 auto;
+            margin-top: 0; /* 슬라이더 바를 없애기 위해 여백을 제거 */
         }
 
         .slide {
@@ -41,11 +48,20 @@
         .description {
             position: absolute;
             width: max-content;
-            text-align: center;
+            text-align: left; /* 좌측 정렬 */
             color: #333;
-            font-size: 14px;
             opacity: 0;
             transition: opacity 0.3s ease;
+        }
+
+        .description .main-text {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .description .sub-text {
+            font-size: 12px;
+            color: #666;
         }
 
         .selected {
@@ -62,36 +78,97 @@
             opacity: 0.5;
             filter: brightness(0.7);
         }
+
+        /* 추가된 스타일: 섹션 사이의 마진 */
+        section {
+            width: 100%; /* 1920px 대신 100%로 설정 */
+            margin-top: 20px; /* 위쪽 여백 */
+            margin-bottom: 20px; /* 아래쪽 여백 */
+            padding: 0 20px; /* 좌우 여백 추가 */
+            box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+        }
     </style>
 </head>
 <body>
-    <div class="slider">
-        <div class="slide">
-            <div class="thumbnail-container">
-                <img src="img/iMockup온실.png" alt="Mockup 1" class="thumbnail">
-                <div class="description" data-position="left">Mockup 1 - Short description here</div>
-            </div>
-            <div class="thumbnail-container">
-                <img src="img/iMockup온실1.png" alt="Mockup 2" class="thumbnail">
-                <div class="description" data-position="left">Mockup 2 - Another short description</div>
-            </div>
-            <div class="thumbnail-container">
-                <img src="img/iMockup온실2.png" alt="Mockup 3" class="thumbnail">
-                <div class="description" data-position="right">Mockup 3 - Description for third image</div>
-            </div>
-            <div class="thumbnail-container">
-                <img src="img/iMockup온실3.png" alt="Mockup 4" class="thumbnail">
-                <div class="description" data-position="right">Mockup 4 - Final image description</div>
+    <section id="greenhouse-slider-1">
+        <div class="slider">
+            <div class="slide">
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실.png" alt="Mockup 1" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">Mockup 1</span><br>
+                        <span class="sub-text">Short description here</span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실1.png" alt="Mockup 2" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">Mockup 2</span><br>
+                        <span class="sub-text">Another short description</span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실2.png" alt="Mockup 3" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">Mockup 3</span><br>
+                        <span class="sub-text">Description for third image</span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실3.png" alt="Mockup 4" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">Mockup 4</span><br>
+                        <span class="sub-text">Final image description</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    
+    <section id="greenhouse-slider-2">
+        <div class="slider">
+            <div class="slide">
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실.png" alt="Mockup 1" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">Mockup 1</span><br>
+                        <span class="sub-text">Short description here</span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실1.png" alt="Mockup 2" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">Mockup 2</span><br>
+                        <span class="sub-text">Another short description</span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실2.png" alt="Mockup 3" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">Mockup 3</span><br>
+                        <span class="sub-text">Description for third image</span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실3.png" alt="Mockup 4" class="thumbnail">
+                    <div class="description" data-position="right">
+                        <span class="main-text">Mockup 4</span><br>
+                        <span class="sub-text">Final image description</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
       
     <script>
-        const slideContainer = document.querySelector('.slide');
+        const slideContainers = document.querySelectorAll('.slide');
         const thumbnails = document.querySelectorAll('.thumbnail');
         const descriptions = document.querySelectorAll('.description');
 
-        function setSelectedImage(index) {
+        function setSelectedImage(slideContainer, index) {
+            const thumbnails = slideContainer.querySelectorAll('.thumbnail');
+            const descriptions = slideContainer.querySelectorAll('.description');
+
             thumbnails.forEach((img, idx) => {
                 img.classList.remove('selected');
                 img.classList.add('faded');
@@ -122,16 +199,22 @@
         }
 
         window.onload = () => {
-            setSelectedImage(0);
+            document.querySelectorAll('.slide').forEach(slideContainer => {
+                setSelectedImage(slideContainer, 0);
+            });
         };
 
-        thumbnails.forEach((thumbnail, index) => {
-            thumbnail.addEventListener('click', () => {
-                if (thumbnails[index].classList.contains('selected')) {
-                    setSelectedImage(0);
-                } else {
-                    setSelectedImage(index);
-                }
+        document.querySelectorAll('.slider').forEach(slider => {
+            const thumbnails = slider.querySelectorAll('.thumbnail');
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', () => {
+                    const slideContainer = slider.querySelector('.slide');
+                    if (thumbnails[index].classList.contains('selected')) {
+                        setSelectedImage(slideContainer, 0);
+                    } else {
+                        setSelectedImage(slideContainer, index);
+                    }
+                });
             });
         });
     </script>
