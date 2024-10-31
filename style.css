@@ -78,6 +78,22 @@
 .header-text a:hover {
     color: #FFB45C; /* 호버 시 색상 */
 }
+.fixed-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background-image: url('img/TOP.png');
+    background-size: cover;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.fixed-button:hover {
+    background-image: url('img/TOPhover.png');
+    z-index: 4;
+}
 
 /* 메인 섹션 스타일 */
 #main {

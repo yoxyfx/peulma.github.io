@@ -1,3 +1,17 @@
+document.querySelector('.fixed-button').addEventListener('click', function() {
+    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+});
+const button = document.querySelector('.fixed-button');
+
+button.addEventListener('mouseover', () => {
+    button.src = 'img/TOPhover.png';
+});
+
+button.addEventListener('mouseout', () => {
+    button.src = 'img/TOP.png';
+});
+
+
 document.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const scrollPosition = window.scrollY + window.innerHeight;
