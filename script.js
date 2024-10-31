@@ -1,15 +1,19 @@
+// 스크롤을 최상단으로 이동
 document.querySelector('.fixed-button').addEventListener('click', function() {
-    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// 버튼 이미지 변경 (마우스 오버 시)
 const button = document.querySelector('.fixed-button');
 
 button.addEventListener('mouseover', () => {
-    button.src = 'img/TOPhover.png';
+    button.style.backgroundImage = "url('img/TOPhover.png')";
 });
 
 button.addEventListener('mouseout', () => {
-    button.src = 'img/TOP.png';
+    button.style.backgroundImage = "url('img/TOP.png')";
 });
+
 
 
 document.addEventListener('scroll', function() {

@@ -34,35 +34,41 @@
         }
 
    /* 헤더 스타일 */
-   header {
-            background-color: #ffffff;
-            color: #9EBF86;
-            padding: 30px 0;
-        }
+  /* 헤더 스타일 */
+header {
+    background-color: #ffffff;
+    color: #9EBF86;
+    padding: 30px 0;
+    position: fixed; /* 헤더 상단 고정 */
+    top: 0; /* 상단에 위치 */
+    left: 0; /* 왼쪽에 위치 */
+    right: 0; /* 오른쪽에 위치 */
+    z-index: 10; /* 다른 요소 위에 표시되도록 z-index 추가 */
+}
 
-        /* 헤더 내부 중앙 배치 및 여백 */
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* 로고와 텍스트 오른쪽 정렬 */
-            max-width: 1200px; /* 최대 너비 제한 */
-            margin: 0 auto; /* 중앙 정렬 */
-            padding: 0 200px; /* 양쪽 여백을 200px */
-        }
+/* 헤더 내부 중앙 배치 및 여백 */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 로고와 텍스트 오른쪽 정렬 */
+    max-width: 1200px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 0 200px; /* 양쪽 여백을 200px */
+}
 
-        /* 로고 스타일 */
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+/* 로고 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+}
 
-        .logo img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
 
-      /* 내비게이션 메뉴 스타일 */
+/* 내비게이션 메뉴 스타일 */
 .header-text {
     display: flex;
     align-items: center;
@@ -78,10 +84,11 @@
 .header-text a:hover {
     color: #FFB45C; /* 호버 시 색상 */
 }
+
 .fixed-button {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 80px;
+    right: 80px;
     width: 100px;
     height: 100px;
     background-image: url('img/TOP.png');
@@ -92,8 +99,8 @@
 
 .fixed-button:hover {
     background-image: url('img/TOPhover.png');
-    z-index: 4;
 }
+
 
 /* 메인 섹션 스타일 */
 #main {
@@ -103,7 +110,10 @@
     background-color: #96C155;
     color: #ffffff;
     width: 100%;
+    height: 900px;
     margin: 0;
+    margin-top: 100px;
+    padding-top: 100px;
     padding: 50px;
     gap: 50px; /* 직사각형과 텍스트 간의 여백 추가 */
     overflow: hidden; /* 섹션 내부에서 넘치는 콘텐츠 숨기기 */
@@ -204,6 +214,7 @@
   /* 배경 섹션 스타일 */
 /* 배경 섹션 스타일 */
 #background {
+    position: relative; /* 부모 요소에 상대 위치 지정 */
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -212,19 +223,48 @@
     background-color: #ffffff;
     color: #000000;
     width: 100%;
+    height: 1000px;
     margin: 0; 
     padding: 50px; 
 }
 
-#background h2 {
-    font-size: 2em;
-    color: #3E7443;
+.alpapa {
+    position: absolute; /* 절대 위치 지정 */
+    top: 15%; /* 상단에 배치 */
+    left: 0; /* 왼쪽에 배치 */
+    width: 50%; /* 너비를 50%로 유지 */
+    height: auto;
+    margin-top: 0; /* 위쪽 여백 제거 */
+    margin-bottom: 50px; /* 아래쪽 여백 유지 */
+    animation: moveUpDown 2s ease-in-out infinite; /* 애니메이션 추가 */
 }
 
-#background p {
-    font-size: 1em;
-    color: #333333;
+.alpapa img {
+    width: 30%; /* 이미지의 너비를 div에 맞춤 */
+    height: auto; /* 비율 유지 */
 }
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); /* 처음 위치 */
+    }
+    50% {
+        transform: translateY(-10px); /* 위로 이동 */
+    }
+    100% {
+        transform: translateY(0); /* 원래 위치로 돌아옴 */
+    }
+}
+
+
+#background h2, 
+#background p {
+    margin-top: 0; /* 위쪽 여백 제거 */
+    margin-bottom: 20px; /* 아래쪽 여백 조정 (원하는 만큼) */
+}
+
+
+
 
 /* 이미지 컨테이너 스타일 */
 .sub {
