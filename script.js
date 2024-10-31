@@ -89,3 +89,18 @@ document.addEventListener('scroll', function() {
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const imgSection = document.getElementById('img');
+    
+            window.addEventListener('scroll', function() {
+                const sectionPosition = imgSection.getBoundingClientRect();
+    
+                // img 섹션이 뷰포트에 들어올 때 배경 이미지 변경
+                if (sectionPosition.top <= window.innerHeight && sectionPosition.bottom >= 0) {
+                    imgSection.style.backgroundImage = "url('img/bg2.png')"; // 새로운 배경 이미지
+                } else {
+                    imgSection.style.backgroundImage = "url('img/bg1.png')"; // 원래 배경 이미지
+                }
+            });
+        });  
