@@ -3,16 +3,6 @@ document.querySelector('.fixed-button').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// 버튼 이미지 변경 (마우스 오버 시)
-const button = document.querySelector('.fixed-button');
-
-button.addEventListener('mouseover', () => {
-    button.style.backgroundImage = "url('img/TOPhover.png')";
-});
-
-button.addEventListener('mouseout', () => {
-    button.style.backgroundImage = "url('img/TOP.png')";
-});
 
 
 
