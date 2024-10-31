@@ -531,7 +531,7 @@ a {
             justify-content: center;
             text-align: center;
             background-image: url(img/stressimg.png);
-            background-color: #A9D675;
+            background-color:   #a3cb6a;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -546,7 +546,10 @@ a {
             flex-direction: column;
             align-items: center; /* 섹션 내 모든 요소 중앙 정렬 */
             justify-content: center;
-            background-color: #A9D675;
+            background-image: url('img/bg3.png'); /* 이미지 파일 경로로 변경 */
+            background-size: cover; /* 이미지를 전체 영역에 맞게 채움 */
+            background-position: center; /* 이미지를 중앙에 배치 */
+            background-repeat: no-repeat; /* 이미지 반복 없음 */
             color: #ffffff;
             width: 100%;
             padding: 50px;
