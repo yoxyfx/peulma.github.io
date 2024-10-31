@@ -1057,33 +1057,77 @@ margin-top: 60%;
 }
 
 #character {
-    font-style: bold;
+    width: 100%;
+    height: 1200px;
+    font-weight: bold;
     display: flex;
-    flex-direction: column; /* 세로 정렬 */
-    align-items: center; /* 가운데 정렬 */
-    background-color:  #ffffff;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
     color: #3E7443;
     width: 100%;
-    margin: 0;
     padding: 50px;
     box-sizing: border-box;
-    text-align: center; /* 텍스트 가운데 정렬 추가 */
+    text-align: center;
 }
-.characterimg{
-            width: 100%; 
-            height: auto; 
-            max-width: 500px; 
-            object-fit: cover; 
-            z-index: 1; /* 이미지의 z-index도 조정 */
-            position: relative; /* z-index 적용을 위해 position 설정 */
-            margin-top: 200px;
-            margin-bottom: 200px;
+
+.characterimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 400px;
+    margin-bottom: 300px;
 }
-#character .circle-shape {
-    width: 400px; /* 원의 너비를 더 크게 */
-    height: 400px; /* 원의 높이를 더 크게 */
-    font-size: 24px; /* 텍스트 크기도 조정 */
+
+.characterimg img {
+    position: absolute;
+    top: 50%; /* 이미지의 중심을 부모의 중심에 맞춤 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 수평 및 수직 중앙 정렬 */
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation-duration: 1.5s; /* 느린 교체 속도 */
+    animation-iteration-count: infinite;
 }
+
+.frame1 {
+    animation-name: frame1Visible;
+}
+
+.frame2 {
+    animation-name: frame2Visible;
+}
+
+@keyframes frame1Visible {
+    0%, 40% { 
+        opacity: 1; /* frame1을 보이게 함 */
+    } 
+    50% { 
+        opacity: 0; /* frame1을 서서히 숨김 */
+    }
+    60%, 100% { 
+        opacity: 0; /* frame1을 완전히 숨김 */
+    }
+}
+
+@keyframes frame2Visible {
+    0%, 40% { 
+        opacity: 0; /* frame2를 숨김 */
+    } 
+    50% { 
+        opacity: 1; /* frame2를 보이게 함 */
+    }
+    60%, 100% { 
+        opacity: 1; /* frame2를 유지 */
+    }
+}
+
+
 
 
         /* 공통 스타일 */
