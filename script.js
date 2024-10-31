@@ -4,6 +4,26 @@ document.querySelector('.fixed-button').addEventListener('click', function() {
 });
 
 
+// 모든 talk 이미지를 선택합니다.
+const talkImages = document.querySelectorAll('.talk-img');
+
+// Intersection Observer를 사용하여 섹션이 보일 때 이미지 애니메이션을 트리거합니다.
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            talkImages.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add('show'); // 이미지를 나타나게 함
+                }, index * 300); // 각 이미지의 나타나는 시간 간격을 둡니다.
+            });
+            observer.unobserve(entry.target); // 한 번만 실행하도록 옵저버에서 제거
+        }
+    });
+});
+
+// bg 섹션을 옵저버에 추가합니다.
+const bgSection = document.getElementById('bg');
+observer.observe(bgSection);
 
 
 document.addEventListener('scroll', function() {
