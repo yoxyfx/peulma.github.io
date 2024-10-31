@@ -52,7 +52,15 @@
             position: relative;
             margin: 0 80px;
         }
+      /* 첫 번째와 두 번째 슬라이더 위치 조정 */
+#greenhouse-slider-1 .slider,
+#greenhouse-slider-2 .slider {
+    padding-left: 400px; /* 기존 500px에서 400px로 줄여서 왼쪽으로 이동 */
+}
 
+        #greenhouse-slider-3, #greenhouse-slider-4 {
+        padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
+    }
         .slide img {
             width: 200px;
             height: auto;
@@ -70,12 +78,12 @@
         }
 
         .description .main-text {
-            font-size: 20px;
+            font-size: 40px;
             font-weight: bold;
         }
 
         .description .sub-text {
-            font-size: 15px;
+            font-size: 20px;
             color: #666;
         }
 
@@ -93,7 +101,11 @@
             opacity: 0.5;
             filter: brightness(0.7);
         }
-      
+       .thumbnail.faded {
+        transform: translateY(10px); /* 선택되지 않은 이미지들을 아래로 이동 */
+        opacity: 0.5; /* 선택되지 않은 이미지의 투명도 조정 */
+        margin-top: 60%;
+    }
         /* 공통 스타일 */
         section {
             padding: 20px;
@@ -146,7 +158,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup홈1.png" alt="Mockup 2" class="thumbnail">
-                    <div class="description" data-position="left">
+                    <div class="description" data-position="right">
                         <span class="main-text">루틴 설정</span><br>
                         <span class="sub-text">
                             루틴의 난이도를 설정할 수 있습니다.<br>
@@ -183,7 +195,7 @@
             <div class="slide">
                 <div class="thumbnail-container">
                     <img src="img/iMockup루틴.png" alt="Mockup 1" class="thumbnail">
-                    <div class="description" data-position="left">
+                    <div class="description" data-position="right">
                         <span class="main-text">루틴</span><br>
                         <span class="sub-text">
                             진행중인 루틴을 확인할 수 있는 루틴 화면입니다.<br>
@@ -193,7 +205,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup루틴1.png" alt="Mockup 2" class="thumbnail">
-                    <div class="description" data-position="left">
+                    <div class="description" data-position="right">
                         <span class="main-text">루틴 상세 설정</span><br>
                         <span class="sub-text">
                             진행중인 루틴의 날짜를 설정할 수 있습니다.<br>
@@ -240,7 +252,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup온실1.png" alt="Mockup 6" class="thumbnail">
-                    <div class="description" data-position="right">
+                    <div class="description" data-position="left">
                         <span class="main-text">식물</span><br>
                         <span class="sub-text">
                             기른 식물들이 모여져 온실을 꾸미고 있습니다.<br>
@@ -250,7 +262,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup온실2.png" alt="Mockup 7" class="thumbnail">
-                    <div class="description" data-position="right">
+                    <div class="description" data-position="left">
                         <span class="main-text">꾸미기</span><br>
                         <span class="sub-text">
                             기르고 싶은 식물을 클릭하여 수정 할 수 있습니다.<br>
@@ -260,8 +272,28 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup온실3.png" alt="Mockup 8" class="thumbnail">
-                    <div class="description" data-position="right">
+                    <div class="description" data-position="left">
                         <span class="main-text">온실 설정</span><br>
+                        <span class="sub-text">
+                            식물에 대해 설명을 추가할 수 있습니다.<br>
+                            온실에 대한 당신만의 설명을 추가해보세요!
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실4.png" alt="Mockup 8" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">온실 설정</span><br>
+                        <span class="sub-text">
+                            식물에 대해 설명을 추가할 수 있습니다.<br>
+                            온실에 대한 당신만의 설명을 추가해보세요!
+                        </span>
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="img/iMockup온실5.png" alt="Mockup 8" class="thumbnail">
+                    <div class="description" data-position="left">
+                        <span class="main-text">온실</span><br>
                         <span class="sub-text">
                             식물에 대해 설명을 추가할 수 있습니다.<br>
                             온실에 대한 당신만의 설명을 추가해보세요!
@@ -287,7 +319,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup성장1.png" alt="Mockup 10" class="thumbnail">
-                    <div class="description" data-position="right">
+                    <div class="description" data-position="left">
                         <span class="main-text">내 정보</span><br>
                         <span class="sub-text">
                             본인의 정보를 수정하고, 관리할 수 있습니다.<br>
@@ -297,7 +329,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup성장2.png" alt="Mockup 11" class="thumbnail">
-                    <div class="description" data-position="right">
+                    <div class="description" data-position="left">
                         <span class="main-text">설정 화면</span><br>
                         <span class="sub-text">
                             계정 삭제 및 로그아웃도 가능합니다.<br>
@@ -307,7 +339,7 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="img/iMockup성장3.png" alt="Mockup 12" class="thumbnail">
-                    <div class="description" data-position="right">
+                    <div class="description" data-position="left">
                         <span class="main-text">이웃 관리</span><br>
                         <span class="sub-text">
                             함께 할 이웃을 관리할 수 있습니다.<br>
@@ -347,7 +379,7 @@
                 }
             });
 
-            const totalMargin = 40;
+            const totalMargin = 200;
             const baseImageWidth = thumbnails[0].clientWidth;
             const selectedImageWidth = baseImageWidth * 1.8;
             const offset = index * (baseImageWidth + totalMargin) - ((selectedImageWidth - baseImageWidth) / 2) + 100;
