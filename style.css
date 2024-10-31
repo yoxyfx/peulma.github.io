@@ -62,13 +62,22 @@
             margin-right: 10px;
         }
 
-        /* 내비게이션 메뉴 스타일 */
-        .header-text {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+      /* 내비게이션 메뉴 스타일 */
+.header-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
+.header-text a {
+    color: #9EBF86; /* 기본 색상 */
+    text-decoration: none;
+    transition: color 0.3s ease; /* 색상 전환 효과 */
+}
+
+.header-text a:hover {
+    color: #FFB45C; /* 호버 시 색상 */
+}
 
 /* 메인 섹션 스타일 */
 #main {
@@ -169,9 +178,13 @@
 }
 
 .text-content img {
-   width:100px;
+   width:20%;
    margin-left:20px;
 }
+.text-content p img {
+    width:60%;
+    margin-left: -3px;
+ }
   /* 배경 섹션 스타일 */
 /* 배경 섹션 스타일 */
 #background {
