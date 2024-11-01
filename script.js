@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById("problemsolution");
-    const images = document.querySelectorAll(".imagea-container img");
+    const images = document.querySelectorAll(".image-container2 img"); // 수정된 부분
 
     function revealImages() {
         const sectionTop = section.getBoundingClientRect().top;
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", revealImages);
 });
+
 
 
 // bg 섹션을 옵저버에 추가합니다.

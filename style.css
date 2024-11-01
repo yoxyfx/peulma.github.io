@@ -725,53 +725,35 @@ a {
             background-color: #A9D675;
             color: #ffffff;
             width: 100%;
+            height: 1100px;
             margin: 0; 
             padding: 50px;
             position: relative;
         }
         
-        #problemsolution h2 {
-            font-size: 1.2rem; /* Adjust heading size */
-            margin-bottom: 20px;
+        .image-container2 img {
+            width: 30%; /* 이미지 크기 조절 */
+            height: auto;
+            margin: 30px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* 시작 위치 */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 효과 */
         }
         
-        #problemsolution p {
-            font-size: 1.5rem; /* Adjust paragraph text size */
-            margin-bottom: 20px;
-        }
-        
-        .imagea-container img {
-            width: 45%; /* Control image width for responsiveness */
+        .image-container2 img.show {
+            opacity: 1; /* 보이게 설정 */
+            transform: translateY(0); /* 최종 위치로 이동 */
         }
         
         .carnation {
             position: absolute;
             right: 230px;
-            bottom: 50px;
+            bottom: 300px;
             width: 120px; /* Set a smaller width for the carnation image */
             height: auto;
             z-index: 1;
         }
         
-        .carnation img {
-            width: 100%;
-            height: auto;
-        }
-        
-        
-        .imagea-container img {
-            width: 500px;
-            height: auto;
-            margin: 60px;
-            opacity: 0; /* Initially hidden */
-            transform: translateX(-50px); /* Start position */
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-        
-        .imagea-container img.show {
-            opacity: 1; /* Make visible */
-            transform: translateX(0); /* Move to final position */
-        }
         
 
         #servicekeyword {
@@ -798,7 +780,34 @@ a {
     text-align: center; /* 텍스트 중앙 정렬 */
     width: 100%;
     margin-top: 20px;
-    gap: 20px;
+    gap: 200px;
+}
+.circles-container1 {
+    display: flex;
+    position: absolute; /* 절대 위치 */
+    top: 50%; /* Y축 위치 조정 (위로 올리기) */
+    left: 53%; /* X축 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+    z-index: 2; /* 원들이 배경 이미지 위에 위치하도록 설정 */
+    gap: 90px; /* 원들 사이의 간격 */
+}
+
+.circlebg1 {
+    width: 250px; 
+    height: 250px;
+    background-color: #eaeaea; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.circlebg1 img {
+    width: 90%; /* 원의 너비에 맞게 조정 */
+    height: 90%; /* 원의 높이에 맞게 조정 */
+    border-radius: 50%; 
+    object-fit: cover; /* 비율 유지 */
+    margin: 0; /* 여백 제거 */
 }
 #info {
     display: flex;
@@ -989,6 +998,7 @@ a {
 }
 
 .slider {
+    background-color: #FBFFE5;
     width: 120%;
     height: 800px; /* 슬라이더 높이 변경 */
     position: relative;
@@ -1091,6 +1101,7 @@ margin-top: 60%;
     width: 100%;
     height: 1080px;
     padding: 0 0 50px;
+    margin-top: -80px;
     transition: background-image 1.8s ease; /* 부드러운 전환 효과 추가 */
 }
 
