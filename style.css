@@ -707,43 +707,63 @@ a {
             border-radius: 10px;
         }
         
-        #problemsolution { 
+        #problemsolution {
             display: flex; 
-            flex-direction: column; /* 세로 정렬 */
-            align-items: center; /* 섹션 내부 모든 요소 중앙 정렬 */
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            text-align: center; /* 텍스트 중앙 정렬 */
+            text-align: center;
             background-color: #A9D675;
             color: #ffffff;
             width: 100%;
             margin: 0; 
-            padding: 50px; 
-            position: relative; /* 자식 요소의 절대 위치를 사용할 수 있도록 설정 */
+            padding: 50px;
+            position: relative;
+        }
+        
+        #problemsolution h2 {
+            font-size: 1.2rem; /* Adjust heading size */
+            margin-bottom: 20px;
+        }
+        
+        #problemsolution p {
+            font-size: 1.5rem; /* Adjust paragraph text size */
+            margin-bottom: 20px;
+        }
+        
+        .imagea-container img {
+            width: 45%; /* Control image width for responsiveness */
         }
         
         .carnation {
-            position: absolute; /* 절대 위치 설정 */
-            right: 10px; /* 왼쪽으로 10px 이동 (조정 가능) */
-            bottom: 10px; /* 아래쪽으로 10px 이동 (조정 가능) */
-            width: auto; /* 원래 비율 유지 */
-            height: auto; /* 원래 비율 유지 */
-            z-index: 1; /* 다른 요소보다 위에 표시 */
+            position: absolute;
+            right: 230px;
+            bottom: 50px;
+            width: 120px; /* Set a smaller width for the carnation image */
+            height: auto;
+            z-index: 1;
         }
         
-.image-container {
-    display: flex;
-    flex-direction: row; /* 이미지를 가로로 정렬 */
-    justify-content: center;
-    gap: 100px; /* 이미지 간격 */
-    margin-top: 20px;
-}
-
-.image-container img {
-    width: 500px; /* 이미지 크기 조정 */
-    height: auto;
-    margin: 60px;
-}
-
+        .carnation img {
+            width: 100%;
+            height: auto;
+        }
+        
+        
+        .imagea-container img {
+            width: 500px;
+            height: auto;
+            margin: 60px;
+            opacity: 0; /* Initially hidden */
+            transform: translateX(-50px); /* Start position */
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        
+        .imagea-container img.show {
+            opacity: 1; /* Make visible */
+            transform: translateX(0); /* Move to final position */
+        }
+        
 
         #servicekeyword {
     display: flex; 

@@ -21,6 +21,30 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const section = document.getElementById("problemsolution");
+    const images = document.querySelectorAll(".imagea-container img");
+
+    function revealImages() {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight) {
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add("show");
+                }, index * 300); // Delay each image by 300ms
+            });
+            // Remove event listener after animation
+            window.removeEventListener("scroll", revealImages);
+        }
+    }
+
+    window.addEventListener("scroll", revealImages);
+});
+
+
 // bg 섹션을 옵저버에 추가합니다.
 const bgSection = document.getElementById('bg');
 observer.observe(bgSection);
