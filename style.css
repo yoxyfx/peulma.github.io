@@ -302,18 +302,6 @@ header {
 
 
 
-/* 이미지 컨테이너 스타일 */
-.sub {
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* 원 컨테이너 */
 /* 배경 섹션 스타일 */
@@ -351,34 +339,110 @@ header {
     color: #FFB45C;
 }
 
+.sub {
+    position: relative;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub img {
+    width: 110%; /* Ensure the background image fits the container */
+    height: auto;
+    z-index: 1; /* Lower z-index for background image */
+    position: relative; /* So it stays in the background */
+}
+
+
+.sub img {
+    width: 110%; /* Ensure the background image fits the container */
+    height: auto;
+    z-index: 1; /* Lower z-index for background image */
+    position: relative; /* So it stays in the background */
+}
 
 .circle-container {
     display: flex;
-    justify-content: center; /* 가운데 정렬 (필요시) */
-    gap: 150px; /* 원 사이 간격 조절 (원하는 크기로 조정) */
+    gap: 600px; /* Increased gap for more space between circles */
     position: absolute;
-    top: 18%; /* 이미지 위 위치 조정 */
+    top: 15%; /* Adjust this value to place the circles higher or lower */
     left: 50%;
-    transform: translate(-50%, -50%); /* 중앙에 배치 */
-    max-width: 1000px;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Higher z-index for circles to stay above the background image */
+    flex-wrap: nowrap; /* Ensure items stay in one row */
 }
+
 
 .circlebg {
-    width: 250px; /* 원 크기 */
+    width: 250px; 
     height: 250px;
-    background-color: #ffffff; /* 원 색상 */
-    border-radius: 50%; /* 원형 만들기 */
-    display: flex; /* Flexbox 사용 */
-    align-items: center; /* 수직 중앙 정렬 */
-    justify-content: center; /* 수평 중앙 정렬 */
+    background-color: #eaeaea; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
+
+/* Keep the rest of your styles the same */
+
+
 .circlebg img {
-    width: 220px; /* 이미지의 너비 */
-    height: 220px; /* 이미지의 높이 */
-    border-radius: 50%; /* 이미지도 원형으로 만들기 */
-    object-fit: cover; /* 이미지 비율 유지하며 자르기 */
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; 
+    object-fit: cover;
 }
+
+
+.subtext-container {
+    font-size: 30px;
+    text-align: center;
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가운데 정렬 */
+    gap: 150px; /* 텍스트 간격 조정 */
+    margin-top: 20px; /* 원과 텍스트 사이의 간격 */
+}
+
+.subtext-container p {
+    margin: 0; /* 기본 마진 제거 */
+}
+
+/* 부가 정보 스타일 */
+.subinfo {
+    font-size: 1em;
+    color: #7A7A7A;
+    margin-top: 20px;
+}
+
+
+.circlebg {
+    width: 250px; 
+    height: 250px;
+    background-color: #eaeaea; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+/* Keep the rest of your styles the same */
+
+
+.circlebg img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
 
 .subtext-container {
     font-size: 30px;
