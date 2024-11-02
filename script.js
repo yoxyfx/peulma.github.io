@@ -3,6 +3,21 @@ document.querySelector('.fixed-button').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const backgroundSection = document.querySelector("#background");
+
+    function handleScroll() {
+        const sectionPosition = backgroundSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (sectionPosition < screenPosition) {
+            backgroundSection.classList.add("visible");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+});
+
 
 // 모든 talk 이미지를 선택합니다.
 const talkImages = document.querySelectorAll('.talk-img');
