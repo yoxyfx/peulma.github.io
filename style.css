@@ -1269,21 +1269,21 @@ a {
 
 .thumbnail-container {
     position: relative;
-    margin: 0 80px;
+    margin: 0 40px;
 }
 /* 첫 번째와 두 번째 슬라이더 위치 조정 */
 #greenhouse-slider-1 .slider,
 #greenhouse-slider-2 .slider {
  background-color: #FBFFE5;
-padding-left: 400px; /* 기존 500px에서 400px로 줄여서 왼쪽으로 이동 */
+padding-left: 350px; /* 기존 500px에서 400px로 줄여서 왼쪽으로 이동 */
 }
 
 #greenhouse-slider-3, #greenhouse-slider-4 {
     background-color: #FBFFE5;
-padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
+padding-left: 900px; /* 오른쪽으로 이동하는 패딩 추가 */
 }
 .slide img {
-    width: 200px;
+    width: 240px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -1293,7 +1293,7 @@ padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
     position: absolute;
     width: max-content;
     text-align: left; /* 좌측 정렬 */
-    margin-left: 80px;
+    margin-left: 45px;
     color: #3E7443;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1311,7 +1311,7 @@ padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
 }
 
 .selected {
-    transform: scale(1.8);
+    transform: scale(1.5);
     transform-origin: center;
     z-index: 10;
 }
@@ -1327,7 +1327,7 @@ padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
 .thumbnail.faded {
 transform: translateY(10px); /* 선택되지 않은 이미지들을 아래로 이동 */
 opacity: 0.5; /* 선택되지 않은 이미지의 투명도 조정 */
-margin-top: 60%;
+margin-top: 40%;
 }
         #information {
     display: flex;
