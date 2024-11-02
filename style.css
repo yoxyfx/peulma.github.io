@@ -324,7 +324,9 @@ header {
     font-size: 1.2em;
     color: #3E7443;
 }
-
+.lines{
+    margin-top: 50px;
+}
 .line1 {
     font-size: 1.8em;
     color: #333333;
