@@ -420,7 +420,8 @@ header {
 
 .subtext-container {
     color:#3E7443;
-    font-size: 30px;
+    font-size: 40px;
+    line-height: 1.2em;
     text-align: center;
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 가운데 정렬 */
@@ -431,6 +432,7 @@ header {
 
 
 .subtext-container p {
+   
     margin: 0; /* 기본 마진 제거 */
     margin-top: 0; /* 각 요소 간의 기본 간격을 제거하여 글자가 더 밑으로 내리도록 설정 */
 }
@@ -1269,6 +1271,7 @@ padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
     position: absolute;
     width: max-content;
     text-align: left; /* 좌측 정렬 */
+    margin-left: 80px;
     color: #3E7443;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1280,8 +1283,9 @@ padding-left: 700px; /* 오른쪽으로 이동하는 패딩 추가 */
 }
 
 .description .sub-text {
-    font-size: 20px;
+    font-size: 30px;
     color: #666;
+    line-height: 1.5em;
 }
 
 .selected {
@@ -1619,12 +1623,15 @@ margin-top: 60%;
             width: 80%;
             margin: 20px auto;
         }
+        .copyright{
+            margin-left: 250px;
+        }
         .copyright p{
-            text-align: center;
+            text-align: left;
         }
         
         footer p {
-            font-size: 0.9em;
+            font-size: 1.0em;
             opacity: 0.8;
             margin-top: 10px;
         }
