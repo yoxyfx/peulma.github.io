@@ -89,7 +89,7 @@ header {
 .fixed-button {
     position: fixed;
     bottom: 80px;
-    right: 80px;
+    right: 240px;
     width: 100px;
     height: 100px;
     background-image: url('img/TOP.png'); /* 기본 배경 이미지 */
@@ -1098,14 +1098,15 @@ a {
     align-items: center;
     justify-content: center;
     background-color: #FBFFE5;
-    height: 2000px;
+    height: 1800px;
     text-align: center;
 }
 
 .video-container video {
-    width: 100%; /* 필요에 따라 비디오 크기 조정 */
+    width: 120%; /* 필요에 따라 비디오 크기 조정 */
     border-radius: 8px; /* 비디오 모서리를 둥글게 만듦 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    
 }
 
 .greenhouse-slider-container {
