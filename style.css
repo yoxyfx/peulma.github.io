@@ -873,6 +873,22 @@ a {
     object-fit: cover; /* 비율 유지 */
     margin: 0; /* 여백 제거 */
 }
+.line1 {
+    display: flex;
+    position: relative; /* 부모 요소에 상대적으로 위치 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    z-index: 1; /* 배경 이미지 아래에 위치 */
+    margin-top: -100px;
+    margin-left: 50px; /* 상단 여백 추가 */
+}
+
+.line1 > img {
+    width: 8px;
+    height: auto;
+    margin: 0 180px; /* 각 이미지 사이의 간격을 조정 */
+}
+
+
 #info {
     display: flex;
     flex-direction: column;
