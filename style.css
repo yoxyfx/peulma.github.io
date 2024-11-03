@@ -1653,8 +1653,8 @@ margin-top: 40%;
 
 .teamtitle {
     text-align: left; /* Left alignment */
-    margin-top: 100px;
     margin-left: 300px;
+    margin-top: 100px;
     width: 100%; /* Full width for proper alignment */
 }
 
@@ -1769,7 +1769,7 @@ margin-top: 40%;
     margin: 0; /* Remove margin */
     width: 100%;
     height: 1200px;
-    font-weight: 900; /* Bold text */
+    font-weight: 900; /* 두껍게 설정 */
     font-size: 35px;
     display: flex;
     flex-direction: column;
@@ -1778,20 +1778,6 @@ margin-top: 40%;
     padding: 50px;
     box-sizing: border-box;
     text-align: center;
-    opacity: 0; /* Start as invisible */
-    animation: slideUp 1s forwards; /* Trigger the slide up animation */
-}
-
-/* Animation for sliding up */
-@keyframes slideUp {
-    0% {
-        transform: translateY(50%); /* Start below */
-        opacity: 0; /* Start invisible */
-    }
-    100% {
-        transform: translateY(0); /* End at normal position */
-        opacity: 1; /* End visible */
-    }
 }
 
 .characterimg {
@@ -1808,13 +1794,13 @@ margin-top: 40%;
 
 .characterimg img {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 55%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Align center */
+    top: 50%; /* 이미지의 중심을 부모의 중심에 맞춤 */
+    left: 55%;
+    transform: translate(-50%, -50%); /* 수평 및 수직 중앙 정렬 */
     width: 100%;
     height: auto;
     opacity: 0;
-    animation-duration: 2.0s; /* Slow transition */
+    animation-duration: 1.5s; /* 느린 교체 속도 */
     animation-iteration-count: infinite;
 }
 
@@ -1828,28 +1814,24 @@ margin-top: 40%;
 
 @keyframes frame1Visible {
     0%, 50% { 
-        opacity: 0; /* Show frame1 */
+        opacity: 0; /* frame1을 보이게 함 */
     } 
+    
     60%, 100% { 
-        opacity: 1; /* Fully hide frame1 */
+        opacity: 1; /* frame1을 완전히 숨김 */
     }
 }
 
 @keyframes frame2Visible {
     0%, 50% { 
-        opacity: 1; /* Hide frame2 */
+        opacity: 1; /* frame2를 숨김 */
     } 
+   
     60%, 100% { 
-        opacity: 0; /* Maintain frame2 visibility */
+        opacity: 0; /* frame2를 유지 */
     }
 }
 
-/* Additional class for the text inside #character */
-#character p {
-    opacity: 0; /* Start as invisible */
-    animation: slideUp 1s forwards; /* Trigger the slide up animation for text */
-    animation-delay: 0.5s; /* Delay slightly for text */
-}
 
 
 

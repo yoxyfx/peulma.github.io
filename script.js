@@ -237,4 +237,40 @@ document.addEventListener('scroll', function() {
         
             observer.observe(teamSection);
         });
+        document.addEventListener("DOMContentLoaded", () => {
+            const elementsToAnimate = document.querySelectorAll('#main .slide-up');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.05 // 5%가 보일 때 트리거
+            };
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // visible 클래스 추가
+                        observer.unobserve(entry.target); // 관찰 중지
+                    }
+                });
+            }, observerOptions);
+        
+            elementsToAnimate.forEach(element => {
+                observer.observe(element); // 각 요소를 관찰
+            });
+        });
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                const context = this;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+        }
+        
+        const optimizedScrollHandler = debounce(() => {
+            // 스크롤 관련 작업 수행
+        }, 100); // 100ms 대기 후 실행
+        
+        window.addEventListener('scroll', optimizedScrollHandler);
+        
         
