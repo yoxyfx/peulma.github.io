@@ -172,7 +172,7 @@ document.addEventListener('scroll', function() {
                 const windowHeight = window.innerHeight; // 현재 창의 높이
         
                 // 섹션이 화면에 보이는 경우
-                if (sectionTop < windowHeight * 0.75) { // 창 높이의 75% 이상 보이면
+                if (sectionTop < windowHeight * 0.9) { // 창 높이의 75% 이상 보이면
                     teamSection.classList.remove('hidden'); // hidden 클래스 제거
                     teamSection.classList.add('visible'); // visible 클래스 추가
                 }
@@ -189,7 +189,7 @@ document.addEventListener('scroll', function() {
             const options = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.5 // 10%가 보일 때
+                threshold: 0.8 // 10%가 보일 때
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -205,3 +205,35 @@ document.addEventListener('scroll', function() {
                 observer.observe(element); // 모든 fade-in 요소를 관찰
             });
         });
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const characterSection = document.getElementById('character');
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        characterSection.classList.add('visible');
+                    }
+                });
+            });
+        
+            observer.observe(characterSection);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const teamSection = document.getElementById('team');
+            const elementsToAnimate = teamSection.querySelectorAll('.teamtitle, .profileimg, .circle-container, .circle-text');
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        elementsToAnimate.forEach(element => {
+                            element.classList.add('slide-up');
+                        });
+                    }
+                });
+            });
+        
+            observer.observe(teamSection);
+        });
+        
