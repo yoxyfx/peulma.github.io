@@ -1021,7 +1021,7 @@ a {
         
         .carnation {
             position: absolute;
-            right: 240px;
+            right: 160px;
             bottom: 80px;
             width: 200px; /* Set a smaller width for the carnation image */
             height: auto;
@@ -1075,8 +1075,8 @@ a {
             justify-content: flex-start; /* Change to flex-start to align items to the left */
             gap: 10px; /* Space between keywords */
             margin: 0 auto; /* Center the entire container */
-            padding-left: 100px; /* Add padding to the left if needed to create space */
-            margin-left: 150px;
+            padding-left: -20px; /* Add padding to the left if needed to create space */
+            /*margin-left: 150px;*/
         }
         
         
@@ -1613,16 +1613,19 @@ margin-top: 40%;
     justify-content: center;
     text-align: center;
     background-image: url('img/bg1.png'); /* 초기 배경 이미지 */
-    background-size: contain; /* 배경 이미지 비율 유지 */
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover; /* 배경 이미지를 여백 없이 꽉 채움 */
+    background-position: center;
+    background-repeat: no-repeat;
     color: #021502;
     width: 100%;
-    height: 950px;
-   
-   
+    height: 850px;
+    margin: 0;
+    margin-top: -50px;
+
     transition: background-image 1.8s ease; /* 부드러운 전환 효과 추가 */
+    z-index: 10;
 }
+
 /* Add more media queries as needed for smaller screens */
 @media (max-width: 480px) {
     /* Additional styles for very small screens */
@@ -1659,6 +1662,7 @@ margin-top: 40%;
         background-image: url('img/bgbg1.png');
         background-size: cover; 
         background-position: center; 
+        
     }
     
     #team img {
