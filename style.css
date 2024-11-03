@@ -9,7 +9,7 @@
     font-family: 'NanumSquareRound';
     src: url('font/NanumSquareRoundOTFB.woff2') format('woff2'),
          url('font/NanumSquareRoundOTFB.otf') format('opentype');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -259,7 +259,7 @@ header {
     background-color: #ffffff;
     color: #000000;
     width: 100%;
-    height: 1000px;
+    height: 1500px;
     margin: 0; 
     padding: 50px; 
 }
@@ -307,9 +307,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     background-color: #ffffff;
-    color: #000000;
+    color: #000000; 
     width: 100%;
     margin: 0;
     padding: 50px;
@@ -341,20 +340,24 @@ header {
 .lines{
     margin-top: 50px;
 }
-.line1 {
+.lines1 {
     font-size: 1.8em;
+    line-height: 1.8em;
+    font-weight: bold; /* font-style은 italic/bold가 아닌 font-weight로 설정해야 합니다. */
     color: #333333;
+    display: block; /* display 속성 추가 */
 }
 
-.line2 {
-    margin-top: 100px;
-    margin-left: 50px;
+
+.lines2 {
+    text-align: center;
+    margin-top: 800px;
     font-size: 1.5em;
     color: #555555;
-    line-height: 1.2em;
+    line-height: 1.8em;
 }
 
-.line3 {
+.lines3 {
     color: #FFB45C;
     line-height: 1.2em;
 }
@@ -423,21 +426,25 @@ header {
 }
 
 .subtext-container {
-    color:#3E7443;
+    color: #3E7443;
     font-size: 40px;
     line-height: 1.2em;
     text-align: center;
-    display: flex; /* Flexbox 사용 */
-    justify-content: center; /* 가운데 정렬 */
-    gap: 210px; /* 텍스트 간격 조정 */
-    margin-left:150px;
-    margin-top: 120px; /* 원과 텍스트 사이의 간격을 더 늘림 */
+    display: flex;
+    justify-content: center;
+    gap: 210px;
+    margin-top: 120px;
+    transform: translateX(60px); /* 컨테이너 전체를 오른쪽으로 이동 */
 }
 
-
 .subtext-container p {
-    margin: 10px; /* 기본 마진 제거 */
-    margin-top: 0; /* 각 요소 간의 기본 간격을 제거하여 글자가 더 밑으로 내리도록 설정 */
+    margin: 10px;
+    margin-top: 0;
+}
+
+/* Plant 텍스트만 왼쪽으로 이동 */
+.move-left {
+    transform: translateX(-20px); /* Plant 텍스트를 왼쪽으로 이동 */
 }
 
 
