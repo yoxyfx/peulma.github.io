@@ -1321,7 +1321,7 @@ a {
 .slider {
     background-color: #FBFFE5;
     width: 120%;
-    height: 800px; /* 슬라이더 높이 변경 */
+    height: 1000px; /* 슬라이더 높이 변경 */
     position: relative;
     padding-left: 500px;
     margin: 0 auto;
@@ -1331,7 +1331,7 @@ a {
 .slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 500px; /* 여기서 높이를 1000px로 설정 */
+    height: 600px; /* 여기서 높이를 1000px로 설정 */
 }
 
 .thumbnail-container {
