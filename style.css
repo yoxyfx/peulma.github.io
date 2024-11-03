@@ -149,7 +149,7 @@ header {
 .flower1 img {
     z-index: 3; /* 가장 위에 */
     position: absolute; /* 위치를 절대적으로 설정 */
-    top: 0; /* 초기 위치 */
+    top: 3%; /* 초기 위치 */
     left: 20%; /* 초기 위치 */
     width: 20%;
     height: auto;
@@ -184,7 +184,7 @@ header {
         top: 0; /* 위쪽 위치 */
     }
     100% {
-        top: 50px; /* 아래쪽으로 이동 (조정 가능) */
+        top: 30px; /* 아래쪽으로 이동 (조정 가능) */
     }
 }
 
@@ -252,6 +252,31 @@ header {
 .app-icon {
     width: 15% !important; /* 중요한 속성으로 지정하여 우선 적용 */
 }
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px; /* Less padding on smaller screens */
+    }
+
+    .text-content {
+        max-width: 100%; /* Allow full width for text */
+        font-size: 18px; /* Slightly smaller font size */
+    }
+
+    .mockup img {
+        max-width: 100%; /* Ensure images are responsive */
+        margin-left: 0; /* Remove margin on small screens */
+    }
+
+    .fixed-button {
+        right: 20px; /* Adjust position for smaller screens */
+    }
+
+    .circle {
+        width: 90%; /* Make circle responsive */
+        height: auto; /* Keep aspect ratio */
+        top: 80%; /* Adjust position */
+    }
+}
 
 
   /* 배경 섹션 스타일 */
@@ -273,7 +298,7 @@ header {
 
 .alpapa {
     position: absolute; /* 절대 위치 지정 */
-    top: 10%; /* 상단에 배치 */
+    top: 20%; /* 상단에 배치 */
     left: 0; /* 왼쪽에 배치 */
     width: 50%; /* 너비를 50%로 유지 */
     height: auto;
@@ -462,6 +487,42 @@ header {
     color: #7A7A7A;
     margin-top: 20px;
 }
+@media (max-width: 768px) {
+    #background {
+        padding: 20px; /* Reduce padding on small screens */
+        height: auto; /* Allow the height to be flexible */
+    }
+
+    .alpapa {
+        width: 80%; /* Increase width for smaller screens */
+        top: 10%; /* Adjust position */
+    }
+
+    .lines1 {
+        font-size: 1.5em; /* Smaller font size */
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .lines2 {
+        margin-top: 300px; /* Reduce top margin */
+        font-size: 1.2em; /* Smaller font size */
+    }
+
+    .subtext-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Reduce gap */
+    }
+
+    .sub img {
+        width: 100%; /* Ensure images are responsive */
+        margin-left: 0; /* Center image */
+    }
+
+    .circlebg {
+        width: 150px; /* Smaller circles on smaller screens */
+        height: 150px;
+    }
+}
 
 
    /* 배경 및 텍스트 스타일 */
@@ -598,6 +659,38 @@ a {
     height: auto; /* 비율 유지 */
 }
 
+@media (max-width: 768px) {
+    #bg {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .background-title {
+        font-size: 1.2em; /* Smaller title */
+    }
+
+    .background-description {
+        font-size: 1em; /* Smaller description */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .alpapa2 {
+        right: -100px; /* Adjust positioning */
+        width: 70%; /* Increase width for smaller screens */
+    }
+
+    .alpapa2 img {
+        width: 30%; /* Adjust image size */
+    }
+
+    .talk, .graph {
+        flex: 1 1 100%; /* Stack sections vertically */
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+
+    .graph {
+        margin-left: 0; /* Reset margin on smaller screens */
+    }
+}
 
 
 
@@ -812,7 +905,39 @@ a {
     width: 300px;
     height: auto;
 }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #survey, #stress, #user {
+        padding: 20px; /* Reduce padding on smaller screens */
+        min-height: auto; /* Allow sections to adjust */
+    }
 
+    .survey-container {
+        flex-direction: column; /* Stack survey items */
+        align-items: center;
+    }
+
+    .survey {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .stress-subtitle, .stress-highlight {
+        font-size: 24px; /* Reduce font size */
+    }
+
+    .make {
+        flex-direction: column; /* Stack characters vertically */
+        margin-top: 50px; /* Adjust spacing */
+    }
+
+    .charac, .charac2, .charac1 {
+        width: 50px; /* Adjust character size */
+    }
+
+    .rectangle img {
+        width: 100%; /* Make images responsive */
+    }
+}
 
 
 #persona {
@@ -1102,7 +1227,39 @@ a {
             margin: 0 160px; /* 각 이미지 사이의 간격을 조정 */
         }
         
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .backgroundimg-container {
+        width: 80%; /* Adjust for smaller screens */
+    }
 
+    .persona {
+        width: 90%; /* Increase width for mobile */
+    }
+
+    .circlebg1 {
+        width: 150px; /* Smaller circles for mobile */
+        height: 150px;
+    }
+
+    .circlebg1 p {
+        font-size: 20px; /* Adjust text size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #persona {
+        padding: 2%; /* Less padding on small screens */
+    }
+
+    .line1 > img {
+        margin: 0 20px; /* Reduce margin on mobile */
+    }
+
+    #servicekeyword h2, #servicekeyword h3, #servicekeyword h5 {
+        margin-left: 0; /* Center headings on mobile */
+    }
+}
 #info {
     display: flex;
     flex-direction: column;
@@ -1124,7 +1281,25 @@ a {
     margin: 0; /* 기본 마진 제거 */
 }
 
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    #persona, #problemsolution {
+        padding: 10px; /* More padding for smaller screens */
+    }
 
+    .backgroundimg-container {
+        width: 80%; /* Adjust background image width */
+    }
+
+    .persona {
+        width: 90%; /* Adjust persona width */
+    }
+
+    .image-container2 img {
+        width: 90%; /* Responsive image width */
+    }
+}
         /* Brand 섹션 스타일 */
         #brand {
             display: flex;
@@ -1425,6 +1600,7 @@ margin-top: 40%;
     width:100%;
     padding:50px;
 }
+
 .custom-heading {
     color: #3E7443; /* 원하는 색상 코드로 변경 */
 }
@@ -1445,7 +1621,17 @@ margin-top: 40%;
     margin-top: -80px;
     transition: background-image 1.8s ease; /* 부드러운 전환 효과 추가 */
 }
+/* Add more media queries as needed for smaller screens */
+@media (max-width: 480px) {
+    /* Additional styles for very small screens */
+    #info, #brand, #video-player, .uikit {
+        padding: 10px; /* Adjust padding */
+    }
 
+    .description {
+        font-size: 0.8em; /* Smaller font for mobile */
+    }
+}
 
 #team {
     display: flex;
@@ -1646,7 +1832,8 @@ margin-top: 40%;
             width: 100%;
             box-sizing: border-box;
             opacity: 1; 
-            transition: opacity 0.6s ease; /* 페이드인 효과 */
+            transition: opacity 1.0s ease; /* 페이드인 효과 */
+            
         }
 
         section.visible {
@@ -1660,14 +1847,17 @@ margin-top: 40%;
         section p {
             color: inherit;
         }
-    
-        .fade-in {
-            opacity: 0; /* 초깃값 */
-        }
-        
-        .fade-in.visible {
-            opacity: 1; /* 나타나는 상태 */
-        }
+      
+       .hidden {
+    opacity: 0; /* 초기 상태: 완전 투명 */
+    transform: translateY(20px); /* 아래로 약간 이동 */
+    transition: opacity 0.5s ease, transform 1.0s ease; /* 애니메이션 효과 */
+}
+
+.visible {
+    opacity: 1; /* 보이는 상태: 불투명 */
+    transform: translateY(0); /* 원래 위치로 돌아옴 */
+}
         .text-content {
             flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
             padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
@@ -1755,4 +1945,58 @@ margin-top: 40%;
             opacity: 0.8;
             margin-top: 10px;
         }
-        
+        /* Media Queries */
+@media (max-width: 1200px) {
+    .teamtitle {
+        margin-left: 10%; /* Less margin on medium screens */
+    }
+    .profileimg {
+        flex-direction: row; /* Change back to row for larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    team {
+        padding: 2vw; /* Less padding on small screens */
+    }
+
+    .teamtitle {
+        text-align: center; /* Center text on small screens */
+        margin-left: 0; /* Remove margin */
+    }
+
+    .profileimg {
+        flex-direction: column; /* Stack profiles on top of each other */
+    }
+
+    .profile-item {
+        margin-top: 20px; /* Reduce margin between items */
+    }
+
+    #character {
+        height: auto; /* Let height adjust automatically */
+    }
+
+    footer {
+        text-align: center; /* Center footer content */
+    }
+
+    .name-group {
+        flex-direction: column; /* Stack names on small screens */
+        gap: 20px; /* Adjust spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-item .name {
+        font-size: 1.2em; /* Smaller font size for names */
+    }
+
+    .profile-item .descriptionj {
+        font-size: 1em; /* Smaller font size for descriptions */
+    }
+
+    footer p {
+        font-size: 1em; /* Smaller font size in footer */
+    }
+}

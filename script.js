@@ -164,7 +164,24 @@ document.addEventListener('scroll', function() {
                 }
             });
         });  
-
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamSection = document.getElementById('team');
+        
+            function checkVisibility() {
+                const sectionTop = teamSection.getBoundingClientRect().top; // 섹션의 위치
+                const windowHeight = window.innerHeight; // 현재 창의 높이
+        
+                // 섹션이 화면에 보이는 경우
+                if (sectionTop < windowHeight * 0.75) { // 창 높이의 75% 이상 보이면
+                    teamSection.classList.remove('hidden'); // hidden 클래스 제거
+                    teamSection.classList.add('visible'); // visible 클래스 추가
+                }
+            }
+        
+            window.addEventListener('scroll', checkVisibility); // 스크롤 시 checkVisibility 함수 호출
+            checkVisibility(); // 초기 로드 시 체크
+        });
+        
 
         document.addEventListener('DOMContentLoaded', () => {
             const fadeElements = document.querySelectorAll('.fade-in');
@@ -172,7 +189,7 @@ document.addEventListener('scroll', function() {
             const options = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1 // 10%가 보일 때
+                threshold: 0.5 // 10%가 보일 때
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
