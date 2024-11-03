@@ -901,12 +901,11 @@ a {
     background-repeat: no-repeat;
     color: #ffffff;
     width: 100%;
-    height: 1100px; /* 이 높이는 고정 */
+    height: 1100px; /* 고정 높이 */
     padding: 20px;
-    z-index: 3; /* user보다 위에 위치하도록 설정 */
+    z-index: 5; /* user보다 위에 위치하도록 설정 */
     position: relative; /* z-index 사용을 위한 위치 설정 */
 }
-
 
 .stress-text {
     margin-top: -200px; /* 텍스트를 위로 더 올리기 위해 마진 증가 */
@@ -926,7 +925,6 @@ a {
     text-align: center; /* 중앙 정렬 */
 }
 
-       
 #user {
     display: flex;
     flex-direction: column;
@@ -938,12 +936,13 @@ a {
     background-repeat: no-repeat;
     color: #ffffff;
     width: 100%;
-    min-height: 250vh; /* 최소 화면 높이를 100vh로 설정 */
+    height: 1100px; /* 고정 높이 */
     padding: 50px;
     text-align: center;
-    margin-top: -600px;
     z-index: 2;
+    position: relative; /* z-index 사용을 위한 위치 설정 */
 }
+
 
         
         #user h1 {
