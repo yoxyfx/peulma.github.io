@@ -960,7 +960,7 @@ a {
     text-align: center;
     width: 350px; /* 키워드 1 너비 */
     border-radius: 10px;
-    margin-left: 10px; /* 기존 위치 유지 */
+    margin-left: 50px; /* 기존 위치 유지 */
     z-index: 2;
 }
 
@@ -991,7 +991,7 @@ a {
     text-align: center;
     width: 350px; /* 키워드 2 너비 */
     border-radius: 10px;
-    margin-left: 30px; /* 왼쪽으로 이동 */
+    margin-left: -20px; /* 왼쪽으로 이동 */
 }
 
 .keyword2 h4 {
@@ -1018,7 +1018,7 @@ a {
     text-align: center;
     width: 350px; /* 키워드 3 너비 */
     border-radius: 10px;
-    margin-left: -50px; /* 왼쪽으로 이동 (더 왼쪽으로) */
+    margin-left: -20px; /* 왼쪽으로 이동 (더 왼쪽으로) */
 }
 
 /* Adjust the heading styles for Keyword 3 */
