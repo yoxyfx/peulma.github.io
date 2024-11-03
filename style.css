@@ -1820,13 +1820,14 @@ margin-top: 40%;
 
 .characterimg img {
     position: absolute;
-    top: 50%; /* 이미지의 중심을 부모의 중심에 맞춤 */
+    top: 50%;
     left: 55%;
-    transform: translate(-50%, -50%); /* 수평 및 수직 중앙 정렬 */
+    transform: translate(-50%, -50%);
     width: 100%;
+    max-width: 800px;
     height: auto;
     opacity: 0;
-    animation-duration: 1.5s; /* 느린 교체 속도 */
+    animation-duration: 3s; /* 애니메이션 속도 조절 */
     animation-iteration-count: infinite;
 }
 
@@ -1836,25 +1837,24 @@ margin-top: 40%;
 
 .frame2 {
     animation-name: frame2Visible;
+    width: 90%; /* 두 번째 이미지를 살짝 작게 설정 */
 }
 
 @keyframes frame1Visible {
-    0%, 50% { 
-        opacity: 0; /* frame1을 보이게 함 */
-    } 
-    
-    60%, 100% { 
-        opacity: 1; /* frame1을 완전히 숨김 */
+    0%, 45% { 
+        opacity: 1; /* frame1이 표시되는 기간 */
+    }
+    50%, 100% { 
+        opacity: 0; /* frame1이 사라지는 기간 */
     }
 }
 
 @keyframes frame2Visible {
-    0%, 50% { 
-        opacity: 1; /* frame2를 숨김 */
-    } 
-   
-    60%, 100% { 
-        opacity: 0; /* frame2를 유지 */
+    0%, 45% { 
+        opacity: 0; /* frame2가 숨겨져 있는 기간 */
+    }
+    50%, 100% { 
+        opacity: 1; /* frame2가 표시되는 기간 */
     }
 }
 
