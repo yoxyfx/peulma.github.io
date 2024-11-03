@@ -20,6 +20,7 @@ document.querySelectorAll('.header-text a').forEach(anchor => {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
     const backgroundSection = document.querySelector("#background");
 

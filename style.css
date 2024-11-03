@@ -1637,22 +1637,18 @@ margin-top: 40%;
     background-image: url('img/bgbg1.png'); /* Set your background image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background */
+
     margin: 0; /* Remove margin */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center align for the entire section */
+  
     color: #3E7443;
     width: 100%;
+   
+   
     box-sizing: border-box;
     text-align: center; /* Default text alignment */
-}
-
-.teamtitle,
-.profileimg,
-.circle-container,
-.circle-text {
-    opacity: 0; /* Start as invisible */
-    animation: slideUp 1s forwards; /* Trigger the slide up animation */
 }
 
 .teamtitle {
@@ -1660,38 +1656,108 @@ margin-top: 40%;
     margin-top: 100px;
     margin-left: 300px;
     width: 100%; /* Full width for proper alignment */
-    animation-delay: 0.2s; /* Slight delay for the title */
+}
+
+ 
+.teamtitle h2 {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    line-height: 1.2; /* Optional: Adjust line height for consistent spacing */
+}
+
+.teamtitle img{
+    width:15%;
+    height: auto;
+    margin-top: 25px;
 }
 
 .profileimg {
-    display: flex; /* Flexbox to use for horizontal layout */
-    justify-content: center; /* Center horizontally */
-    gap: 3px; /* Item spacing */
-    margin-top: 130px; /* Top margin */
-    padding: 90px;
-    animation-delay: 0.4s; /* Slight delay for profile images */
+    display: flex; /* Flexbox를 사용하여 수평 배열 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    gap: 3px; /* 아이템 간격 조정 */
+    margin-top: 130px; /* 위쪽 여백 */
+    padding:90px;
+   
 }
+
+.profile-item {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    position: relative; /* 자식 요소가 절대 위치를 가질 수 있도록 설정 */
+}
+.profile-item img{
+    right:1%;
+}
+
+.profile-circle {
+    display: flex;
+    align-items: center; /* 이미지 수직 중앙 정렬 */
+    justify-content: center; /* 이미지 수평 중앙 정렬 */
+}
+
+.circle-shape {
+    width: 90px; /* 원의 너비 */
+    height: 90px; /* 원의 높이 */
+    background-color: #b0e57c; /* 원 색상 */
+    border-radius: 50%; /* 원 모양 */
+    display: flex;
+    align-items: center; /* 내용 수직 정렬 */
+    justify-content: center; /* 내용 수평 정렬 */
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px; /* 원과 텍스트 사이 간격 */
+}
+
+.profile-item {
+    margin-top: 40px; /* Adding margin directly to the profile item */
+  
+}
+
+.profile-item p {
+    margin: 0; /* Remove default margin from paragraph */
+}
+
+.profile-item .name {
+    font-size: 1.5em; /* Team member's name font size */
+    font-weight: bold; /* Bold font */
+    color: #5B5B5B; /* Team member name color */
+    margin-top: 30px; /* Increase space above the name */
+}
+
+.profile-item .descriptionj {
+    font-size: 1.2em; /* Description text font size */
+    color: #6F9E58; /* Description text color */
+    font-weight: bold; /* Bold font */
+    margin-top: 15px; /* Space below the description */
+}
+
+.profile-item .phonenumber {
+    font-size: 0.85em; /* Phone number font size */
+    color: #5B5B5B; /* Phone number color */
+    margin-top: 50px; /* Space above the phone number */
+}
+
 
 .circle-container {
     display: flex; 
-    flex-wrap: wrap; /* Auto wrap on small screens */
-    justify-content: center; /* Center horizontally */
-    align-items: flex-start; /* Align items to the top */
-    gap: 50px; /* Circle spacing */
+    flex-wrap: wrap; /* 작은 화면에서도 자동 줄바꿈 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: flex-start; /* 상단 정렬로 변경 */
+    gap: 50px; /* 원 사이 간격 */
     width: 100%;
-    max-width: 1200px; /* Max width limit */
-    margin: 0 auto; /* Center alignment */
-    margin-top: 100px; /* Space above */
-    animation-delay: 0.6s; /* Slight delay for circle container */
+    max-width: 1200px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 중앙에 배치 */
+    margin-top: 100px; /* 공간 확보 */
 }
 
 .circle-text {
     text-align: center;
-    line-height: 1.5; /* Line height */
+    line-height: 1.5; /* 줄 간격 */
     font-size: 16px;
     color: #030303;
-    margin-top: 20px; /* Margin */
-    padding-top: 10px; /* Padding */
+    margin-top: 20px; /* 마진이 적용되지 않으면 패딩을 고려 */
+    padding-top: 10px; /* 패딩을 사용하여 공간을 확보 */
 }
 
 
