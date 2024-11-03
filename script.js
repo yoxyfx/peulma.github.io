@@ -37,6 +37,39 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const circleImages = document.querySelectorAll(".circlebg");
+    const textItems = document.querySelectorAll(".subtext-container p");
+
+    function animateOnScroll(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // 이미 나타난 요소는 더 이상 관찰하지 않음
+            }
+        });
+    }
+
+    const observerOptions = {
+        threshold: 0.5 // 요소의 절반이 화면에 들어왔을 때 애니메이션 시작
+    };
+
+    const observer = new IntersectionObserver(animateOnScroll, observerOptions);
+
+    // 원형 이미지 순차적으로 나타나게 설정
+    circleImages.forEach((circle, index) => {
+        observer.observe(circle);
+        circle.style.transitionDelay = `${index * 0.3}s`; // 각 이미지에 지연 시간 적용
+    });
+
+    // 텍스트 순차적으로 나타나게 설정
+    textItems.forEach((text, index) => {
+        observer.observe(text);
+        text.style.transitionDelay = `${index * 0.3 + 0.9}s`; // 텍스트에 추가 지연 시간 적용
+    });
+});
+
+
 // 모든 talk 이미지를 선택합니다.
 const talkImages = document.querySelectorAll('.talk-img');
 

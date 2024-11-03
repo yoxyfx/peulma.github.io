@@ -161,7 +161,7 @@ header {
     z-index: 2; /* 그 다음 위에 */
     position: absolute; /* 위치를 절대적으로 설정 */
     top: 430px; /* 초기 위치 */
-    left: 10%; /* 초기 위치 */
+    left: 0; /* 초기 위치 */
     width: 20%;
     height: auto;
     animation: moveLeftRight 2s infinite alternate; /* 좌우 애니메이션 */
@@ -202,7 +202,7 @@ header {
     position: absolute; 
     width: 980px; 
     height: 980px; 
-    background-color: rgba(251, 255, 229, 0.8); 
+    /*background-color: rgba(251, 255, 229, 0.8); */
     border-radius: 50%; 
     z-index: 0; /* 가장 아래에 위치하도록 설정 */
     top: 88%; 
@@ -211,10 +211,10 @@ header {
 }
 
 .circle img {
-    width: 90%;
+    width: 125%;
     position: relative; /* 위치를 상대적으로 설정 */
-    top: -15%; /* 위로 이동 (조정 가능) */
-    left: 20%; /* 오른쪽으로 이동 (조정 가능) */
+    top: -20%; /* 위로 이동 (조정 가능) */
+    left: -10%; /* 오른쪽으로 이동 (조정 가능) */
 }
 
 
@@ -226,7 +226,7 @@ header {
             object-fit: cover; 
             z-index: 1; /* 이미지의 z-index도 조정 */
             position: relative; /* z-index 적용을 위해 position 설정 */
-            margin-left: 100px;
+            margin-left: 60px;
         }
 
       
@@ -487,6 +487,21 @@ header {
     color: #7A7A7A;
     margin-top: 20px;
 }
+
+/* 초기 상태 설정 */
+.circlebg, .subtext-container p {
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 위로 올라오도록 설정 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 트랜지션 설정 */
+}
+
+/* 요소가 보일 때 적용되는 상태 */
+.circlebg.visible, .subtext-container p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 @media (max-width: 768px) {
     #background {
         padding: 20px; /* Reduce padding on small screens */
@@ -778,14 +793,14 @@ a {
     text-align: center;
     background-image: url(img/stressimg.png);
     background-color: #a3cb6a;
-    background-size: contain; /* 이미지 비율 유지 */
-    background-position: top center; /* 상단 고정 */
+    background-size: cover; /* 배경 이미지가 화면에 꽉 차도록 설정 */
+    background-position: center; /* 배경 이미지 중앙 정렬 */
     background-repeat: no-repeat;
     color: #ffffff;
     width: 100%;
     height: 1100px; /* 이 높이는 고정 */
     padding: 20px;
-    z-index: 3; /* 이 값을 높여서 user보다 위에 위치하도록 설정 */
+    z-index: 3; /* user보다 위에 위치하도록 설정 */
     position: relative; /* z-index 사용을 위한 위치 설정 */
 }
 
@@ -1047,7 +1062,7 @@ a {
             width: 100%;
             margin: 0; 
             padding: 40px; 
-            margin-left: -10px; /* 왼쪽으로 이동 */
+            margin-left: -50px; /* 왼쪽으로 이동 */
         }
         
        /* Move the headings to the right */
@@ -1076,7 +1091,7 @@ a {
             gap: 10px; /* Space between keywords */
             margin: 0 auto; /* Center the entire container */
             padding-left: -20px; /* Add padding to the left if needed to create space */
-            /*margin-left: 150px;*/
+            margin-left: 270px;
         }
         
         
@@ -1126,7 +1141,7 @@ a {
     text-align: center;
     width: 350px; /* 키워드 2 너비 */
     border-radius: 10px;
-    margin-left: -20px; /* 왼쪽으로 이동 */
+    margin-left: -30px; /* 왼쪽으로 이동 */
 }
 
 .keyword2 h4 {
