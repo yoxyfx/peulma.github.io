@@ -871,7 +871,7 @@ a {
 .alpapa-image {
     position: absolute;
     top: 26%;
-    left: 5%;
+    left: 10%;
     max-width: 15%;
     height: auto;
     animation: bounce 1s ease infinite; /* bounce 애니메이션 적용 */
