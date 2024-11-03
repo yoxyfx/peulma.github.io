@@ -879,8 +879,8 @@ a {
 }
 
 .charac2 {
-    bottom: 10%;
-    right: 18%;
+    bottom: 14%;
+    right: 21%;
     transform: translate(-10%, -10%);
     width: 70px;  /* 크기를 조정 (예: 50px에서 70px로 변경) */
     height: auto;  
