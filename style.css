@@ -899,6 +899,13 @@ a {
             height: auto;
             z-index: 1;
         }
+        #white {
+           
+            background-color: #ffffff; /* Background color: white */
+            color: #000000; /* Text color: black */
+            width: 100%; /* Full width of the parent container */
+            height: 200px; /* Fixed height of 1000 pixels */
+        }
         
         
         #servicekeyword {
@@ -917,7 +924,7 @@ a {
         
        /* Move the headings to the right */
 #servicekeyword h2 {
-    font-size: 2em; /* 원하는 크기로 설정 */
+    font-size: 1.2em; /* 원하는 크기로 설정 */
     color: #333; /* 원하는 색으로 설정 */
     margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
 }
