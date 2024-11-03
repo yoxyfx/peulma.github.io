@@ -820,17 +820,18 @@ a {
     background-repeat: no-repeat;
     color: #ffffff;
     width: 100%;
-    min-height: 200vh; /* 최소 화면 높이를 100vh로 설정 */
+    min-height: 250vh; /* 최소 화면 높이를 100vh로 설정 */
     padding: 50px;
     text-align: center;
-    margin-top: -500px;
-    z-index: 1;
+    margin-top: -600px;
+    z-index: 2;
 }
 
         
         #user h1 {
             margin: 0; /* 불필요한 여백 제거 */
             text-align: center;
+            margin-top: 300px;
             margin-bottom: 100px;
         }
        
@@ -854,7 +855,7 @@ a {
         
       .charac,  .charac2 {
     position: absolute;
-    z-index: 6; /* make 요소보다 아래에 표시되도록 설정 */
+    z-index: 7; /* make 요소보다 아래에 표시되도록 설정 */
 }
 .charac1{
     position: absolute;
@@ -870,7 +871,7 @@ a {
 }
 
 .charac1 {
-    top: 43%; /* 상단에서의 위치 조정 (예: 35%에서 20%로 변경) */
+    top: 50%; /* 상단에서의 위치 조정 (예: 35%에서 20%로 변경) */
     left: 50%;
     transform: translate(-50%, -50%); /* 중앙 정렬을 위해 수정 */
     width: 50px;  /* 크기를 조정 (예: 20px에서 80px로 변경) */
@@ -878,8 +879,8 @@ a {
 }
 
 .charac2 {
-    bottom: 15%;
-    right: 25%;
+    bottom: 10%;
+    right: 18%;
     transform: translate(-10%, -10%);
     width: 70px;  /* 크기를 조정 (예: 50px에서 70px로 변경) */
     height: auto;  
