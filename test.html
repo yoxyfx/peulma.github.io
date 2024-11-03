@@ -5,172 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
- #background {
-    position: relative; /* 부모 요소에 상대 위치 지정 */
+#servicekeyword {
     display: flex; 
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
     justify-content: center;
-    text-align: center;
+    text-align: center; /* 텍스트 중앙 정렬 */
     background-color: #ffffff;
     color: #000000;
     width: 100%;
-    height: 1500px;
     margin: 0; 
-    padding: 50px; 
+    padding: 40px; 
+    margin-left: -10px; /* 왼쪽으로 이동 */
 }
 
-.alpapa {
-    position: absolute; /* 절대 위치 지정 */
-    top: 10%; /* 상단에 배치 */
-    left: 0; /* 왼쪽에 배치 */
-    width: 50%; /* 너비를 50%로 유지 */
-    height: auto;
-    margin-top: 0; /* 위쪽 여백 제거 */
-    margin-bottom: 50px; /* 아래쪽 여백 유지 */
-    animation: moveUpDown 2s ease-in-out infinite; /* 애니메이션 추가 */
+/* Move the headings to the right */
+#servicekeyword h2 {
+    font-size: 2em; /* 원하는 크기로 설정 */
+    color: #333; /* 원하는 색으로 설정 */
+    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
 }
 
-.alpapa img {
-    width: 30%; /* 이미지의 너비를 div에 맞춤 */
-    height: auto; /* 비율 유지 */
+#servicekeyword h3 {
+    font-size: 1.5em; /* 원하는 크기로 설정 */
+    text-align: center;
+    color: #3E7443; /* 원하는 색으로 설정 */
+    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
 }
 
-@keyframes moveUpDown {
-    0% {
-        transform: translateY(0); /* 처음 위치 */
-    }
-    50% {
-        transform: translateY(-10px); /* 위로 이동 */
-    }
-    100% {
-        transform: translateY(0); /* 원래 위치로 돌아옴 */
-    }
+#servicekeyword h5 {
+    font-size: 1.1em; /* 원하는 크기로 설정 */
+    line-height: 1.8em;
+    text-align: center;
+    color: #000000; /* 원하는 색으로 설정 */
 }
 
-
-#background h2, 
-#background p {
-    margin-top: 0; /* 위쪽 여백 제거 */
-    margin-bottom: 20px; /* 아래쪽 여백 조정 (원하는 만큼) */
+.servicekeyword-container {
+    display: flex;
+    justify-content: flex-start; /* Change to flex-start to align items to the left */
+    gap: 20px; /* Space between keywords */
+    margin: 0 auto; /* Center the entire container */
+    padding-left: 100px; /* Add padding to the left if needed to create space */
 }
 
+/* h5 스타일 */
+.servicekeyword-container h5 {
+    font-size: 2.0em; /* 원하는 크기 */
+    font-weight: 300; /* 얇은 글자 */
+}
 
-
-
-#background {
+/* Keyword 1 스타일 */
+.keyword1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #000000; 
-    width: 100%;
-    margin: 0;
-    padding: 50px;
+    text-align: center;
+    width: 400px; /* 키워드 1 너비 */
+    border-radius: 10px;
+    margin-left: 90px; /* 기존 위치 유지 */
+    z-index: 1; /* Set a lower z-index for keyword 1 */
 }
-/* 전체 섹션에 페이드 인 효과를 위한 초기 상태 */
-#background {
-    opacity: 0;
-    transform: translateY(50px); /* 아래에서 위로 올라오도록 설정 */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* 트랜지션 설정 */
-}
-
-/* 화면에 나타날 때 효과 */
-#background.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* JavaScript를 통해 스크롤에 따라 클래스 추가 */
-
-.background img {
-    width: 100%;
-    height: auto;
-}
-
-#background h2 {
+.keyword1 h3 {
     font-size: 1.2em;
     color: #3E7443;
-}
-.lines{
-    margin-top: 50px;
-}
-.lines1 {
-    font-size: 1.8em;
-    color: #333333;
+    font-weight: bold;
+    margin: 10px 0; /* Adjust margin to center vertically */
+    padding-left: 100px; /* Instead of margin-left */
 }
 
-.lines2 {
-    text-align: center;
-    margin-top: 500px;
-    margin-left: 50px;
-    font-size: 1.5em;
+
+.keyword1 h5 {
+    font-size: 1em;
+    line-height: 1.4;
     color: #555555;
-    line-height: 1.2em;
+    margin: 0; /* Reset margin to center */
 }
 
-.lines3 {
-    color: #FFB45C;
-    line-height: 1.2em;
+/* Keyword 2 스타일 */
+.keyword2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px; /* 키워드 2 너비 */
+    border-radius: 10px;
+    margin-left: 10px; /* 왼쪽으로 이동 */
+    z-index: 2; /* Set a higher z-index for keyword 2 */
 }
 
-.sub {
-    position: relative; /* 부모 요소에 상대 위치 설정 */
-    margin: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%;
-    max-width: 900px;
+.keyword2 h3 {
+    font-size: 1.3em;
+    color: #3E7443;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-left: -60px; /* Adjusted to move it slightly more to the left */
 }
 
-.sub img {
-    width: 110%;
-    height: auto;
-    position: relative;
-    margin-left: -20px;
-    z-index: 1; /* 배경 이미지의 z-index를 1로 설정 */
+.keyword2 h5 {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0; /* Center within its container */
 }
 
+/* Keyword 3 스타일 */
+.keyword3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px; /* 키워드 3 너비 */
+    border-radius: 10px;
+    margin-left: -30px; /* 왼쪽으로 이동 (더 왼쪽으로) */
+    z-index: 3; /* Set the highest z-index for keyword 3 */
+}
 
+.keyword3 h3 {
+    font-size: 1.4em;
+    color: #3E7443;
+    font-weight: bold;
+    margin: 10px 0; /* Center vertically */
+    margin-left: 0; /* Center within its container */
+}
 
-.circles-container {
+.keyword3 h5 {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #777777;
+    margin: 0; /* Center within its container */
+}
+
+.circles-container1 {
     display: flex;
     position: absolute; /* 절대 위치 */
-    top: 32%; /* Y축 위치 조정 (위로 올리기) */
+    top: 50%; /* Y축 위치 조정 (위로 올리기) */
     left: 53%; /* X축 중앙 정렬 */
     transform: translate(-50%, -50%); /* 가운데 정렬 */
-    z-index: 3; /* 원들이 배경 이미지 위에 위치하도록 설정 */
+    z-index: 2; /* 원들이 배경 이미지 위에 위치하도록 설정 */
     gap: 90px; /* 원들 사이의 간격 */
 }
 
-
-.line {
-    display: flex;
-    position: absolute;
-    left: 53%;
-    transform: translate(-50%, 0);
-    z-index: 0; /* 배경 이미지 아래에 위치 */
-}
-
-.line > img {
-    width: 8px;
-    height: auto;
-    margin: 0 170px; 
-}
-
-
-.circlebg {
+.circlebg1 {
     width: 250px; 
     height: 250px;
-    background-color: #eaeaea; 
+    background-color: #FBFFE5; 
     border-radius: 50%;
     display: flex; 
     align-items: center; 
     justify-content: center;
 }
 
-.circlebg img {
+.circlebg1 p {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 30px;
+    color: green; /* 글자 색상을 초록색으로 설정 */
+    font-weight: bold; /* 글자를 두껍게 설정할 수 있습니다 (선택 사항) */
+}
+
+.circlebg1 img {
     width: 90%; /* 원의 너비에 맞게 조정 */
     height: 90%; /* 원의 높이에 맞게 조정 */
     border-radius: 50%; 
@@ -178,81 +172,73 @@
     margin: 0; /* 여백 제거 */
 }
 
-.subtext-container {
-    color:#3E7443;
-    font-size: 40px;
-    line-height: 1.2em;
-    text-align: center;
-    display: flex; /* Flexbox 사용 */
-    justify-content: center; /* 가운데 정렬 */
-    gap: 210px; /* 텍스트 간격 조정 */
-    margin-left:150px;
-    margin-top: 120px; /* 원과 텍스트 사이의 간격을 더 늘림 */
+.line1 {
+    display: flex;
+    position: relative; /* 부모 요소에 상대적으로 위치 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    z-index: 1; /* 배경 이미지 아래에 위치 */
+    margin-top: -50px;
+    margin-left: 30px; /* 상단 여백 추가 */
 }
 
-
-.subtext-container p {
-    margin: 10px; /* 기본 마진 제거 */
-    margin-top: 0; /* 각 요소 간의 기본 간격을 제거하여 글자가 더 밑으로 내리도록 설정 */
+.line1 > img {
+    width: 8px;
+    height: auto;
+    margin: 0 160px; /* 각 이미지 사이의 간격을 조정 */
 }
 
-
-/* 부가 정보 스타일 */
-.subinfo {
-    font-size: 1em;
-    color: #7A7A7A;
-    margin-top: 20px;
-}
 
     </style>
 </head>
 <body>
-    
-    <section id="background">
-        <h2>플마</h2>
-        <div class="alpapa">
-            <img src="img/알파파.png">
-        </div>
-      <div class="lines">
-        <span class="lines1">갓생으로 살기 위해 노력이<br>
-            강박과 스트레스 유발로 이어져 힘드신가요?</span>
-      <br>
-        <span class="lines2">
-            플마는 스트레스 줄여주는 습관 형성 서비스입니다.<br>
-            이 서비스를 통해 <span class="lines3">좋은 습관은 플러스 나쁜 습관은 마이너스</span><br>
-            한다는 의미에서 착안되었습니다.
-        </span>
-      </div>
-         
-       
+    <section id="servicekeyword">
+        <h2>Service Keyword</h2>
+        <h3>플마의 서비스를 도출하였습니다.</h3>
         
         <div class="sub">
             <img src="img/Frame34043.png" alt="플마 배경 이미지">
-            <div class="circles-container">
-                <div class="circlebg">
-                    <img src="img/image1.png">
+            <div class="circles-container1">
+                <div class="circlebg1">
+                    <p>Funny</p>
                 </div>
-                <div class="circlebg">
-                    <img src="img/image2.png">
+                <div class="circlebg1">
+                    <p>Steadily</p>
                 </div>
-                <div class="circlebg">
-                    <img src="img/image3.png">
+                <div class="circlebg1">
+                    <p>Oneself</p>
                 </div>
             </div>
-            
-            <div class="line">
-                <img src="img/line.png">
-                <img src="img/line.png">
-                <img src="img/line.png">
+        </div>
+
+        <div class="line1">
+            <img src="img/line.png">
+            <img src="img/line.png">
+            <img src="img/line.png">
+        </div>
+
+        <div class="servicekeyword-container">
+            <div class="keyword1">
+                <h3>재미있게</h3>
+                <h5>계획을 실천해 가상 식물을 키우고
+                    <br>온실을 꾸밀 수 있는 서비스로,
+                    <br>친구와 습관 챌린지에 참여하고
+                    <br>이웃 온실을 구경하며 소통할 수 있습니다.
+                </h5>
             </div>
-            
-            <div class="subtext-container">
-                <p>Plant</p>
-                <p>Plan</p>
-                <p>Mindcare</p>
+            <div class="keyword2">
+                <h3>꾸준히</h3>
+                <h5>
+                    연속 루틴 달성 시 추가 보상과
+                    <br>도전과제 완료 시 특별 배지를 제공하며,
+                    <br>사용자 맞춤 난이도 조절 기능을
+                    <br>지원합니다.
+                </h5>
+            </div>
+            <div class="keyword3">
+                <h3>스스로</h3>
+                <h5>사용자가 하루를 되돌아보며<p>작성할 수 있는 일기</p></h5>
             </div>
         </div>
     </section>
-    
 </body>
 </html>

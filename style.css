@@ -374,6 +374,7 @@ header {
     margin: 0;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: -30px; /* Move slightly to the left */
     width: 100%;
     max-width: 900px;
 }
@@ -910,21 +911,24 @@ a {
             color: #000000;
             width: 100%;
             margin: 0; 
-            padding: 50px; 
+            padding: 40px; 
+            margin-left: -10px; /* 왼쪽으로 이동 */
         }
         
-        /* h2 스타일 */
-        #servicekeyword h2 {
-            font-size: 2em; /* 원하는 크기로 설정 */
-            color: #333; /* 원하는 색으로 설정 */
-        }
-        
-        /* h3 스타일 */
-        #servicekeyword h3 {
-            font-size: 1.5em; /* 원하는 크기로 설정 */
-            text-align: center;
-            color: #3E7443; /* 원하는 색으로 설정 */
-        }
+       /* Move the headings to the right */
+#servicekeyword h2 {
+    font-size: 2em; /* 원하는 크기로 설정 */
+    color: #333; /* 원하는 색으로 설정 */
+    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
+}
+
+#servicekeyword h3 {
+    font-size: 1.5em; /* 원하는 크기로 설정 */
+    text-align: center;
+    color: #3E7443; /* 원하는 색으로 설정 */
+    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
+}
+
         #servicekeyword h5 {
             font-size: 1.1em; /* 원하는 크기로 설정 */
             line-height: 1.8em;
@@ -933,14 +937,13 @@ a {
         }
         .servicekeyword-container {
             display: flex;
-            justify-content: center;
-            text-align: center;
-            width: 100%;
-            margin-top: 20px;
-            gap: 10px;
-            left: 40%;
-            margin-left: 50px; /* 왼쪽으로 이동 */
+            justify-content: flex-start; /* Change to flex-start to align items to the left */
+            gap: 10px; /* Space between keywords */
+            margin: 0 auto; /* Center the entire container */
+            padding-left: 100px; /* Add padding to the left if needed to create space */
+            margin-left: 150px;
         }
+        
         
         /* h5 스타일 */
         .servicekeyword-container h5 {
@@ -948,28 +951,36 @@ a {
             font-weight: 300; /* 얇은 글자 */
         }
         
-       /* Keyword 1 스타일 */
+/* Keyword 1 스타일 */
+/* Keyword 1 스타일 */
 .keyword1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 300px; /* 키워드 1 너비 */
+    width: 350px; /* 키워드 1 너비 */
     border-radius: 10px;
-  
+    margin-left: 10px; /* 기존 위치 유지 */
+    z-index: 2;
 }
 
-.keyword1 h3 {
+.keyword1 h4 {
     font-size: 1.2em;
     color: #3E7443;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-left: 0px;
 }
 
 .keyword1 h5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     font-size: 1em;
     line-height: 1.4;
     color: #555555;
+    margin-left: 0px;
 }
 
 /* Keyword 2 스타일 */
@@ -978,48 +989,55 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 300px; /* 키워드 1 너비 */
-    margin-left:50px;
+    width: 350px; /* 키워드 2 너비 */
     border-radius: 10px;
-    
+    margin-left: 30px; /* 왼쪽으로 이동 */
 }
 
-.keyword2 h3 {
+.keyword2 h4 {
     font-size: 1.3em;
     color: #3E7443;
     font-weight: bold;
     margin-bottom: 12px;
+    margin-left: 0px; /* Adjusted to move it slightly more to the left */
 }
 
+/* Adjust the h5 styles for Keyword 2 */
 .keyword2 h5 {
     font-size: 1em;
     line-height: 1.6;
     color: #666666;
+    margin-left: 0; /* Center within its container */
 }
 
+/* Keyword 3 스타일 */
 .keyword3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 300px; /* 키워드 1 너비 */
+    width: 350px; /* 키워드 3 너비 */
     border-radius: 10px;
-    margin-left:50px;
-    
+    margin-left: -50px; /* 왼쪽으로 이동 (더 왼쪽으로) */
 }
 
-.keyword3 h3 {
+/* Adjust the heading styles for Keyword 3 */
+.keyword3 h4 {
     font-size: 1.4em;
     color: #3E7443;
     font-weight: bold;
     margin-bottom: 15px;
+    margin-left: 0; /* Center within its container */
 }
 
+/* Adjust the h5 styles for Keyword 3 */
 .keyword3 h5 {
     font-size: 1em;
     line-height: 1.8;
     color: #777777;
+    margin-left: 0; /* Center within its container */
 }
+
 
         
         .circles-container1 {
@@ -1067,7 +1085,7 @@ a {
             justify-content: center; /* 가로 중앙 정렬 */
             z-index: 1; /* 배경 이미지 아래에 위치 */
             margin-top: -50px;
-            margin-left: 50px; /* 상단 여백 추가 */
+            margin-left: 30px; /* 상단 여백 추가 */
         }
         
         .line1 > img {
@@ -1663,6 +1681,7 @@ margin-top: 40%;
         
         footer img {
             align-self: flex-start;
+            margin-left:-10px;
             margin-bottom: 20px;
         }
         
