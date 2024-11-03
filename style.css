@@ -1165,13 +1165,14 @@ a {
             width: 100%;
             margin: 0; 
             padding: 40px; 
-            margin-left: -50px; /* 왼쪽으로 이동 */
+            margin-left: -20px; /* 왼쪽으로 이동 */
         }
         
        /* Move the headings to the right */
 #servicekeyword h2 {
     font-size: 1.2em; /* 원하는 크기로 설정 */
     color: #333; /* 원하는 색으로 설정 */
+    margin-left: 20px;
    
 }
 
@@ -1179,6 +1180,7 @@ a {
     font-size: 1.5em; /* 원하는 크기로 설정 */
     text-align: center;
     color: #3E7443; /* 원하는 색으로 설정 */
+    margin-left: 20px;
    
 }
 
