@@ -3,6 +3,23 @@ document.querySelector('.fixed-button').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+document.querySelectorAll('.header-text a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const offset = parseInt(this.getAttribute('data-offset')) || 0; // 데이터 속성에서 오프셋 값 가져오기
+
+        window.scrollTo({
+            top: targetElement.offsetTop + offset, // 각 링크마다 다르게 조정된 오프셋 적용
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const backgroundSection = document.querySelector("#background");
 
@@ -147,3 +164,27 @@ document.addEventListener('scroll', function() {
                 }
             });
         });  
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // 10%가 보일 때
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // visible 클래스 추가
+                        observer.unobserve(entry.target); // 관찰 중지
+                    }
+                });
+            }, options);
+
+            fadeElements.forEach(element => {
+                observer.observe(element); // 모든 fade-in 요소를 관찰
+            });
+        });

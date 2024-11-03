@@ -1660,7 +1660,14 @@ margin-top: 40%;
         section p {
             color: inherit;
         }
-
+    
+        .fade-in {
+            opacity: 0; /* 초깃값 */
+        }
+        
+        .fade-in.visible {
+            opacity: 1; /* 나타나는 상태 */
+        }
         .text-content {
             flex: 1; /* 텍스트 부분이 나머지 공간을 차지하게 */
             padding-left: 50px; /* 직사각형과 텍스트 사이의 여백 */
