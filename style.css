@@ -1009,13 +1009,14 @@ a {
             margin: 30px;
             opacity: 0; /* Initially hidden */
             transform: translateY(20px); /* 시작 위치 */
-            transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 효과 */
+            transition: opacity 2.5s ease, transform 2.5s ease; /* 애니메이션 효과 */
         }
         
         .image-container2 img.show {
             opacity: 1; /* 보이게 설정 */
             transform: translateY(0); /* 최종 위치로 이동 */
         }
+      
         
         .carnation {
             position: absolute;

@@ -57,7 +57,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById("problemsolution");
-    const images = document.querySelectorAll(".image-container2 img"); // 수정된 부분
+    const images = document.querySelectorAll(".image-container2 img");
 
     function revealImages() {
         const sectionTop = section.getBoundingClientRect().top;
@@ -67,10 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
             images.forEach((img, index) => {
                 setTimeout(() => {
                     img.classList.add("show");
-                }, index * 300); // Delay each image by 300ms
+                }, index * 300); // 각 이미지가 300ms 간격으로 나타나도록 설정
             });
-            // Remove event listener after animation
-            window.removeEventListener("scroll", revealImages);
+            window.removeEventListener("scroll", revealImages); // 애니메이션 후 이벤트 제거
         }
     }
 
@@ -190,7 +189,7 @@ document.addEventListener('scroll', function() {
             const options = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.8 // 10%가 보일 때
+                threshold: 1.0 // 10%가 보일 때
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
