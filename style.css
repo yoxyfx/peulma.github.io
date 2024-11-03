@@ -1264,20 +1264,28 @@ a {
         }
        
         #video-player {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FBFFE5;
-    height: 1800px;
-    text-align: center;
-}
-
-.video-container video {
-    width: 100%; /* 필요에 따라 비디오 크기 조정 */
-    border-radius: 8px; /* 비디오 모서리를 둥글게 만듦 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
-    
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FBFFE5;
+            height: 1500px;
+            text-align: center;
+        }
+        .video-container video {
+            width: 100%; /* 필요에 따라 비디오 크기 조정 */
+            border-radius: 8px; /* 비디오 모서리를 둥글게 만듦 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+            
+        }
+        #yellow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          background-color: #FBFFE5;
+            height: 200px;
+            text-align: center;
+        }
+        
 
 .greenhouse-slider-container {
     background-color: #FBFFE5;
@@ -1318,7 +1326,7 @@ padding-left: 300px; /* 기존 500px에서 400px로 줄여서 왼쪽으로 이�
 /* 슬라이더 1, 2의 설명 위치 */
 #greenhouse-slider-1 .description,
 #greenhouse-slider-2 .description {
-    margin-left: 100px; /* 설명 위치를 따로 조정 */
+    margin-left: -40px; /* 설명 위치를 따로 조정 */
 }
 
 /* 슬라이더 3, 4의 설명 위치 */
@@ -1425,18 +1433,6 @@ margin-top: 40%;
     text-align: center;
 }
 
-#team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    color: #3E7443;
-    width: 100%;
-    margin: 0;
-    padding: 50px;
-    box-sizing: border-box;
-    text-align: center;
-}
 
 .profileimg {
     display: flex; /* Flexbox를 사용하여 수평 배열 */
@@ -1488,18 +1484,22 @@ margin-top: 40%;
 }
 
 .profile-item .name {
-    font-size: 1.1em; /* 팀원 이름의 폰트 크기 */
+    font-size: 1.5em; /* 팀원 이름의 폰트 크기 */
     font-weight: bold; /* 팀원 이름을 굵게 */
-    color: #3E7443; /* 팀원 이름의 색상 */
+    color: #5B5B5B; /* 팀원 이름의 색상 */
 }
 
-.profile-item .description,
-.profile-item .phonenumber {
+.profile-item .description,{
     font-size: 0.85em; /* 설명글의 폰트 크기 */
-    color: #7A7A7A; /* 설명글의 색상 */
+    color: #6F9E58; /* 설명글의 색상 */
+    font-weight:bold;
     margin-top: 5px;
 }
-
+.profile-item .phonenumber{
+    font-size: 0.85em; /* 설명글의 폰트 크기 */
+    color: #5B5B5B;/* 설명글의 색상 */
+    margin-top: 5px;
+}
 .circle-container {
     display: flex; 
     flex-wrap: wrap; /* 작은 화면에서도 자동 줄바꿈 */
