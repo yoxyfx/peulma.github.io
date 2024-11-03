@@ -568,7 +568,7 @@ header {
     text-align: center;
     display: flex;
     justify-content: center;
-    gap: 210px;
+    gap: 245px;
     margin-top: 20px;
     transform: translateX(60px); /* 컨테이너 전체를 오른쪽으로 이동 */
 }
@@ -1740,7 +1740,7 @@ margin-top: 40%;
     margin: 0;
     margin-top: -50px;
 
-    transition: background-image 1.8s ease; /* 부드러운 전환 효과 추가 */
+    transition: background-image 2.5s ease; /* 부드러운 전환 효과 추가 */
     z-index: 10;
 }
 
