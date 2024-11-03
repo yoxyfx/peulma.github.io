@@ -102,15 +102,15 @@ document.addEventListener('scroll', function() {
                 }
             });
 
-            const totalMargin = 200;
+            const totalMargin = 60;
             const baseImageWidth = thumbnails[0].clientWidth;
-            const selectedImageWidth = baseImageWidth * 1.8;
+            const selectedImageWidth = baseImageWidth * 1.0;//이동정도
             const offset = index * (baseImageWidth + totalMargin) - ((selectedImageWidth - baseImageWidth) / 2) + 100;
             slideContainer.style.transform = `translateX(-${offset}px)`;
         }
 
         window.onload = () => {
-            const initialSelectedIndices = [0, 0, 4, 3]; // 각 슬라이더 섹션의 초기 선택 인덱스 설정
+            const initialSelectedIndices = [0, 0, 4, 4]; // 각 슬라이더 섹션의 초기 선택 인덱스 설정
             document.querySelectorAll('.slide').forEach((slideContainer, index) => {
                 setSelectedImage(slideContainer, initialSelectedIndices[index]);
             });
@@ -129,6 +129,9 @@ document.addEventListener('scroll', function() {
                 });
             });
         });
+
+       
+        
 
         document.addEventListener('DOMContentLoaded', function() {
             const imgSection = document.getElementById('img');
