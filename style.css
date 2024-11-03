@@ -64,7 +64,7 @@ header {
 
 .logo img {
     width: 50px;
-    height: 50px;
+    height: auto;
     margin-right: 10px;
 }
 
@@ -397,7 +397,7 @@ header {
 .sub {
     position: relative; /* 부모 요소에 상대 위치 설정 */
     margin: 0;
-    margin-top: 50px;
+    margin-top: 45px;
     margin-bottom: 50px;
     margin-left: -30px; /* Move slightly to the left */
     width: 100%;
@@ -417,7 +417,7 @@ header {
 .circles-container {
     display: flex;
     position: absolute; /* 절대 위치 */
-    top: 32%; /* Y축 위치 조정 (위로 올리기) */
+    top: 33%; /* Y축 위치 조정 (위로 올리기) */
     left: 53%; /* X축 중앙 정렬 */
     transform: translate(-50%, -50%); /* 가운데 정렬 */
     z-index: 3; /* 원들이 배경 이미지 위에 위치하도록 설정 */
@@ -441,8 +441,8 @@ header {
 
 
 .circlebg {
-    width: 250px; 
-    height: 250px;
+    width: 260px; 
+    height: 260px;
     background-color: #eaeaea; 
     border-radius: 50%;
     display: flex; 
@@ -466,7 +466,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 210px;
-    margin-top: 120px;
+    margin-top: 20px;
     transform: translateX(60px); /* 컨테이너 전체를 오른쪽으로 이동 */
 }
 
@@ -1053,14 +1053,14 @@ a {
 #servicekeyword h2 {
     font-size: 1.2em; /* 원하는 크기로 설정 */
     color: #333; /* 원하는 색으로 설정 */
-    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
+   
 }
 
 #servicekeyword h3 {
     font-size: 1.5em; /* 원하는 크기로 설정 */
     text-align: center;
     color: #3E7443; /* 원하는 색으로 설정 */
-    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
+   
 }
 
         #servicekeyword h5 {
@@ -1177,7 +1177,7 @@ a {
         .circles-container1 {
             display: flex;
             position: absolute; /* 절대 위치 */
-            top: 50%; /* Y축 위치 조정 (위로 올리기) */
+            top: 43%; /* Y축 위치 조정 (위로 올리기) */
             left: 53%; /* X축 중앙 정렬 */
             transform: translate(-50%, -50%); /* 가운데 정렬 */
             z-index: 2; /* 원들이 배경 이미지 위에 위치하도록 설정 */
@@ -1815,49 +1815,10 @@ margin-top: 40%;
     width: 100%;
     max-width: 500px;
     height: auto;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-bottom: 300px;
 }
 
-.characterimg img {
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    opacity: 0;
-    animation-duration: 3s; /* 애니메이션 속도 조절 */
-    animation-iteration-count: infinite;
-}
-
-.frame1 {
-    animation-name: frame1Visible;
-}
-
-.frame2 {
-    animation-name: frame2Visible;
-    width: 90%; /* 두 번째 이미지를 살짝 작게 설정 */
-}
-
-@keyframes frame1Visible {
-    0%, 45% { 
-        opacity: 1; /* frame1이 표시되는 기간 */
-    }
-    50%, 100% { 
-        opacity: 0; /* frame1이 사라지는 기간 */
-    }
-}
-
-@keyframes frame2Visible {
-    0%, 45% { 
-        opacity: 0; /* frame2가 숨겨져 있는 기간 */
-    }
-    50%, 100% { 
-        opacity: 1; /* frame2가 표시되는 기간 */
-    }
-}
 
 
 
