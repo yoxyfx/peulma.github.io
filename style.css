@@ -1632,37 +1632,63 @@ margin-top: 40%;
         font-size: 0.8em; /* Smaller font for mobile */
     }
 }
-
+/*
 #team {
-    background-image: url('img/bgbg1.png'); /* Set your background image */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background */
+    background-image: url('img/bgbg1.png');
+    background-size: cover; 
+    background-position: center; 
 
-    margin: 0; /* Remove margin */
+    margin: 0; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align for the entire section */
+    align-items: center; 
   
     color: #3E7443;
     width: 100%;
    
    
     box-sizing: border-box;
-    text-align: center; /* Default text alignment */
-}
-
+    text-align: center; 
+    */
+    #team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('img/bgbg1.png');
+        background-size: cover; 
+        background-position: center; 
+    }
+    
+    #team img {
+        margin-top: 150px; 
+        margin-bottom: 150px;
+        margin-left: 100px; /* 이미지가 오른쪽으로 100px 이동하도록 설정 */
+        display: block;
+        width: 75%;
+        height: auto;
+        opacity: 0; /* 초기 상태에서는 이미지가 보이지 않도록 설정 */
+        transition: opacity 1s ease-out; /* 부드러운 페이드 효과 */
+    }
+    
+    
+    #team.show img {
+        opacity: 1; /* 보여질 때 이미지가 나타나도록 설정 */
+    }
+    
+    
+/*
 .teamtitle {
-    text-align: left; /* Left alignment */
+    text-align: left; 
     margin-left: 500px;
     margin-top: 150px;
-    width: 100%; /* Full width for proper alignment */
+    width: 100%; 
 }
 
  
 .teamtitle h2 {
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    line-height: 1.2; /* Optional: Adjust line height for consistent spacing */
+    margin: 0; 
+    padding: 0;
+    line-height: 1.2; 
 }
 
 .teamtitle img{
@@ -1672,19 +1698,19 @@ margin-top: 40%;
 }
 
 .profileimg {
-    display: flex; /* Flexbox를 사용하여 수평 배열 */
-    justify-content: center; /* 가로 가운데 정렬 */
-    gap: 3px; /* 아이템 간격 조정 */
-    margin-top: 130px; /* 위쪽 여백 */
+    display: flex; 
+    justify-content: center; 
+    gap: 3px; 
+    margin-top: 130px; 
     padding:90px;
    
 }
 
 .profile-item {
     display: flex;
-    flex-direction: column; /* 세로 방향으로 정렬 */
-    align-items: center; /* 중앙 정렬 */
-    position: relative; /* 자식 요소가 절대 위치를 가질 수 있도록 설정 */
+    flex-direction: column; 
+    align-items: center; 
+    position: relative; 
 }
 .profile-item img{
     right:1%;
@@ -1692,75 +1718,75 @@ margin-top: 40%;
 
 .profile-circle {
     display: flex;
-    align-items: center; /* 이미지 수직 중앙 정렬 */
-    justify-content: center; /* 이미지 수평 중앙 정렬 */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .circle-shape {
-    width: 90px; /* 원의 너비 */
-    height: 90px; /* 원의 높이 */
-    background-color: #b0e57c; /* 원 색상 */
-    border-radius: 50%; /* 원 모양 */
+    width: 90px; 
+    height: 90px; 
+    background-color: #b0e57c; 
+    border-radius: 50%; 
     display: flex;
-    align-items: center; /* 내용 수직 정렬 */
-    justify-content: center; /* 내용 수평 정렬 */
+    align-items: center; 
+    justify-content: center; 
     font-size: 20px;
     color: white;
-    margin-bottom: 30px; /* 원과 텍스트 사이 간격 */
+    margin-bottom: 30px; 
 }
 
 .profile-item {
-    margin-top: 40px; /* Adding margin directly to the profile item */
+    margin-top: 40px; 
   
 }
 
 .profile-item p {
-    margin: 0; /* Remove default margin from paragraph */
+    margin: 0; 
 }
 
 .profile-item .name {
-    font-size: 1.5em; /* Team member's name font size */
-    font-weight: bold; /* Bold font */
-    color: #5B5B5B; /* Team member name color */
-    margin-top: 30px; /* Increase space above the name */
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #5B5B5B; 
+    margin-top: 30px; 
 }
 
 .profile-item .descriptionj {
-    font-size: 1.2em; /* Description text font size */
-    color: #6F9E58; /* Description text color */
-    font-weight: bold; /* Bold font */
-    margin-top: 15px; /* Space below the description */
+    font-size: 1.2em; 
+    color: #6F9E58; 
+    font-weight: bold; 
+    margin-top: 15px; 
 }
 
 .profile-item .phonenumber {
-    font-size: 0.85em; /* Phone number font size */
-    color: #5B5B5B; /* Phone number color */
-    margin-top: 50px; /* Space above the phone number */
+    font-size: 0.85em; 
+    color: #5B5B5B; 
+    margin-top: 50px; 
 }
 
 
 .circle-container {
     display: flex; 
-    flex-wrap: wrap; /* 작은 화면에서도 자동 줄바꿈 */
-    justify-content: center; /* 가로 가운데 정렬 */
-    align-items: flex-start; /* 상단 정렬로 변경 */
-    gap: 50px; /* 원 사이 간격 */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; /
+    gap: 50px; /
     width: 100%;
-    max-width: 1200px; /* 최대 너비 제한 */
-    margin: 0 auto; /* 중앙에 배치 */
-    margin-top: 100px; /* 공간 확보 */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    margin-top: 100px; 
 }
 
 .circle-text {
     text-align: center;
-    line-height: 1.5; /* 줄 간격 */
+    line-height: 1.5; 
     font-size: 16px;
     color: #030303;
-    margin-top: 20px; /* 마진이 적용되지 않으면 패딩을 고려 */
-    padding-top: 10px; /* 패딩을 사용하여 공간을 확보 */
+    margin-top: 20px; 
+    padding-top: 10px; 
 }
 
-
+*/
 #character {
     background-image: url('img/bgbg2png'); /* Set your background image */
     background-size: cover; /* Cover the entire container */

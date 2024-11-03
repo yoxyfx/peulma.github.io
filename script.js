@@ -273,4 +273,22 @@ document.addEventListener('scroll', function() {
         
         window.addEventListener('scroll', optimizedScrollHandler);
         
+        document.addEventListener("DOMContentLoaded", () => {
+            const teamSection = document.querySelector("#team");
+        
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            teamSection.classList.add("show"); // 보일 때 "show" 클래스 추가
+                        }
+                    });
+                },
+                {
+                    threshold: 0.5, // 50%가 화면에 나타날 때 트리거
+                }
+            );
+        
+            observer.observe(teamSection);
+        });
         
