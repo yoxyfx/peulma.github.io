@@ -5,240 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-#servicekeyword {
-    display: flex; 
-    flex-direction: column; /* 세로 정렬 */
-    align-items: center; /* 가로 중앙 정렬 */
-    justify-content: center;
-    text-align: center; /* 텍스트 중앙 정렬 */
+        #team {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align for the entire section */
     background-color: #ffffff;
-    color: #000000;
+    color: #3E7443;
     width: 100%;
-    margin: 0; 
-    padding: 40px; 
-    margin-left: -10px; /* 왼쪽으로 이동 */
+    margin: 0;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center; /* Default text alignment */
 }
 
-/* Move the headings to the right */
-#servicekeyword h2 {
-    font-size: 2em; /* 원하는 크기로 설정 */
-    color: #333; /* 원하는 색으로 설정 */
-    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
+.teamtitle {
+    text-align: left; /* Left alignment */
+    margin-left: 300px;
+    width: 100%; /* Full width for proper alignment */
 }
 
-#servicekeyword h3 {
-    font-size: 1.5em; /* 원하는 크기로 설정 */
-    text-align: center;
-    color: #3E7443; /* 원하는 색으로 설정 */
-    margin-left: 80px; /* 오른쪽으로 이동 (조정 가능) */
+ 
+.teamtitle h2 {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    line-height: 1.2; /* Optional: Adjust line height for consistent spacing */
 }
 
-#servicekeyword h5 {
-    font-size: 1.1em; /* 원하는 크기로 설정 */
-    line-height: 1.8em;
-    text-align: center;
-    color: #000000; /* 원하는 색으로 설정 */
-}
-
-.servicekeyword-container {
-    display: flex;
-    justify-content: flex-start; /* Change to flex-start to align items to the left */
-    gap: 20px; /* Space between keywords */
-    margin: 0 auto; /* Center the entire container */
-    padding-left: 100px; /* Add padding to the left if needed to create space */
-}
-
-/* h5 스타일 */
-.servicekeyword-container h5 {
-    font-size: 2.0em; /* 원하는 크기 */
-    font-weight: 300; /* 얇은 글자 */
-}
-
-/* Keyword 1 스타일 */
-.keyword1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 400px; /* 키워드 1 너비 */
-    border-radius: 10px;
-    margin-left: 90px; /* 기존 위치 유지 */
-    z-index: 1; /* Set a lower z-index for keyword 1 */
-}
-.keyword1 h3 {
-    font-size: 1.2em;
-    color: #3E7443;
-    font-weight: bold;
-    margin: 10px 0; /* Adjust margin to center vertically */
-    padding-left: 100px; /* Instead of margin-left */
-}
-
-
-.keyword1 h5 {
-    font-size: 1em;
-    line-height: 1.4;
-    color: #555555;
-    margin: 0; /* Reset margin to center */
-}
-
-/* Keyword 2 스타일 */
-.keyword2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 400px; /* 키워드 2 너비 */
-    border-radius: 10px;
-    margin-left: 10px; /* 왼쪽으로 이동 */
-    z-index: 2; /* Set a higher z-index for keyword 2 */
-}
-
-.keyword2 h3 {
-    font-size: 1.3em;
-    color: #3E7443;
-    font-weight: bold;
-    margin-bottom: 12px;
-    margin-left: -60px; /* Adjusted to move it slightly more to the left */
-}
-
-.keyword2 h5 {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666666;
-    margin: 0; /* Center within its container */
-}
-
-/* Keyword 3 스타일 */
-.keyword3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 400px; /* 키워드 3 너비 */
-    border-radius: 10px;
-    margin-left: -30px; /* 왼쪽으로 이동 (더 왼쪽으로) */
-    z-index: 3; /* Set the highest z-index for keyword 3 */
-}
-
-.keyword3 h3 {
-    font-size: 1.4em;
-    color: #3E7443;
-    font-weight: bold;
-    margin: 10px 0; /* Center vertically */
-    margin-left: 0; /* Center within its container */
-}
-
-.keyword3 h5 {
-    font-size: 1em;
-    line-height: 1.8;
-    color: #777777;
-    margin: 0; /* Center within its container */
-}
-
-.circles-container1 {
-    display: flex;
-    position: absolute; /* 절대 위치 */
-    top: 50%; /* Y축 위치 조정 (위로 올리기) */
-    left: 53%; /* X축 중앙 정렬 */
-    transform: translate(-50%, -50%); /* 가운데 정렬 */
-    z-index: 2; /* 원들이 배경 이미지 위에 위치하도록 설정 */
-    gap: 90px; /* 원들 사이의 간격 */
-}
-
-.circlebg1 {
-    width: 250px; 
-    height: 250px;
-    background-color: #FBFFE5; 
-    border-radius: 50%;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-}
-
-.circlebg1 p {
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    font-size: 30px;
-    color: green; /* 글자 색상을 초록색으로 설정 */
-    font-weight: bold; /* 글자를 두껍게 설정할 수 있습니다 (선택 사항) */
-}
-
-.circlebg1 img {
-    width: 90%; /* 원의 너비에 맞게 조정 */
-    height: 90%; /* 원의 높이에 맞게 조정 */
-    border-radius: 50%; 
-    object-fit: cover; /* 비율 유지 */
-    margin: 0; /* 여백 제거 */
-}
-
-.line1 {
-    display: flex;
-    position: relative; /* 부모 요소에 상대적으로 위치 설정 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    z-index: 1; /* 배경 이미지 아래에 위치 */
-    margin-top: -50px;
-    margin-left: 30px; /* 상단 여백 추가 */
-}
-
-.line1 > img {
-    width: 8px;
+.teamtitle img{
+    width:15%;
     height: auto;
-    margin: 0 160px; /* 각 이미지 사이의 간격을 조정 */
+    margin-top: 25px;
 }
 
+.profileimg {
+    display: flex; /* Flexbox를 사용하여 수평 배열 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    gap: 3px; /* 아이템 간격 조정 */
+    margin-top: 130px; /* 위쪽 여백 */
+    padding:90px;
+   
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    position: relative; /* 자식 요소가 절대 위치를 가질 수 있도록 설정 */
+}
+.profile-item img{
+    right:1%;
+}
+
+.profile-circle {
+    display: flex;
+    align-items: center; /* 이미지 수직 중앙 정렬 */
+    justify-content: center; /* 이미지 수평 중앙 정렬 */
+}
+
+.circle-shape {
+    width: 90px; /* 원의 너비 */
+    height: 90px; /* 원의 높이 */
+    background-color: #b0e57c; /* 원 색상 */
+    border-radius: 50%; /* 원 모양 */
+    display: flex;
+    align-items: center; /* 내용 수직 정렬 */
+    justify-content: center; /* 내용 수평 정렬 */
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px; /* 원과 텍스트 사이 간격 */
+}
+
+.profile-item {
+    margin-top: 40px; /* Adding margin directly to the profile item */
+  
+}
+
+.profile-item p {
+    margin: 0; /* Remove default margin from paragraph */
+}
+
+.profile-item .name {
+    font-size: 1.5em; /* Team member's name font size */
+    font-weight: bold; /* Bold font */
+    color: #5B5B5B; /* Team member name color */
+    margin-top: 30px; /* Increase space above the name */
+}
+
+.profile-item .descriptionj {
+    font-size: 1.2em; /* Description text font size */
+    color: #6F9E58; /* Description text color */
+    font-weight: bold; /* Bold font */
+    margin-top: 15px; /* Space below the description */
+}
+
+.profile-item .phonenumber {
+    font-size: 0.85em; /* Phone number font size */
+    color: #5B5B5B; /* Phone number color */
+    margin-top: 25px; /* Space above the phone number */
+}
+
+
+.circle-container {
+    display: flex; 
+    flex-wrap: wrap; /* 작은 화면에서도 자동 줄바꿈 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: flex-start; /* 상단 정렬로 변경 */
+    gap: 50px; /* 원 사이 간격 */
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 중앙에 배치 */
+    margin-top: 100px; /* 공간 확보 */
+}
+
+.circle-text {
+    text-align: center;
+    line-height: 1.5; /* 줄 간격 */
+    font-size: 16px;
+    color: #030303;
+    margin-top: 20px; /* 마진이 적용되지 않으면 패딩을 고려 */
+    padding-top: 10px; /* 패딩을 사용하여 공간을 확보 */
+}
 
     </style>
 </head>
 <body>
-    <section id="servicekeyword">
-        <h2>Service Keyword</h2>
-        <h3>플마의 서비스를 도출하였습니다.</h3>
+    <section id="team">
+        <div class="teamtitle" style="text-align: left;">
+            <h2>작심삼일도 식물과 함께, 갓생으로 가는 길</h2>
+          <img src="img/team플마green.png">
+        </div>
         
-        <div class="sub">
-            <img src="img/Frame34043.png" alt="플마 배경 이미지">
-            <div class="circles-container1">
-                <div class="circlebg1">
-                    <p>Funny</p>
+    
+        <div class="profileimg">
+            <div class="profile-item">
+                <div class="profile-circle">
+                 
+                        <img src="img/서연우.png" alt="Profile 1">
+              
+                    
                 </div>
-                <div class="circlebg1">
-                    <p>Steadily</p>
+                <p>
+                    <span class="name">서연우</span><br>
+                    <span class="descriptionj">Planner</span><br><br>
+                    <span class="phonenumber">010-9206-4960</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <div class="profile-circle">
+                 
+                        <img src="img/권규린.png" alt="Profile 2">
+                   
+                    
                 </div>
-                <div class="circlebg1">
-                    <p>Oneself</p>
+                <p>
+                    <span class="name">권규린</span><br>
+                    <span class="descriptionj">Designer</span><br><br>
+                    <span class="phonenumber">010-2833-8320</span>
+                </p>
+            </div>
+            <div class="profile-item">
+                <div class="profile-circle">
+               
+                        <img src="img/박소정.png" alt="Profile 3">
+                   <!-- 원 -->
+                   
                 </div>
+                <p>
+                    <span class="name">박소정</span><br>
+                    <span class="descriptionj">Designer</span><br><br>
+                    <span class="phonenumber">010-7922-6868</span>
+                </p>
             </div>
-        </div>
-
-        <div class="line1">
-            <img src="img/line.png">
-            <img src="img/line.png">
-            <img src="img/line.png">
-        </div>
-
-        <div class="servicekeyword-container">
-            <div class="keyword1">
-                <h3>재미있게</h3>
-                <h5>계획을 실천해 가상 식물을 키우고
-                    <br>온실을 꾸밀 수 있는 서비스로,
-                    <br>친구와 습관 챌린지에 참여하고
-                    <br>이웃 온실을 구경하며 소통할 수 있습니다.
-                </h5>
+            <div class="profile-item">
+                <div class="profile-circle">
+                   
+                        <img src="img/이경진.png" alt="Profile 4">
+                 
+                </div>
+                <p>
+                    <span class="name">이경진</span><br>
+                    <span class="descriptionj">Designer</span><br><br>
+                    <span class="phonenumber">010-6890-1436</span>
+                </p>
             </div>
-            <div class="keyword2">
-                <h3>꾸준히</h3>
-                <h5>
-                    연속 루틴 달성 시 추가 보상과
-                    <br>도전과제 완료 시 특별 배지를 제공하며,
-                    <br>사용자 맞춤 난이도 조절 기능을
-                    <br>지원합니다.
-                </h5>
+            <div class="profile-item">
+                <div class="profile-circle">
+                  
+                        <img src="img/정해린.png" alt="Profile 5">
+             
+                    
+                </div>
+                <p>
+                    <span class="name">정해린</span><br>
+                    <span class="descriptionj">Designer</span><br><br>
+                    <span class="phonenumber">010-4609-0545</span>
+                </p>
             </div>
-            <div class="keyword3">
-                <h3>스스로</h3>
-                <h5>사용자가 하루를 되돌아보며<p>작성할 수 있는 일기</p></h5>
+            <div class="profile-item">
+                <div class="profile-circle">
+                
+                        <img src="img/임승현.png" alt="Profile 6">
+                 
+                    
+                </div>
+                <p>
+                    <span class="name">임승현</span><br>
+                    <span class="descriptionj">Programer</span><br><br>
+                    <span class="phonenumber">010-2842-6429</span>
+                </p>
             </div>
         </div>
     </section>
+    
 </body>
 </html>
