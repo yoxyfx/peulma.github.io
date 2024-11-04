@@ -494,18 +494,25 @@ header {
 
 .lines3 {
     color: #FFB45C;
-    line-height: 1.2em;
+    line-height: 1.2m;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    width: 100vw; /* 화면 전체 너비 */
+    max-width: 110%; /* 최대 너비 제한 */
 }
 
 .sub {
-    position: relative; /* 부모 요소에 상대 위치 설정 */
-    margin: 0;
+    position: relative;
+    margin: 0 auto;
     margin-top: 45px;
     margin-bottom: 50px;
-    margin-left: -30px; /* Move slightly to the left */
     width: 100%;
     max-width: 900px;
 }
+
 
 .sub img {
     width: 110%;
@@ -567,10 +574,10 @@ header {
     line-height: 1.2em;
     text-align: center;
     display: flex;
-    justify-content: center;
-    gap: 245px;
+    justify-content: space-between; /* 요소들 간의 간격을 균등 분배 */
+    gap: 40px;
     margin-top: 20px;
-    transform: translateX(60px); /* 컨테이너 전체를 오른쪽으로 이동 */
+    transform: translateX(65px); /* 컨테이너 전체를 오른쪽으로 이동 */
 }
 
 .subtext-container p {
@@ -578,9 +585,13 @@ header {
     margin-top: 0;
 }
 
-/* Plant 텍스트만 왼쪽으로 이동 */
 .move-left {
-    transform: translateX(-20px); /* Plant 텍스트를 왼쪽으로 이동 */
+    margin-left: -100px; /* Plant 텍스트를 왼쪽으로 크게 이동 */
+}
+
+
+.move-right {
+    transform: translateX(-40px); /* Mindcare를 오른쪽으로 이동 */
 }
 
 
@@ -995,7 +1006,7 @@ a {
 }
 
 .charac2 {
-    bottom: 14%;
+    bottom: 5%;
     right: 21%;
     transform: translate(-10%, -10%);
     width: 70px;  /* 크기를 조정 (예: 50px에서 70px로 변경) */
