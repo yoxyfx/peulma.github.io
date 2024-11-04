@@ -570,18 +570,19 @@ header {
 
 .subtext-container {
     color: #3E7443;
-    font-size: 40px;
+    font-size: 38px;
     line-height: 1.2em;
     text-align: center;
     display: flex;
     justify-content: space-between; /* 요소들 간의 간격을 균등 분배 */
-    gap: 40px;
+    gap: 10px; /* 간격을 40px로 조정 */
     margin-top: 20px;
-    transform: translateX(65px); /* 컨테이너 전체를 오른쪽으로 이동 */
+    transform: translateX(60px); /* 컨테이너 전체를 오른쪽으로 이동 */
 }
 
+
 .subtext-container p {
-    margin: 10px;
+    margin: 0px;
     margin-top: 0;
 }
 
@@ -591,8 +592,10 @@ header {
 
 
 .move-right {
-    transform: translateX(-40px); /* Mindcare를 오른쪽으로 이동 */
+    margin-left: -30px; /* Mindcare를 왼쪽으로 이동 */
 }
+
+
 
 
 /* 부가 정보 스타일 */
