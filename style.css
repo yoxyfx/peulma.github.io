@@ -1202,7 +1202,7 @@ a {
         .servicekeyword-container {
             display: flex;
             justify-content: flex-start; /* Change to flex-start to align items to the left */
-            gap: 10px; /* Space between keywords */
+            gap: 15px; /* Space between keywords */
             margin: 0 auto; /* Center the entire container */
             padding-left: -20px; /* Add padding to the left if needed to create space */
             margin-left: 50px;
@@ -1310,7 +1310,7 @@ a {
     text-align: center;
     width: 350px; /* 키워드 3 너비 */
     border-radius: 10px;
-    margin-left: -20px; /* 왼쪽으로 이동 (더 왼쪽으로) */
+    margin-left: -30px; /* 왼쪽으로 이동 (더 왼쪽으로) */
 }
 
 /* Adjust the heading styles for Keyword 3 */
