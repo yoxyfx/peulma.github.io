@@ -570,30 +570,26 @@ header {
 
 .subtext-container {
     color: #3E7443;
-    font-size: 38px;
+    font-size: 35px;
     line-height: 1.2em;
     text-align: center;
     display: flex;
-    justify-content: space-between; /* 요소들 간의 간격을 균등 분배 */
-    gap: 10px; /* 간격을 40px로 조정 */
+    justify-content: space-around;
+    gap: 40px; /* 간격을 40px로 조정 */
     margin-top: 20px;
     transform: translateX(60px); /* 컨테이너 전체를 오른쪽으로 이동 */
 }
 
 
 .subtext-container p {
-    margin: 0px;
+    margin: -100px;
     margin-top: 0;
 }
 
 .move-left {
-    margin-left: -100px; /* Plant 텍스트를 왼쪽으로 크게 이동 */
+    margin-left: -50px; /* Plant 텍스트를 왼쪽으로 이동 */
 }
 
-
-.move-right {
-    margin-left: -30px; /* Mindcare를 왼쪽으로 이동 */
-}
 
 
 
