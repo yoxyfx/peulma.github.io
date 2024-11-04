@@ -141,14 +141,50 @@ header {
 
 /* flower 이미지들 */
 .flower1 img, .flower2 img, .flower3 img {
-    width: 100%; 
-    height: auto; 
-    max-width: 700px; 
-    object-fit: cover; 
+    width: auto;
+    height: auto;
+    max-width: 20%; /* 최대 크기를 설정하여 비율을 유지합니다 */
+    object-fit: cover;
     position: absolute;
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
 }
+
+/* mockup 이미지 */
+.mockup img {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* 확대 시 비율을 유지하고 부모 컨테이너의 크기에 맞춥니다 */
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+    margin-left: 60px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* circle 이미지 */
+.circle img {
+    width: auto;
+    height: auto;
+    max-width: 125%; /* 확대 시 비율 유지 */
+    position: relative;
+    top: -20%;
+    left: -10%;
+}
+
+/* text-content 내부의 이미지 */
+.text-content img {
+    width: auto;
+    height: auto;
+    max-width: 60%;
+    margin-left: 20px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 1.0s;
+}
+
 
 /* flower1 이미지 */
 .flower1 img {
