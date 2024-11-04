@@ -1205,7 +1205,7 @@ a {
             gap: 10px; /* Space between keywords */
             margin: 0 auto; /* Center the entire container */
             padding-left: -20px; /* Add padding to the left if needed to create space */
-            margin-left: 270px;
+            margin-left: 50px;
         }
         
         
@@ -1213,6 +1213,34 @@ a {
         .servicekeyword-container h5 {
             font-size: 2.0em; /* 원하는 크기 */
             font-weight: 300; /* 얇은 글자 */
+        }
+        /* wrapper1 스타일 */
+.wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto;
+    padding: 0 20px; /* 여백 추가 */
+    box-sizing: border-box;
+}
+        .sub1 {
+            position: relative;
+            margin: 0 auto;
+            margin-top: 45px;
+            margin-bottom: 50px;
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        
+        .sub1 img {
+            width: 110%;
+            height: auto;
+            position: relative;
+            margin-left: -20px;
+            z-index: 1; /* 배경 이미지의 z-index를 1로 설정 */
         }
         
 /* Keyword 1 스타일 */
