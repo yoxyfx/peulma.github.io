@@ -778,27 +778,31 @@ a {
     flex: 1;
     height: 100%;
 }
-
-.talk-img {
-    opacity: 0; /* 초기 상태: 숨김 */
-    transform: translateY(20px); /* 아래에서 위로 이동 */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 애니메이션 효과 */
+.talk{
+    margin-left:-100px;
+}
+.content a.talk img {
+    max-width: 280px;
+    height: auto;
+}
+#second-talk-img {
+    margin-left: -150px; /* 왼쪽으로 이동할 거리 */
 }
 
-.show {
+ow {
     opacity: 1; /* 나타나는 상태 */
     transform: translateY(0); /* 원래 위치로 이동 */
 }
 
 .graph {
-    margin-left: -350px; /* 그래프를 왼쪽으로 더 이동 */
+    margin-left: -450px; /* 그래프를 왼쪽으로 더 이동 */
 }
 
-/* 대화 이미지 스타일 */
 .talk img, .graph img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
+
 
 /* 그래프 이미지 너비 조정 */
 .graph img {
@@ -810,7 +814,7 @@ a {
 .character1 {
     position: absolute; /* 절대 위치로 설정 */
     bottom: 0; /* 아래쪽에 배치 */
-    left: 6%; /* 왼쪽에 배치 */
+    left: 13%; /* 왼쪽에 배치 */
     transform: translateY(20px); /* 약간 아래로 위치 조정 */
     z-index: 1; /* 다른 콘텐츠 위에 배치 */
 }
