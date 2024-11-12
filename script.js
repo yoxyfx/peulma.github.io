@@ -111,6 +111,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+function toggleImage(clickedImage) {
+    const images = document.querySelectorAll('.images-containers img');
+    const captions = document.querySelectorAll('.images-captions');
+    
+    images.forEach(image => {
+        image.classList.remove('active');
+        image.classList.add('inactive');
+    });
+
+    captions.forEach(caption => {
+        caption.classList.remove('active');
+    });
+
+    clickedImage.classList.add('active');
+    clickedImage.classList.remove('inactive');
+
+    const parentWrapper = clickedImage.closest('.images-wrappers');
+    const caption = parentWrapper.querySelector('.images-captions');
+    caption.classList.add('active');
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const firstImage = document.querySelector('.images-containers .images-wrappers img');
+    const firstCaption = document.querySelector('.images-containers .images-wrappers .images-captions');
+    firstImage.classList.add('active');
+    firstCaption.classList.add('active');
+});
+
+
+
+
 // bg 섹션을 옵저버에 추가합니다.
 const bgSection = document.getElementById('bg');
 observer.observe(bgSection);

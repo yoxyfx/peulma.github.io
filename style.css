@@ -1682,6 +1682,113 @@ ow {
         }
         
 
+
+        #introduce {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 150px;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 80rem;
+            margin: 0;
+            margin-top: 0px;
+            transition: background-image 2.5s ease;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+
+        #introduce h1 {
+    font-family: 'NanumSquareRound', sans-serif;
+    font-weight: 900;
+    color: #3E7443;
+    font-size: 3rem;
+    margin: 0px 100px 15px 100px;
+}
+
+        #introduce h2 {
+    color: #3E7443;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 15px 100px;
+}
+
+
+        #introduce p {
+            color: #021502;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 0px 100px;
+            margin-left: 100px;
+        }
+
+        .images-containers {
+            display: flex;
+            /*justify-content: center;*/
+            gap: 30px;
+            flex-wrap: nowrap;
+            width: 120%;
+            max-width: 1500px;
+            margin: 0 auto;
+            margin-left:150px;
+            align-items: center;
+            position: relative;
+            top: 160px;
+        }
+
+        .images-containers .images-wrappers {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            transition: transform 0.5s ease, margin 0.5s ease;
+        }
+
+        .images-containers img {
+           
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            cursor: pointer;
+            max-width: 200%;
+            max-height: 200%;
+            will-change: transform;
+        }
+
+        .images-containers img.active {
+            transform: scale(1.5);
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .images-containers img.inactive {
+            transform: scale(0.8);
+            opacity: 0.7;
+            margin-top: 125px;
+        }
+
+        .images-captions {
+            position: absolute;
+            font-size: 18px;
+            color: #07603c;
+            font-weight: bold;
+            display: none;
+        }
+
+        .caption-loading, .caption-home, .caption-routine, .caption-greenhouse, .caption-growth {
+            top: -35%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .images-captions.active {
+            display: block;
+        }
+
+
+
+
 .greenhouse-slider-container {
     background-color: #FBFFE5;
     max-width: 2000px; 
