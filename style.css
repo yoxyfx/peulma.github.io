@@ -1635,7 +1635,7 @@ ow {
     background-color: #B1DA73; 
     color: #ffffff;
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     margin: 0;
     padding: 200px;
     box-sizing: border-box;
@@ -1705,15 +1705,16 @@ ow {
             align-items: center;
             justify-content: center;
             background-color: #FBFFE5;
-            height: 1500px;
+            height: 1350px;
             text-align: center;
         }
         .video-container video {
-            width: 100%; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-            
+            width: 140%;
+            border-radius: 8px;
+            /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+            transform: translateX(-220px); /* 왼쪽으로 10px 이동 */
         }
+        
         #yellow{
             display: flex;
             align-items: center;
@@ -1734,14 +1735,17 @@ ow {
             background-color: #FBFFE5;
             color: #021502;
             width: 100%;
-            height: 80rem;
+            height: 70rem;
             margin: 0;
             margin-top: 0px;
             transition: background-image 2.5s ease;
             z-index: 10;
             transform: translateY(-200px); 
         }
-
+        .introduce {
+            transform: translateY(-100px); /* 위로 20px 이동 */
+        }
+        
         #introduce h1 {
     font-family: 'NanumSquareRound', sans-serif;
     font-weight: 900;
