@@ -146,7 +146,7 @@ header {
     width: 48%;
     justify-content: center;
     margin-left: 15%; /* Adjust this value to move the image more to the right */
-    margin-top: 50px; 
+    margin-top: 60px; 
     transition: transform 0.3s ease;
     height: auto; 
     position: relative; 
@@ -176,9 +176,9 @@ header {
     width: 100%;
     max-width: 450px;
     position: absolute; 
-    top: 33.3%;
-    right: 25%; /* 오른쪽으로 정렬 */
-    z-index: 1; /* 겹치는 순서 조정 */
+    top: 29.9%;
+    right: 25%; 
+    z-index: 1; 
 }
 
 .habit-image-plant-1 img {
@@ -188,23 +188,15 @@ header {
 }
 
 
-.habit-image-2 {
-    width: 48%;
-    justify-content: center;
-    margin-left: 15%;
-   
-    transition: transform 0.3s ease;
-    height: auto;
-    position: relative; /* 기준 위치 */
-}
+
 
 .habit-image-plant-2 {
     width: 100%;
     max-width: 450px;
     position: absolute; /* 절대 위치로 설정 */
-   top:39.5%;
-    right: 30%; /* 오른쪽으로 정렬 */
-    z-index: 2; /* 겹치는 순서 조정 */
+   top:36%;
+    right: 24%; 
+    z-index: 2; 
 }
 
 .habit-image-plant-2 img {
@@ -228,8 +220,8 @@ header {
     width: 100%;
     max-width: 450px;
     position: absolute; /* 절대 위치로 설정 */
-   top:44.8%;
-    right: 30%; /* 오른쪽으로 정렬 */
+   top:41.5%;
+    right: 24%; /* 오른쪽으로 정렬 */
     z-index: 2; /* 겹치는 순서 조정 */
 }
 
@@ -239,31 +231,60 @@ header {
     object-fit: cover;
 }
 
-/* habit-image-plant-5 스타일 */
-.habit-image-plant-5 {
+.habit-image-plant-4 {
     width: 100%;
-    max-width: 450px;
-    margin-bottom: 20px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-
+    margin-left: 15%;
+    transition: transform 0.3s ease;
+    height: auto;
+    position: relative; 
+    max-width: 450px;
+    position: absolute; 
+   top:42.75%;
+    left: -5.5%; 
+    z-index: 2; 
 }
 
-.habit-image-plant-5 img {
-    width: 100%;
+.habit-image-plant-4 img {
+    width: 80%;
+
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
 }
+
+.habit-image-2 {
+    width: 60%;
+    margin-right: 0;
+    margin-left: auto; 
+    transition: transform 0.3s ease;
+    height: auto;
+    position: relative;
+}
+
+.habit-base {
+    width: 60%;
+    height: auto;
+    margin-top: 80px;
+}
+
+.habit-overlay {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-160%);
+    width: 30%; /* 필요에 따라 조절 */
+    height: auto;
+}
+
+
 @media (max-width: 768px) {
     .habit-image-1 {
-        width: 80%; /* Adjust size for mobile */
-        height: auto; /* Ensure the height scales proportionally */
+        width: 80%; 
+        height: auto; 
     }
     .habit-image-2 {
-        width: 90%; /* Adjust size for mobile */
-        height: auto; /* Ensure the height scales proportionally */
+        width: 90%; 
+        height: auto; 
     }
 }
 
@@ -308,15 +329,22 @@ header {
                 <img src="img/habitment1.png" class="habit-image-plant-1">
             </div>
             <div class="habit-image-plant-2">
-                <img src="img/habitment2.png" class="habit-image-plant-4">
+                <img src="img/habitment2.png" class="habit-image-plant-2">
             </div>
             <div class="habit-image-plant-3">
-                <img src="img/habitment3.png" class="habit-image-plant-5">
+                <img src="img/habitment3.png" class="habit-image-plant-3">
             </div>
-
-        <div class="habit-image-2">
-            <img src="img/러닝챌린지.png" class="habit-image-2">
-        </div>
+            <div class="habit-image-plant-4">
+                <img src="img/habitment4.png" class="habit-image-plant-4">
+            </div>
+        
+          
+            <div class="habit-image-2">
+                <img src="img/habitimage2ment.png" class="habit-overlay">
+                <img src="img/러닝챌린지.png" class="habit-base">
+              
+            </div>
+            
   
     </section>
 
