@@ -348,7 +348,6 @@ header {
     background-color: #ffffff;
     color: #000000;
     width: 100%;
-  
     margin: 0; 
     padding: 50px; 
 }
@@ -400,21 +399,20 @@ header {
     }
 
     .fixed-button {
-        right: 20px; /* Adjust position for smaller screens */
+        right: 20px;
     }
 
     .circle {
-        width: 90%; /* Make circle responsive */
-        height: auto; /* Keep aspect ratio */
-        top: 80%; /* Adjust position */
+        width: 90%; 
+        height: auto; 
+        top: 80%;
     }
 }
 
 
-  /* 배경 섹션 스타일 */
-/* 배경 섹션 스타일 */
+
 #background {
-    position: relative; /* 부모 요소에 상대 위치 지정 */
+    position: relative; 
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -423,44 +421,44 @@ header {
     background-color: #ffffff;
     color: #000000;
     width: 100%;
-    height: 1500px;
+    height: 1200px;
     margin: 0; 
     padding: 50px; 
 }
 
 .alpapa {
-    position: absolute; /* 절대 위치 지정 */
-    top: 20%; /* 상단에 배치 */
-    left: 0; /* 왼쪽에 배치 */
-    width: 50%; /* 너비를 50%로 유지 */
+    position: absolute; 
+    top: 20%; 
+    left: 0; 
+    width: 50%; 
     height: auto;
-    margin-top: 0; /* 위쪽 여백 제거 */
-    margin-bottom: 50px; /* 아래쪽 여백 유지 */
-    animation: moveUpDown 2s ease-in-out infinite; /* 애니메이션 추가 */
+    margin-top: 0; 
+    margin-bottom: 50px; 
+    animation: moveUpDown 2s ease-in-out infinite;
 }
 
 .alpapa img {
-    width: 30%; /* 이미지의 너비를 div에 맞춤 */
-    height: auto; /* 비율 유지 */
+    width: 30%; 
+    height: auto; 
 }
 
 @keyframes moveUpDown {
     0% {
-        transform: translateY(0); /* 처음 위치 */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-10px); /* 위로 이동 */
+        transform: translateY(-10px); 
     }
     100% {
-        transform: translateY(0); /* 원래 위치로 돌아옴 */
+        transform: translateY(0); 
     }
 }
 
 
 #background h2, 
 #background p {
-    margin-top: 0; /* 위쪽 여백 제거 */
-    margin-bottom: 20px; /* 아래쪽 여백 조정 (원하는 만큼) */
+    margin-top: 0; 
+    margin-bottom: 20px; 
 }
 
 
@@ -477,14 +475,14 @@ header {
     margin: 0;
     padding: 50px;
 }
-/* 전체 섹션에 페이드 인 효과를 위한 초기 상태 */
+
 #background {
     opacity: 0;
-    transform: translateY(50px); /* 아래에서 위로 올라오도록 설정 */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* 트랜지션 설정 */
+    transform: translateY(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out; 
 }
 
-/* 화면에 나타날 때 효과 */
+
 #background.visible {
     opacity: 1;
     transform: translateY(0);
@@ -528,9 +526,10 @@ header {
 
 .wrapper {
     display: flex;
-    justify-content: center; /* 중앙 정렬 */
-    width: 100vw; /* 화면 전체 너비 */
-    max-width: 110%; /* 최대 너비 제한 */
+    justify-content: center;
+    width: 100vw;
+    max-width: 110%;
+    transform: translateX(-30px); /* 왼쪽으로 10px 이동 */
 }
 
 .sub {
@@ -548,19 +547,19 @@ header {
     height: auto;
     position: relative;
     margin-left: -20px;
-    z-index: 1; /* 배경 이미지의 z-index를 1로 설정 */
+    z-index: 1; 
 }
 
 
 
 .circles-container {
     display: flex;
-    position: absolute; /* 절대 위치 */
-    top: 33%; /* Y축 위치 조정 (위로 올리기) */
-    left: 53%; /* X축 중앙 정렬 */
-    transform: translate(-50%, -50%); /* 가운데 정렬 */
-    z-index: 3; /* 원들이 배경 이미지 위에 위치하도록 설정 */
-    gap: 90px; /* 원들 사이의 간격 */
+    position: absolute; 
+    top: 33%; 
+    left: 53%; 
+    transform: translate(-50%, -50%); 
+    z-index: 3; 
+    gap: 90px; 
 }
 
 
@@ -569,7 +568,7 @@ header {
     position: absolute;
     left: 53%;
     transform: translate(-50%, 0);
-    z-index: 0; /* 배경 이미지 아래에 위치 */
+    z-index: 0; 
 }
 
 .line > img {
@@ -617,31 +616,31 @@ header {
 
 
 .move-left {
-    position: absolute; /* 절대 위치 설정 */
-    left: 8%; /* 왼쪽 끝으로 이동 */
+    position: absolute; 
+    left: 8%; 
 }
 .move-right {
-    position: absolute; /* 절대 위치 설정 */
-    left: 78%; /* 왼쪽 끝으로 이동 */
+    position: absolute; 
+    left: 78%; 
 }
 
 
 
-/* 부가 정보 스타일 */
+
 .subinfo {
     font-size: 1em;
     color: #7A7A7A;
     margin-top: 20px;
 }
 
-/* 초기 상태 설정 */
+
 .circlebg, .subtext-container p {
     opacity: 0;
-    transform: translateY(20px); /* 아래에서 위로 올라오도록 설정 */
+    transform: translateY(20px); 
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 트랜지션 설정 */
 }
 
-/* 요소가 보일 때 적용되는 상태 */
+
 .circlebg.visible, .subtext-container p.visible {
     opacity: 1;
     transform: translateY(0);
@@ -686,7 +685,7 @@ header {
 }
 
 
-   /* 배경 및 텍스트 스타일 */
+
    #bg {
     display: flex; 
     flex-direction: column; 
@@ -699,12 +698,12 @@ header {
     margin: 0;
     padding: 50px;
     overflow: hidden;
-    position: relative; /* 추가된 부분 */
+    position: relative; 
 }
 
-/* 제목 스타일 */
+
 .background-title {
-    font-size: 1.5em; 
+    font-size: 1.2em; 
     font-weight: bold;
     margin-bottom: 20px;
     color: #ffffff;
