@@ -1151,6 +1151,22 @@ ow {
     border-radius: 10px;
 }
 
+#persona h2 {
+    text-align: center; /* 가운데 정렬 */
+    font-size: 1.2rem; /* 폰트 크기 조절 */
+    color: #333; /* 텍스트 색상 */
+    margin-top: 20px; /* 위쪽 여백 */
+    margin-bottom: 10px; /* 아래쪽 여백 */
+}
+
+#persona p {
+    text-align: center; /* 가운데 정렬 */
+    font-size: 1.5rem; /* 폰트 크기 조절 */
+    color: #555; /* 텍스트 색상 */
+    margin-top: 0; /* 위쪽 여백 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+    line-height: 1.5; /* 행간 조절 */
+}
 
 
         #problemsolution {
@@ -1167,6 +1183,30 @@ ow {
             padding: 50px;
             position: relative;
         }
+        #problemsolution h2 {
+            text-align: center; /* 가운데 정렬 */
+            font-size: 1.2rem; /* 폰트 크기 조절 */
+            color: #ffffff; /* 텍스트 색상 */
+            margin-top: 20px; /* 위쪽 여백 */
+            margin-bottom: 10px; /* 아래쪽 여백 */
+        }
+        
+        #problemsolution p {
+            text-align: center; /* 가운데 정렬 */
+            font-size: 1.5rem; /* 폰트 크기 조절 */
+            color: #ffffff; /* 텍스트 색상 */
+            margin-top: 0; /* 위쪽 여백 */
+            margin-bottom: 20px; /* 아래쪽 여백 */
+            line-height: 1.5; /* 행간 조절 */
+        }
+        .arrow-img {
+            width: 40px !important;
+            height: auto !important;
+            position: relative; /* 위치 조정을 위해 추가 */
+            top: -200px; /* 위로 이동 */
+        }
+        
+        
         
         .image-container2 img {
             width: 30%; /* 이미지 크기 조절 */
@@ -1185,9 +1225,9 @@ ow {
         
         .carnation {
             position: absolute;
-            right: 160px;
-            bottom: 80px;
-            width: 200px; /* Set a smaller width for the carnation image */
+            right: 220px;
+            bottom: 50px;
+            width: 150px; /* Set a smaller width for the carnation image */
             height: auto;
             z-index: 1;
         }
@@ -1211,22 +1251,22 @@ ow {
             width: 100%;
             margin: 0; 
             padding: 40px; 
-            margin-left: -20px; /* 왼쪽으로 이동 */
+            margin-left: 0px; /* 왼쪽으로 이동 */
         }
         
        /* Move the headings to the right */
 #servicekeyword h2 {
-    font-size: 1.2em; /* 원하는 크기로 설정 */
-    color: #333; /* 원하는 색으로 설정 */
-    margin-left: 20px;
+    font-size: 1.2em; 
+    color: #333; 
+    /*margin-left: 20px;*/
    
 }
 
 #servicekeyword h3 {
-    font-size: 1.5em; /* 원하는 크기로 설정 */
+    font-size: 1.5em; 
     text-align: center;
-    color: #3E7443; /* 원하는 색으로 설정 */
-    margin-left: 20px;
+    color: #3E7443; /
+    /*margin-left: 20px;*/
    
 }
 
@@ -1252,17 +1292,18 @@ ow {
             font-weight: 300; /* 얇은 글자 */
         }
         /* wrapper1 스타일 */
-.wrapper1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* 최대 너비 설정 */
-    margin: 0 auto;
-    padding: 0 20px; /* 여백 추가 */
-    box-sizing: border-box;
-}
-        .sub1 {
+        .wrapper1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            transform: translateX(-10px); /* 왼쪽으로 10px 이동 */
+        }
+             .sub1 {
             position: relative;
             margin: 0 auto;
             margin-top: 45px;
@@ -1320,7 +1361,7 @@ ow {
     text-align: center;
     width: 350px; /* 키워드 2 너비 */
     border-radius: 10px;
-    margin-left: -30px; /* 왼쪽으로 이동 */
+    margin-left: -35px; /* 왼쪽으로 이동 */
 }
 
 .keyword2 h4 {
@@ -1605,12 +1646,12 @@ ow {
 .imockup {
     position: relative; 
     z-index: 3; 
-    margin-top: 100px; 
+    /*margin-top: 100px;*/ 
 }
 
 .imockup img {
     margin-top: 100px;
-    width: 400px; 
+    width: 550px; 
     height: auto; 
     max-width: 700px; 
     object-fit: cover; 
