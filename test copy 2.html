@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face { 
+            font-family: 'NanumSquareRound';
+            src: url('font/NanumSquareRoundOTFR.woff2') format('woff2'),
+                 url('font/NanumSquareRoundOTFR.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NanumSquareRound';
+            src: url('font/NanumSquareRoundOTFB.woff2') format('woff2'),
+                 url('font/NanumSquareRoundOTFB.otf') format('opentype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        html, body {
+            font-family: 'NanumSquareRound', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        /* 헤더 스타일 */
+header {
+    background-color: #ffffff;
+    color: #9EBF86;
+    padding: 30px 0;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 10; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 200px; 
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+.header-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-text a {
+    color: #9EBF86; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.header-text a:hover {
+    color: #FFB45C; 
+}
+
+
+.fixed-button {
+    position: fixed;
+    bottom: 80px;
+    right: 240px;
+    width: 100px;
+    height: 100px;
+    background-image: url('img/TOP.png'); 
+    background-size: cover;
+    background-color:transparent;
+    cursor: pointer;
+    z-index: 10;
+    border:none;
+    outline: none;
+}
+
+.fixed-button:hover {
+    background-image: url('img/TOPhover.png'); 
+    z-index: 5;
+    background-color:transparent;
+}
+
+
+
+
+       
+  
+
+
+#help{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+              /*justify-content: center;*/
+              padding-left: 150px;
+            background-color: #99BF7E;
+            color: #ffffff;
+            width: 100%;
+            height: 3500px;
+            margin: 0;
+            /*margin-top: -500px;*/
+            transition: background-image 2.5s ease;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+
+        #help h1 {
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 100px;
+        }
+
+        #help h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 15px 100px;
+        }
+
+        #help p {
+            color: #ffffff;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin: 10px 100px;
+            margin-left: 100px;
+        }
+        #price{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+             /*justify-content: center;*/
+             padding-left: 150px;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 3500px;
+            margin: 0;
+            margin-top: -500px;
+            transition: background-image 2.5s ease;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+
+        #price h1 {
+            color:  #3E7443;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 100px;
+        }
+
+        #price h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 15px 100px;
+        }
+
+        #price p {
+            color: #021502;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin: 10px 100px;
+            margin-left: 100px;
+        }
+
+        #share{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+             /*justify-content: center;*/
+            padding-left: 150px;
+            background-color:  #3E7443;
+            color: #ffffff;
+            width: 100%;
+            height: 3500px;
+            margin: 0;
+            margin-top: -500px;
+            transition: background-image 2.5s ease;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+
+        #share h1 {
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 100px;
+        }
+
+        #share h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 15px 100px;
+        }
+
+        #share p {
+            color: #ffffff;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin: 10px 100px;
+            margin-left: 100px;
+        }
+        #growth{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+              /*justify-content: center;*/
+            padding-left: 20px;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 3500px;
+            margin: 0;
+            margin-top: -500px;
+            transition: background-image 2.5s ease;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+
+        #growth h1 {
+            color:  #3E7443;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 100px;
+        }
+
+        #growth h2 {
+            color:  #3E7443;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 15px 100px;
+        }
+
+        #growth p {
+            color: #ffffff;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin: 10px 100px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- 로고 클릭 시 링크 이동 -->
+            <a href="" class="logo"> <!-- 로고를 링크로 감싸기 -->
+                <img src="img/logo.png" alt="플마 로고">
+            </a>
+
+            <!-- 오른쪽 텍스트 -->
+            <div class="header-text">
+                <a href="#background"data-offset="120">Planning</a>
+                <a href="#brand"data-offset="-120">Design</a>
+                <a href="#team"data-offset="-70">Contact</a>
+            </div>
+           
+            
+        </div>
+    </header>
+
+  
+
+   
+
+    <section id="help">
+        <h1>작심삼일 이젠 지겹죠?</h1>
+        <p>진행중인 루틴을 확인하고 직접 루틴을 본인의 일정에<br>
+            맞게 수정하면서 꾸준한 루틴을 유지하길 도와요!</p>
+
+            <img src="img/작심삼일.png">
+        
+    </section>
+
+    <section id="price">
+        <h1>노력의 결실들을 모아봐요</h1>
+        <p>식물이 된 루틴들을 모아 보고 꾸며 보아요.</p>
+
+        <img src="img/pricemockup.png">
+        <img src="img/pricemockup1.png">
+    </section>
+    <section id="share">
+        <h1>
+            예쁘게 꾸미고<br>
+            자랑해 볼까요?
+        </h1>
+        <p>
+            이웃들에게 자랑해보고 대화를 해봐요 본인만이<br>
+            얻을 수 있는 희귀한 식물을 자랑해보면 어떨까요?
+        </p>
+    </section>
+
+    <section id="growth">
+        <h1>오늘은 얼마나 더 성장했을까요?</h1>
+        <p>
+            여러분의 성장을 시각적으로 정확하게 표현하여 보여줍니다.
+        </p>
+    </section>
+
+
+    <script>
+        function toggleImage(clickedImage) {
+            const images = document.querySelectorAll('.images-containers img');
+            const captions = document.querySelectorAll('.images-captions');
+            
+            images.forEach(image => {
+                image.classList.remove('active');
+                image.classList.add('inactive');
+            });
+
+            captions.forEach(caption => {
+                caption.classList.remove('active');
+            });
+
+            clickedImage.classList.add('active');
+            clickedImage.classList.remove('inactive');
+
+            const parentWrapper = clickedImage.closest('.images-wrappers');
+            const caption = parentWrapper.querySelector('.images-captions');
+            caption.classList.add('active');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const firstImage = document.querySelector('.images-containers .images-wrappers img');
+            const firstCaption = document.querySelector('.images-containers .images-wrappers .images-captions');
+            firstImage.classList.add('active');
+            firstCaption.classList.add('active');
+        });
+    </script>
+</body>
+</html>
