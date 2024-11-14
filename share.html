@@ -107,84 +107,83 @@ header {
 
 
 
-        #price{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-             /*justify-content: center;*/
-             padding-left: 150px;
-            background-color: #FBFFE5;
-            color: #021502;
-            width: 100%;
-            height: 3500px;
-            margin: 0;
-            margin-top: -500px;
-            transition: background-image 2.5s ease;
-            z-index: 10;
-            transform: translateY(-200px); 
-        }
 
-        #price h1 {
-            color:  #3E7443;
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 20px 100px;
-        }
+    
+        #share {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: #96C155;
+    color: #021502;
+    width: 100%;
+    height: 180rem;
+    margin: 0;
+    margin-top: 0px;
+    z-index: 10;
+}
 
-        #price h2 {
-            color: #ffffff;
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 15px 100px;
-        }
+#share h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 100px;
+}
 
-        #price p {
-            color: #021502;
-            font-size: 1.25rem;
-            line-height: 1.6;
-            margin: 10px 100px;
-            margin-left: 100px;
-        }
+#share h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 100px;
+}
 
-        #share{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-             /*justify-content: center;*/
-            padding-left: 150px;
-            background-color:  #3E7443;
-            color: #ffffff;
-            width: 100%;
-            height: 3500px;
-            margin: 0;
-            margin-top: -500px;
-            transition: background-image 2.5s ease;
-            z-index: 10;
-            transform: translateY(-200px); 
-        }
+#share p {
+    color: #ffffff;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 10px 100px;
+    margin-left: 100px;
+}
+#share .share-img {
+    display: flex;
+    justify-content: center; /* 이미지 중앙 정렬 */
+    gap: 30px; /* 이미지 사이의 간격 */
+    flex-wrap: wrap; /* 화면이 좁아지면 이미지들이 자동으로 줄바꿈 */
+    margin-top: 20px; /* 필요시 상단 여백 추가 */
+    transition: transform 0.3s ease; /* 전체 컨테이너에 트랜지션 추가 */
+    margin-top:50px;
+}
 
-        #share h1 {
-            color: #ffffff;
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 20px 100px;
-        }
+#share .share-img img {
+    width: 19%; /* 이미지 크기 줄이기 */
+    height: auto; /* 비율에 맞게 자동으로 높이 조정 */
+    margin-bottom: 20px; /* 이미지 간 간격을 조금 띄워줍니다. */
+    transition: transform 0.3s ease; /* 개별 이미지에 트랜지션 추가 */
+}
 
-        #share h2 {
-            color: #ffffff;
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 15px 100px;
-        }
+#share .share-img img:hover {
+    transform: scale(1.2); /* 마우스 오버 시 이미지 크기 확대 */
+}
 
-        #share p {
-            color: #ffffff;
-            font-size: 1.25rem;
-            line-height: 1.6;
-            margin: 10px 100px;
-            margin-left: 100px;
-        }
-   
+/* 마우스 오버 시 양옆 이미지를 작게 만들기 */
+#share .share-img img:nth-child(1):hover,
+#share .share-img img:nth-child(4):hover {
+    transform: scale(1.1); /* 첫 번째와 네 번째 이미지를 축소 */
+}
+
+#share .share-img img:nth-child(2):hover,
+#share .share-img img:nth-child(3):hover {
+    transform: scale(1.1); /* 두 번째와 세 번째 이미지는 조금 더 확대 */
+}
+
+#share .share-img1 img{
+    width:75%;
+    margin-left: 140px;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -212,22 +211,28 @@ header {
 
     
 
-    <section id="price">
-        <h1>노력의 결실들을 모아봐요</h1>
-        <p>식물이 된 루틴들을 모아 보고 꾸며 보아요.</p>
-
-        <img src="img/pricemockup.png">
-        <img src="img/pricemockup1.png">
-    </section>
+    
     <section id="share">
-        <h1>
-            예쁘게 꾸미고<br>
-            자랑해 볼까요?
-        </h1>
-        <p>
-            이웃들에게 자랑해보고 대화를 해봐요 본인만이<br>
-            얻을 수 있는 희귀한 식물을 자랑해보면 어떨까요?
-        </p>
+        <div class="share-title">
+            <h1>
+                예쁘게 꾸미고<br>
+                자랑해 볼까요?
+            </h1>
+            <p>
+                이웃들에게 자랑해보고 대화를 해봐요 본인만이<br>
+                얻을 수 있는 희귀한 식물을 자랑해보면 어떨까요?
+            </p>
+        </div>
+        <div class="share-img">
+            <img src="img/share꾸미기.png">
+            <img src="img/share테마.png">
+            <img src="img/share이웃.png">
+            <img src="img/share방명록.png">
+        </div>
+        <div class="share-img1">
+            <img src="img/share.png">
+        </div>
+  
     </section>
 
 
