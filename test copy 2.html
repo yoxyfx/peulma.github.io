@@ -107,44 +107,7 @@ header {
 
 
 
-        #price{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-             /*justify-content: center;*/
-             padding-left: 150px;
-            background-color: #FBFFE5;
-            color: #021502;
-            width: 100%;
-            height: 3500px;
-            margin: 0;
-            margin-top: -500px;
-            transition: background-image 2.5s ease;
-            z-index: 10;
-            transform: translateY(-200px); 
-        }
-
-        #price h1 {
-            color:  #3E7443;
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 20px 100px;
-        }
-
-        #price h2 {
-            color: #ffffff;
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 15px 100px;
-        }
-
-        #price p {
-            color: #021502;
-            font-size: 1.25rem;
-            line-height: 1.6;
-            margin: 10px 100px;
-            margin-left: 100px;
-        }
+     
         .habit1, .habit2 {
             opacity: 0; /* 처음에는 보이지 않음 */
             transition: opacity 1s ease, transform 1s ease;
@@ -263,24 +226,9 @@ header {
     object-fit: cover;
 }
 
-.habit1 .habit-image-plant-4 {
-    width: 48%;
-    justify-content: center;
-    margin-left: 18%;
-    transition: transform 0.3s ease;
-    height: auto;
-    position: relative; 
-    position: absolute; 
-    top:69%;
-    left: -29.5%; 
-    z-index: 1; 
-}
 
-.habit1 .habit-image-plant-4 img {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-}
+
+
 .habit2{
     width:100%;
     height:auto;
@@ -314,7 +262,7 @@ header {
     height: auto;
 }
 /* 추가된 클래스 */
-.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4 ,.habit-overlay{
+.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3,  ,.habit-overlay{
     opacity: 0; /* 처음에는 보이지 않음 */
     transform: translateY(60px); 
     transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
@@ -339,9 +287,7 @@ header {
     transition-delay: 1s;  
 }
 
-.habit-image-plant-4 {
-    transition-delay: 1s; 
-}
+
 
 
         .appear {
@@ -385,11 +331,7 @@ header {
 
     
 
-    <section id="price">
-        <h1>노력의 결실들을 모아봐요</h1>
-        <p>식물이 된 루틴들을 모아 보고 꾸며 보아요.</p>
-        
-    </section>
+   
     <section id="habit">
         <div class="habit-title">
             <h1>노력의 결실들을 모아봐요</h1>
@@ -398,26 +340,26 @@ header {
 
         <div class="habit1">
             <div class="habit-image-1">
-                <img src="img/pricemockup.png" class="habit-image-1">
+                <img src="img/growths.png" class="habit-image-1">
                 <div class="habit-image-plant-1">
-                    <img src="img/habitment1.png" class="habit-image-plant-1">
+                    <img src="img/growthtext1.png" class="habit-image-plant-1">
                 </div>
                 <div class="habit-image-plant-2">
-                    <img src="img/habitment2.png" class="habit-image-plant-2">
+                    <img src="img/growthtext2.png" class="habit-image-plant-2">
                 </div>
-                <div class="habit-image-plant-3">
-                    <img src="img/habitment3.png" class="habit-image-plant-3">
-                </div>
-                <div class="habit-image-plant-4">
-                    <img src="img/habitment4.png" class="habit-image-plant-4">
+              
+
             </div>
         </div>
         
         <div class="habit2">
       
             <div class="habit-image-2">
-                <img src="img/pricemockup1.png" class="habit-overlay">
-                <img src="img/러닝챌린지.png" class="habit-base">
+                <img src="img/growths1.png" class="habit-overlay">
+                <img src="img/growths1.png" class="habit-base">
+                <img src="img/growth2text1.png">
+                <img src="img/growth2text2.png">
+                <img src="img/growth2text3.png">
             </div>
         </div>
     </section>
