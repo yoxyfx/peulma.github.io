@@ -235,22 +235,20 @@ header {
 }
 
 .habit1 .habit-image-plant-4 {
-    width: 100%;
+    width: 48%;
     justify-content: center;
-    margin-left: 15%;
+    margin-left: 18%;
     transition: transform 0.3s ease;
     height: auto;
     position: relative; 
-    max-width: 450px;
     position: absolute; 
     top:68.5%;
     left: -30%; 
-    z-index: 2; 
+    z-index: 1; 
 }
 
 .habit1 .habit-image-plant-4 img {
     width: 80%;
-
     height: auto;
     object-fit: cover;
 }
@@ -287,25 +285,33 @@ header {
     height: auto;
 }
 /* 추가된 클래스 */
-.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4 {
+.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4 ,.habit-overlay{
     opacity: 0; /* 처음에는 보이지 않음 */
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(100px); 
+    transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
 }
 
+
+.habit-overlay {
+    opacity: 0; /* 처음에는 보이지 않음 */
+    transform: translateX(-50px); /* 처음에는 30px 아래에 위치 */
+    transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
+    transition-delay: 0.2s; /* 다른 이미지들보다 나중에 나타나도록 설정 */
+}
 .habit-image-plant-1 {
-    transition-delay: 0.5s; /* 0.5초 후에 나타남 */
+    transition-delay: 1s; 
 }
 
 .habit-image-plant-2 {
-    transition-delay: 1s; /* 1초 후에 나타남 */
+    transition-delay: 1s; 
 }
 
 .habit-image-plant-3 {
-    transition-delay: 1.5s; /* 1.5초 후에 나타남 */
+    transition-delay: 1s;  
 }
 
 .habit-image-plant-4 {
-    transition-delay: 2s; /* 2초 후에 나타남 */
+    transition-delay: 1s; 
 }
 
 
@@ -315,11 +321,11 @@ header {
         }
 
         .habit1 {
-            transition-delay: 1.0s; /* habit1이 0.5초 후에 나타나도록 설정 */
+            transition-delay: 1.0s; 
         }
 
         .habit2 {
-            transition-delay: 2s; /* habit2가 1초 후에 나타나도록 설정 */
+            transition-delay: 1s; /* habit2가 1초 후에 나타나도록 설정 */
         }
     </style>
 </head>
@@ -375,24 +381,33 @@ header {
             const habit1 = document.querySelector('.habit1');
             const habit2 = document.querySelector('.habit2');
             const habitImages = document.querySelectorAll('.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4');
+            const habitOverlay = document.querySelector('.habit-overlay');
             const habit1Position = habit1.getBoundingClientRect().top;
             const habit2Position = habit2.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3; 
+            const screenPosition = window.innerHeight / 1.4; 
             
             habitImages.forEach(image => {
         const imagePosition = image.getBoundingClientRect().top;
         if (imagePosition < screenPosition) {
-            image.classList.add('appear');
+            image.classList.add('appear'); 
         }
     });
-            if (habit1Position < screenPosition) {
-                habit1.classList.add('appear');
-            }
-            if (habit2Position < screenPosition) {
-                habit2.classList.add('appear');
-            }
-            
+
+    // habit-overlay에 대해서도 별도로 체크하여 'appear' 클래스를 추가
+    if (habitOverlay) {
+        const habitOverlayPosition = habitOverlay.getBoundingClientRect().top;
+        if (habitOverlayPosition < screenPosition) {
+            habitOverlay.classList.add('appear');
         }
+    }
+
+    if (habit1Position < screenPosition) {
+        habit1.classList.add('appear');
+    }
+    if (habit2Position < screenPosition) {
+        habit2.classList.add('appear');
+    }
+}
 
         window.addEventListener('scroll', onScroll);
     </script>
