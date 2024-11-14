@@ -141,6 +141,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+function onScroll() {
+    const habit1 = document.querySelector('.habit1');
+    const habit2 = document.querySelector('.habit2');
+    const habitImages = document.querySelectorAll('.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4');
+    const habitOverlay = document.querySelector('.habit-overlay');
+    const habit1Position = habit1.getBoundingClientRect().top;
+    const habit2Position = habit2.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3; 
+    
+    habitImages.forEach(image => {
+const imagePosition = image.getBoundingClientRect().top;
+if (imagePosition < screenPosition) {
+    image.classList.add('appear'); 
+}
+});
+
+// habit-overlay에 대해서도 별도로 체크하여 'appear' 클래스를 추가
+if (habitOverlay) {
+const habitOverlayPosition = habitOverlay.getBoundingClientRect().top;
+if (habitOverlayPosition < screenPosition) {
+    habitOverlay.classList.add('appear');
+}
+}
+
+if (habit1Position < screenPosition) {
+habit1.classList.add('appear');
+}
+if (habit2Position < screenPosition) {
+habit2.classList.add('appear');
+}
+}
+
+window.addEventListener('scroll', onScroll);
+
+
 
 // bg 섹션을 옵저버에 추가합니다.
 const bgSection = document.getElementById('bg');

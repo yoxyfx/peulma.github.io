@@ -1833,6 +1833,301 @@ ow {
         }
 
 
+        #habit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 150px;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 200rem;
+            margin: 0;
+            margin-top: 0px;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+
+        .habit1, .habit2 {
+            opacity: 0; /* 처음에는 보이지 않음 */
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        #habit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 150px;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 200rem;
+            margin: 0;
+            margin-top: 0px;
+            transition: background-image 2.5s ease;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
+        #habit h1 {
+            font-family: 'NanumSquareRound', sans-serif;
+            font-weight: 900;
+            color: #3E7443;
+            font-size: 3rem;
+            margin: 0px 100px 15px 100px;
+        }
+
+        #habit h2 {
+            color: #3E7443;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 15px 100px;
+        }
+
+        #habit p {
+            color: #021502;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 0px 100px;
+        }
+
+        .habit1{
+    width:100%;
+    height:auto;
+}
+    .habit1 .habit-image-1 {
+    width: 48%;
+    justify-content: center;
+    margin-left: 15%; 
+    margin-top: 60px; 
+    transition: transform 0.3s ease;
+    height: auto; 
+    position: relative; 
+}
+
+
+
+
+.habit1 .habit-image-plant-1 {
+    width: 100%;
+    max-width: 450px;
+    position: absolute; 
+    top: 20%;
+    right: -5%; 
+    z-index: 1; 
+}
+
+.habit1 .habit-image-plant-1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+.habit1 .habit-image-plant-2 {
+    width: 100%;
+    max-width: 450px;
+    position: absolute; 
+    top: 43%;
+    right: -6%; 
+    z-index: 1; 
+}
+
+.habit1 .habit-image-plant-2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.habit1 .habit-image-3 {
+    width: 48%;
+    justify-content: center;
+    margin-left: 15%;
+   
+    transition: transform 0.3s ease;
+    height: auto;
+    position: relative; 
+}
+
+.habit1 .habit-image-plant-3 {
+    width: 100%;
+    max-width: 450px;
+    position: absolute; 
+    top: 64%;
+    right: -6%; 
+    z-index: 1; 
+}
+
+.habit1 .habit-image-plant-3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.habit1 .habit-image-plant-4 {
+    width: 48%;
+    justify-content: center;
+    margin-left: 18%;
+    transition: transform 0.3s ease;
+    height: auto;
+    position: relative; 
+    position: absolute; 
+    top:69%;
+    left: -29.5%; 
+    z-index: 1; 
+}
+
+.habit1 .habit-image-plant-4 img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+.habit2{
+    width:100%;
+    height:auto;
+}
+
+.habit2 .habit-image-2 {
+    margin-top:10%;
+    width: 60%;
+    margin-right: 0;
+    margin-left: auto; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    height: auto;
+    position: relative;
+}
+
+
+
+.habit2 .habit-base {
+    width: 60%;
+    height: auto;
+    margin-top: 80px;
+}
+
+.habit2 .habit-overlay {
+    position: absolute;
+    top: 75%;
+    left: -40%;
+    transform: translateX(0px); 
+    width: 30%;
+    height: auto;
+}
+/* 추가된 클래스 */
+.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4 ,.habit-overlay{
+    opacity: 0; /* 처음에는 보이지 않음 */
+    transform: translateY(100px); 
+    transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
+}
+
+
+.habit-overlay {
+    opacity: 0; /* 처음에는 보이지 않음 */
+    transform: translateX(-250px); /* 처음에는 30px 아래에 위치 */
+    transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
+    transition-delay: 0.6s; /* 다른 이미지들보다 나중에 나타나도록 설정 */
+}
+.habit-image-plant-1 {
+    transition-delay: 1s; 
+}
+
+.habit-image-plant-2 {
+    transition-delay: 1s; 
+}
+
+.habit-image-plant-3 {
+    transition-delay: 1s;  
+}
+
+.habit-image-plant-4 {
+    transition-delay: 1s; 
+}
+
+
+        .appear {
+            opacity: 1; /* 화면에 도달하면 보이게 함 */
+            transform: translateY(0); /* 원래 위치로 이동 */
+        }
+
+        .habit1 {
+            transition-delay: 0s; 
+        }
+
+        .habit2 {
+            transition-delay: 1s; /* habit2가 1초 후에 나타나도록 설정 */
+        }
+
+
+
+
+        @media (max-width: 768px) {
+    
+
+    #habit {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #habit h1 {
+        font-size: 2rem;
+        margin: 0px 30px 15px 30px;
+    }
+
+    #habit h2 {
+        font-size: 2rem;
+        margin: 15px 30px;
+    }
+
+    #habit p {
+        font-size: 1.2rem;
+        margin: 0px 30px;
+    }
+
+    .habit1 .habit-image-1, .habit1 .habit-image-plant-1, .habit1 .habit-image-plant-2, .habit1 .habit-image-plant-3, .habit1 .habit-image-plant-4 {
+        width: 100%;
+        max-width: none;
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .habit1 .habit-image-1 img, .habit1 .habit-image-plant-1 img, .habit1 .habit-image-plant-2 img, .habit1 .habit-image-plant-3 img, .habit1 .habit-image-plant-4 img {
+        width: 100%;
+        height: auto;
+    }
+
+  
+}
+
+@media (max-width: 480px) {
+ 
+
+    #habit h1 {
+        font-size: 1.8rem;
+    }
+
+    #habit h2 {
+        font-size: 1.8rem;
+    }
+
+    #habit p {
+        font-size: 1rem;
+    }
+
+    .habit1 .habit-image-1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .habit2 .habit-image-2 img {
+        width: 100%;
+        height: auto;
+    }
+}
 
 
 .greenhouse-slider-container {
