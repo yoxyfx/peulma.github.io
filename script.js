@@ -177,6 +177,28 @@ window.addEventListener('scroll', onScroll);
 
 
 
+
+
+const images = document.querySelectorAll('.help-img');
+        
+function handleScroll() {
+    images.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        // 이미지가 화면에 나타날 때 .show 클래스 추가
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            img.classList.add('show');
+        } else {
+            img.classList.remove('show'); // 화면에서 벗어나면 숨김
+        }
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+
+
+
+
 // bg 섹션을 옵저버에 추가합니다.
 const bgSection = document.getElementById('bg');
 observer.observe(bgSection);
