@@ -142,7 +142,11 @@ header {
             margin: 0px 100px;
         }
 
-        .habit-image-1 {
+        .habit1{
+    width:100%;
+    height:auto;
+}
+    .habit1 .habit-image-1 {
     width: 48%;
     justify-content: center;
     margin-left: 15%; 
@@ -153,16 +157,16 @@ header {
 }
 
 
-.habit-image-1 {
+.habit1 .habit-image-1 {
     width: 48%;
     justify-content: center;
     margin-left: 15%;
     transition: transform 0.3s ease;
     height: auto;
-    position: relative; /* 기준 위치 */
+    position: relative; 
 }
 
-.habit-image-plant-1 {
+.habit1 .habit-image-plant-1 {
     width: 100%;
     max-width: 450px;
     position: absolute; 
@@ -171,7 +175,7 @@ header {
     z-index: 1; 
 }
 
-.habit-image-plant-1 img {
+.habit1 .habit-image-plant-1 img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -180,48 +184,48 @@ header {
 
 
 
-.habit-image-plant-2 {
+.habit1 .habit-image-plant-2 {
     width: 100%;
     max-width: 450px;
-    position: absolute; /* 절대 위치로 설정 */
+    position: absolute; 
    top:36%;
     right: 24%; 
     z-index: 2; 
 }
 
-.habit-image-plant-2 img {
+.habit1 .habit-image-plant-2 img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
 
-.habit-image-3 {
+.habit1 .habit-image-3 {
     width: 48%;
     justify-content: center;
     margin-left: 15%;
    
     transition: transform 0.3s ease;
     height: auto;
-    position: relative; /* 기준 위치 */
+    position: relative; 
 }
 
-.habit-image-plant-3 {
+.habit1 .habit-image-plant-3 {
     width: 100%;
     max-width: 450px;
-    position: absolute; /* 절대 위치로 설정 */
+    position: absolute; 
    top:41.5%;
-    right: 24%; /* 오른쪽으로 정렬 */
-    z-index: 2; /* 겹치는 순서 조정 */
+    right: 24%; 
+    z-index: 2; 
 }
 
-.habit-image-plant-3 img {
+.habit1 .habit-image-plant-3 img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.habit-image-plant-4 {
+.habit1 .habit-image-plant-4 {
     width: 100%;
     justify-content: center;
     margin-left: 15%;
@@ -235,15 +239,19 @@ header {
     z-index: 2; 
 }
 
-.habit-image-plant-4 img {
+.habit1 .habit-image-plant-4 img {
     width: 80%;
 
     height: auto;
     object-fit: cover;
 }
 
+.habit2{
+    width:100%;
+    height:auto;
+}
 
-.habit-image-2 {
+.habit2 .habit-image-2 {
     margin-top:10%;
     width: 60%;
     margin-right: 0;
@@ -256,32 +264,22 @@ header {
 
 
 
-.habit-base {
+.habit2 .habit-base {
     width: 60%;
     height: auto;
     margin-top: 80px;
 }
 
-.habit-overlay {
+.habit2 .habit-overlay {
     position: absolute;
     top: 75%;
     left: 10%;
     transform: translateX(-160%);
-    width: 30%; /* 필요에 따라 조절 */
+    width: 30%;
     height: auto;
 }
 
 
-@media (max-width: 768px) {
-    .habit-image-1 {
-        width: 80%; 
-        height: auto; 
-    }
-    .habit-image-2 {
-        width: 90%; 
-        height: auto; 
-    }
-}
 
 
 
@@ -290,8 +288,8 @@ header {
 <body>
     <header>
         <div class="header-container">
-            <!-- 로고 클릭 시 링크 이동 -->
-            <a href="" class="logo"> <!-- 로고를 링크로 감싸기 -->
+      
+            <a href="" class="logo">
                 <img src="img/logo.png" alt="플마 로고">
             </a>
 
@@ -315,7 +313,7 @@ header {
                 루틴을 수행 할수록 당신의 식물은 무럭무럭 자라날거예요.</p>
         </div>
       
-        
+        <div class="habit1">
             <div class="habit-image-1">
                 <img src="img/습관홈.png" class="habit-image-1">
             </div>
@@ -331,13 +329,20 @@ header {
             <div class="habit-image-plant-4">
                 <img src="img/habitment4.png" class="habit-image-plant-4">
             </div>
+
+        </div>
         
-          
+         
+        
+        <div class="habit2">
+            
             <div class="habit-image-2">
                 <img src="img/habitimage2ment.png" class="habit-overlay">
                 <img src="img/러닝챌린지.png" class="habit-base">
-              
             </div>
+          
+        </div>
+          
             
   
     </section>
