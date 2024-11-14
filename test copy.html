@@ -27,7 +27,6 @@
             width: 100%;
             overflow-x: hidden;
         }
-        /* 헤더 스타일 */
         header {
             background-color: #ffffff;
             color: #96C155;
@@ -48,21 +47,10 @@
             padding: 0 200px; 
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
         .logo img {
             width: 50px;
             height: auto;
             margin-right: 10px;
-        }
-
-        .header-text {
-            display: flex;
-            align-items: center;
-            gap: 20px;
         }
 
         .header-text a {
@@ -75,27 +63,6 @@
             color: #FFB45C; 
         }
 
-        .fixed-button {
-            position: fixed;
-            bottom: 80px;
-            right: 240px;
-            width: 100px;
-            height: 100px;
-            background-image: url('img/TOP.png'); 
-            background-size: cover;
-            background-color: transparent;
-            cursor: pointer;
-            z-index: 10;
-            border: none;
-            outline: none;
-        }
-
-        .fixed-button:hover {
-            background-image: url('img/TOPhover.png'); 
-            z-index: 5;
-            background-color: transparent;
-        }
-
         #help {
             display: flex;
             flex-direction: column;
@@ -105,11 +72,10 @@
             background-color: #96C155;
             color: #021502;
             width: 100%;
-            height: 180rem;
+            height: 160rem;
             margin: 0;
             margin-top: 0px;
             z-index: 10;
-            transform: translateY(-200px); 
         }
 
         #help h1 {
@@ -138,7 +104,9 @@
         .help-img {
             width: 100%;
             height: auto;
-           
+            opacity: 0; /* 처음에는 투명하게 설정 */
+       
+        transform: translateY(50px); /* 아래에서 위로 올라오는 효과 */
         }
 
         .help-image-container {
@@ -179,18 +147,44 @@
             top: -26%;
             right:28%;
         }
+      
+        .help-img {
+        width: 100%;
+        height: auto;
+        opacity: 0; /* 처음에는 투명하게 설정 */
+        transition: opacity 1s ease-in-out; /* 애니메이션 효과 */
+        transform: translateY(-200px); /* 아래에서 위로 올라오는 효과 */
+    }
 
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 각 이미지에 지연시간을 설정하여 순차적으로 나타나게 함 */
+    #img1 {
+        transition-delay: 0.2s;
+    }
+
+    #img2 {
+        transition-delay: 0.4s;
+    }
+
+    #img3 {
+        transition-delay: 0.6s;
+    }
+
+    #img4 {
+        transition-delay: 0.8s;
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <!-- 로고 클릭 시 링크 이동 -->
-            <a href="" class="logo"> <!-- 로고를 링크로 감싸기 -->
+            <a href="" class="logo">
                 <img src="img/logo.png" alt="플마 로고">
             </a>
-
-            <!-- 오른쪽 텍스트 -->
             <div class="header-text">
                 <a href="#background" data-offset="120">Planning</a>
                 <a href="#brand" data-offset="-120">Design</a>
@@ -211,5 +205,22 @@
             <img src="img/jak3.png" class="help-img" id="img4">
         </div>
     </section>
+    
+    <script>
+        const images = document.querySelectorAll('.help-img');
+        
+        function handleScroll() {
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                // 이미지가 화면에 나타날 때 .show 클래스 추가
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    img.classList.add('show');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll); 
+    </script>
 </body>
 </html>
