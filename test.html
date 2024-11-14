@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @font-face { 
+          @font-face { 
             font-family: 'NanumSquareRound';
             src: url('font/NanumSquareRoundOTFR.woff2') format('woff2'),
                  url('font/NanumSquareRoundOTFR.otf') format('opentype');
@@ -78,33 +78,49 @@ header {
 }
 
 
-.fixed-button {
-    position: fixed;
-    bottom: 80px;
-    right: 240px;
-    width: 100px;
-    height: 100px;
-    background-image: url('img/TOP.png'); 
-    background-size: cover;
-    background-color:transparent;
-    cursor: pointer;
-    z-index: 10;
-    border:none;
-    outline: none;
-}
+        .fixed-button {
+            position: fixed;
+            bottom: 80px;
+            right: 240px;
+            width: 100px;
+            height: 100px;
+            background-image: url('img/TOP.png'); 
+            background-size: cover;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 10;
+            border: none;
+            outline: none;
+        }
 
-.fixed-button:hover {
-    background-image: url('img/TOPhover.png'); 
-    z-index: 5;
-    background-color:transparent;
-}
+        .fixed-button:hover {
+            background-image: url('img/TOPhover.png'); 
+            z-index: 5;
+            background-color: transparent;
+        }
 
+        #habit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 150px;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 200rem;
+            margin: 0;
+            margin-top: 0px;
+            z-index: 10;
+            transform: translateY(-200px); 
+        }
 
+        .habit1, .habit2 {
+            opacity: 0; /* 처음에는 보이지 않음 */
+            transition: opacity 1s ease, transform 1s ease;
+        }
 
-
-       
-  
-#habit {
+        #habit {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -157,21 +173,14 @@ header {
 }
 
 
-.habit1 .habit-image-1 {
-    width: 48%;
-    justify-content: center;
-    margin-left: 15%;
-    transition: transform 0.3s ease;
-    height: auto;
-    position: relative; 
-}
+
 
 .habit1 .habit-image-plant-1 {
     width: 100%;
     max-width: 450px;
     position: absolute; 
-    top: 29.9%;
-    right: 25%; 
+    top: 20%;
+    right: -5%; 
     z-index: 1; 
 }
 
@@ -188,9 +197,9 @@ header {
     width: 100%;
     max-width: 450px;
     position: absolute; 
-   top:36%;
-    right: 24%; 
-    z-index: 2; 
+    top: 43%;
+    right: -6%; 
+    z-index: 1; 
 }
 
 .habit1 .habit-image-plant-2 img {
@@ -214,9 +223,9 @@ header {
     width: 100%;
     max-width: 450px;
     position: absolute; 
-   top:41.5%;
-    right: 24%; 
-    z-index: 2; 
+    top: 63%;
+    right: -6%; 
+    z-index: 1; 
 }
 
 .habit1 .habit-image-plant-3 img {
@@ -234,8 +243,8 @@ header {
     position: relative; 
     max-width: 450px;
     position: absolute; 
-   top:42.75%;
-    left: -5.5%; 
+    top:68.5%;
+    left: -30%; 
     z-index: 2; 
 }
 
@@ -245,7 +254,6 @@ header {
     height: auto;
     object-fit: cover;
 }
-
 .habit2{
     width:100%;
     height:auto;
@@ -278,33 +286,56 @@ header {
     width: 30%;
     height: auto;
 }
+/* 추가된 클래스 */
+.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4 {
+    opacity: 0; /* 처음에는 보이지 않음 */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.habit-image-plant-1 {
+    transition-delay: 0.5s; /* 0.5초 후에 나타남 */
+}
+
+.habit-image-plant-2 {
+    transition-delay: 1s; /* 1초 후에 나타남 */
+}
+
+.habit-image-plant-3 {
+    transition-delay: 1.5s; /* 1.5초 후에 나타남 */
+}
+
+.habit-image-plant-4 {
+    transition-delay: 2s; /* 2초 후에 나타남 */
+}
 
 
+        .appear {
+            opacity: 1; /* 화면에 도달하면 보이게 함 */
+            transform: translateY(0); /* 원래 위치로 이동 */
+        }
 
+        .habit1 {
+            transition-delay: 1.0s; /* habit1이 0.5초 후에 나타나도록 설정 */
+        }
 
-
+        .habit2 {
+            transition-delay: 2s; /* habit2가 1초 후에 나타나도록 설정 */
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-      
             <a href="" class="logo">
                 <img src="img/logo.png" alt="플마 로고">
             </a>
-
-            <!-- 오른쪽 텍스트 -->
             <div class="header-text">
-                <a href="#background"data-offset="120">Planning</a>
-                <a href="#brand"data-offset="-120">Design</a>
-                <a href="#team"data-offset="-70">Contact</a>
+                <a href="#background" data-offset="120">Planning</a>
+                <a href="#brand" data-offset="-120">Design</a>
+                <a href="#team" data-offset="-70">Contact</a>
             </div>
-           
-            
         </div>
     </header>
-
-  
 
     <section id="habit">
         <div class="habit-title">
@@ -312,41 +343,58 @@ header {
             <p>오늘의 루틴을 수행할 수 있는 홈 화면입니다.<br>
                 루틴을 수행 할수록 당신의 식물은 무럭무럭 자라날거예요.</p>
         </div>
-      
+
         <div class="habit1">
             <div class="habit-image-1">
                 <img src="img/습관홈.png" class="habit-image-1">
+                <div class="habit-image-plant-1">
+                    <img src="img/habitment1.png" class="habit-image-plant-1">
+                </div>
+                <div class="habit-image-plant-2">
+                    <img src="img/habitment2.png" class="habit-image-plant-2">
+                </div>
+                <div class="habit-image-plant-3">
+                    <img src="img/habitment3.png" class="habit-image-plant-3">
+                </div>
+                <div class="habit-image-plant-4">
+                    <img src="img/habitment4.png" class="habit-image-plant-4">
             </div>
-            <div class="habit-image-plant-1">
-                <img src="img/habitment1.png" class="habit-image-plant-1">
-            </div>
-            <div class="habit-image-plant-2">
-                <img src="img/habitment2.png" class="habit-image-plant-2">
-            </div>
-            <div class="habit-image-plant-3">
-                <img src="img/habitment3.png" class="habit-image-plant-3">
-            </div>
-            <div class="habit-image-plant-4">
-                <img src="img/habitment4.png" class="habit-image-plant-4">
-            </div>
-
         </div>
         
-         
-        
         <div class="habit2">
-            
+      
             <div class="habit-image-2">
                 <img src="img/habitimage2ment.png" class="habit-overlay">
                 <img src="img/러닝챌린지.png" class="habit-base">
             </div>
-          
         </div>
-          
-            
-  
     </section>
 
-   
+    <script>
+        function onScroll() {
+            const habit1 = document.querySelector('.habit1');
+            const habit2 = document.querySelector('.habit2');
+            const habitImages = document.querySelectorAll('.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4');
+            const habit1Position = habit1.getBoundingClientRect().top;
+            const habit2Position = habit2.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3; 
+            
+            habitImages.forEach(image => {
+        const imagePosition = image.getBoundingClientRect().top;
+        if (imagePosition < screenPosition) {
+            image.classList.add('appear');
+        }
+    });
+            if (habit1Position < screenPosition) {
+                habit1.classList.add('appear');
+            }
+            if (habit2Position < screenPosition) {
+                habit2.classList.add('appear');
+            }
+            
+        }
+
+        window.addEventListener('scroll', onScroll);
+    </script>
 </body>
 </html>
