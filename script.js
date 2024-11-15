@@ -142,40 +142,54 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function onScroll() {
-    const habit1 = document.querySelector('.habit1');
-    const habit2 = document.querySelector('.habit2');
-    const habitImages = document.querySelectorAll('.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4');
-    const habitOverlay = document.querySelector('.habit-overlay');
-    const habit1Position = habit1.getBoundingClientRect().top;
-    const habit2Position = habit2.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3; 
+    const growthElements = [
+        document.querySelector('.growth1'),
+        document.querySelector('.growth2')
+    ];
     
-    habitImages.forEach(image => {
-const imagePosition = image.getBoundingClientRect().top;
-if (imagePosition < screenPosition) {
-    image.classList.add('appear'); 
-}
-});
+    const habitElements = [
+        document.querySelector('.habit1'),
+        document.querySelector('.habit2')
+    ];
+    
+    const growthImages = document.querySelectorAll('.growth-image-plant-1, .growth-image-plant-2, .growth-image-plant-3');
+    const habitImages = document.querySelectorAll('.habit-image-plant-1, .habit-image-plant-2, .habit-image-plant-3, .habit-image-plant-4');
+    
+    const growthOverlays = document.querySelectorAll('.growth-overlay, .growth-overlay1, .growth-overlay2');
+    const habitOverlay = document.querySelector('.habit-overlay');
+    
+    const screenPosition = window.innerHeight / 1.3;
 
-// habit-overlay에 대해서도 별도로 체크하여 'appear' 클래스를 추가
-if (habitOverlay) {
-const habitOverlayPosition = habitOverlay.getBoundingClientRect().top;
-if (habitOverlayPosition < screenPosition) {
-    habitOverlay.classList.add('appear');
-}
-}
+    // growth 및 habit 이미지의 위치 확인 후 appear 클래스 추가
+    [...growthImages, ...habitImages].forEach(image => {
+        const imagePosition = image.getBoundingClientRect().top;
+        if (imagePosition < screenPosition) {
+            image.classList.add('appear'); 
+        }
+    });
 
-if (habit1Position < screenPosition) {
-habit1.classList.add('appear');
-}
-if (habit2Position < screenPosition) {
-habit2.classList.add('appear');
-}
+    // growth 및 habit overlay 요소의 위치 확인 후 appear 클래스 추가
+    [...growthOverlays, habitOverlay].forEach(overlay => {
+        if (overlay) {
+            const overlayPosition = overlay.getBoundingClientRect().top;
+            if (overlayPosition < screenPosition) {
+                overlay.classList.add('appear');
+            }
+        }
+    });
+
+    // growth 및 habit 요소의 위치 확인 후 appear 클래스 추가
+    [...growthElements, ...habitElements].forEach(element => {
+        if (element) {
+            const elementPosition = element.getBoundingClientRect().top;
+            if (elementPosition < screenPosition) {
+                element.classList.add('appear');
+            }
+        }
+    });
 }
 
 window.addEventListener('scroll', onScroll);
-
-
 
 
 
@@ -197,44 +211,6 @@ window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
 
 
-
-
-function onScroll() {
-    const growth1 = document.querySelector('.growth1');
-    const growth2 = document.querySelector('.growth2');
-    const growthImages = document.querySelectorAll('.growth-image-plant-1, .growth-image-plant-2, .growth-image-plant-3');
-    const growthOverlays = document.querySelectorAll('.growth-overlay, .growth-overlay1, .growth-overlay2');
-    
-    const screenPosition = window.innerHeight / 1.3; 
-    
-    // 각 growthImages의 위치 확인 후 appear 클래스 추가
-    growthImages.forEach(image => {
-        const imagePosition = image.getBoundingClientRect().top;
-        if (imagePosition < screenPosition) {
-            image.classList.add('appear'); 
-        }
-    });
-
-    // 각 growthOverlay 요소의 위치 확인 후 appear 클래스 추가
-    growthOverlays.forEach(overlay => {
-        const overlayPosition = overlay.getBoundingClientRect().top;
-        if (overlayPosition < screenPosition) {
-            overlay.classList.add('appear');
-        }
-    });
-
-    const growth1Position = growth1.getBoundingClientRect().top;
-    const growth2Position = growth2.getBoundingClientRect().top;
-
-    if (growth1Position < screenPosition) {
-        growth1.classList.add('appear');
-    }
-    if (growth2Position < screenPosition) {
-        growth2.classList.add('appear');
-    }
-}
-
-window.addEventListener('scroll', onScroll);
 
 
 
