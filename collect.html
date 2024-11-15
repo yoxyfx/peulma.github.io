@@ -105,7 +105,7 @@
             background-color: #FBFFE5;
             color: #021502;
             width: 100%;
-            height: 140rem;
+            height: 180rem;
             transition: background-image 2.5s ease;
             z-index: 10;
         }
@@ -228,11 +228,33 @@
 
 .collect-arrow1 {
     position: absolute;
-    top: 170%; /* 위쪽으로 이동 */
-    left: 35% !important; /* 왼쪽으로 이동 */
+    top: 166%; /* 위쪽으로 이동 */
+    left: 56.5% !important; /* 왼쪽으로 이동 */
     width: 10% !important; /* 크기 조정 */
     height: auto;
     z-index: 2;
+}
+.collect-3 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* 필요하면 `center`, `space-between` 등으로 변경 가능 */
+    align-items: center;
+    gap: 10px; /* 이미지 간격 */
+    margin-top: 50px;
+}
+
+/* 첫 번째 이미지 스타일 */
+.collect-text {
+    width: 30%; /* 첫 번째 이미지 크기 */
+    height: auto; /* 비율 유지 */
+    margin-right: 20px; /* 이미지 간격 */
+}
+
+/* 두 번째 이미지 스타일 */
+.collect-mockup3 {
+    width: 43%!important; /* 두 번째 이미지 크기 */
+    height: auto; /* 비율 유지 */
+    margin-left: 10px; /* 이미지 간격 */
 }
 
 
@@ -283,6 +305,12 @@
             <img src="img/collectarrow2.png" alt="collect-arrow1" class="collect-arrow1">
             
         </div>
+
+        <div class="collect-3">
+            <img src="img/collecttext.png" alt="collect-text" class="collect-text">
+            <img src="img/collectmockup3.png" alt="collect-mockup3" class="collect-mockup3">
+        </div>
+    
     </section>
 </body>
 </html>
