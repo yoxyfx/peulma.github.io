@@ -105,7 +105,7 @@
             background-color: #FBFFE5;
             color: #021502;
             width: 100%;
-            height: 180rem;
+            height: 200rem;
             transition: background-image 2.5s ease;
             z-index: 10;
         }
@@ -170,12 +170,14 @@
         .collect-1 img.collect-img1 {
             width: 42%; /* 첫 번째 이미지 크기 */
             height: auto;
+            z-index: 2;
          
          
         }
         .collect-1 img.collect-img1 img {
             width: 30%; 
             height: auto;
+            z-index: 2;
          
         }
         .collect-1 img.collect-img2 {
@@ -183,6 +185,7 @@
             height: 339.2px; 
             margin-top: 170px;
            margin-left: -120px;
+           z-index: 2;
         }
        
 .collect-1 img.collect-img3 {
@@ -190,6 +193,7 @@
             height: 339.2px; 
             margin-top: 300px;
            margin-left: -20px;
+           z-index: 2;
 
 }
 
@@ -198,6 +202,23 @@
             height: 339.2px; 
             margin-top: 170px;
            margin-left: -10px; 
+           z-index: 2;
+
+}
+.collect-1 img.collect-img4 {
+    width: 250.4px; 
+            height: 339.2px; 
+            margin-top: 170px;
+           margin-left: -10px; 
+           z-index: 2;
+}
+.collect-1 .Collect-Background {
+    position: absolute; /* 가장 아래 배치 */
+    width: 100%; 
+            height: 400px; 
+            margin-top: 140px;
+           margin-left: -140px; 
+           z-index: 1;
 
 }
 .collect-2 {
@@ -219,7 +240,7 @@
 
 .collect-arrow {
     position: absolute;
-    top: 212%; /* 위쪽으로 이동 */
+    top: 204%; /* 위쪽으로 이동 */
     left: 32%; /* 왼쪽으로 이동 */
     width: 22% !important; /* 크기 고정 */
     height: auto !important;
@@ -228,7 +249,7 @@
 
 .collect-arrow1 {
     position: absolute;
-    top: 166%; /* 위쪽으로 이동 */
+    top: 158%; /* 위쪽으로 이동 */
     left: 56.5% !important; /* 왼쪽으로 이동 */
     width: 10% !important; /* 크기 조정 */
     height: auto;
@@ -237,25 +258,32 @@
 .collect-3 {
     position: relative;
     display: flex;
-    justify-content: flex-start; /* 필요하면 `center`, `space-between` 등으로 변경 가능 */
-    align-items: center;
+    flex-direction: column; /* 위아래 배치를 유지 */
+    align-items: flex-end; /* 컨테이너 내부 요소를 오른쪽 정렬 */
     gap: 10px; /* 이미지 간격 */
-    margin-top: 50px;
+    margin-top: 450px;
+    margin-left: 440px; /* 전체 컨테이너를 화면 오른쪽으로 */
 }
 
-/* 첫 번째 이미지 스타일 */
+
 .collect-text {
-    width: 30%; /* 첫 번째 이미지 크기 */
-    height: auto; /* 비율 유지 */
-    margin-right: 20px; /* 이미지 간격 */
+    position: absolute; /* 절대 위치로 이동 */
+    left: 420px; /* 원하는 만큼 왼쪽으로 이동 */
+    width: 30%;
+    height: auto;
+    top:-25%;
 }
 
-/* 두 번째 이미지 스타일 */
+
+
 .collect-mockup3 {
-    width: 43%!important; /* 두 번째 이미지 크기 */
-    height: auto; /* 비율 유지 */
-    margin-left: 10px; /* 이미지 간격 */
+    position: relative;
+    display: block;
+    width: 60%!important;
+    height: auto;
+    top:-15%;
 }
+
 
 
     </style>
@@ -292,6 +320,7 @@
         </div>
 
         <div class="collect-1">
+            <img src="img/collectbg.png" alt="Collect Background" class="Collect-Background">
             <img src="img/collectmockup.png" alt="Mockup Image" class="collect-img1">
             <img src="img/collectimg1.png" alt="Image 1" class="collect-img2">
             <img src="img/collectimg2.png" alt="Image 2" class="collect-img3">
