@@ -101,7 +101,7 @@ header {
 
 .fixed-button:hover {
     background-image: url('img/TOPhover.png'); 
-    z-index: 5;
+    z-index: 100;
     background-color:transparent;
 }
 
@@ -2445,7 +2445,7 @@ z-index: 2;
     gap: 10px;
     margin-top: 450px;
     margin-left: 440px;
-    z-index: 9999;  /* 다른 요소들보다 높은 값 */
+    z-index: 80;  /* 다른 요소들보다 높은 값 */
 }
 
 .collect-text {
