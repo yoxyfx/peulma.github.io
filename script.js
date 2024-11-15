@@ -140,6 +140,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+ // 이미지들이 화면에 나타날 때 'visible' 클래스를 추가하기 위한 IntersectionObserver 사용
+ document.addEventListener('DOMContentLoaded', function () {
+    // 이미지들을 선택
+    const images = document.querySelectorAll('.collect-1 img, .collect-2 img, .collect-3 img');
+    
+    // IntersectionObserver의 콜백 함수
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 화면에 보이면 'visible' 클래스를 추가
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // 더 이상 관찰할 필요 없음
+            }
+        });
+    }, { threshold: 0.5 }); // 50% 이상 화면에 나타날 때 트리거
+
+    // 각 이미지를 observer에 등록
+    images.forEach(image => {
+        observer.observe(image);
+    });
+});
+
 
 function onScroll() {
     const growthElements = [
