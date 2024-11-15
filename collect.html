@@ -28,100 +28,112 @@
             overflow-x: hidden;
         }
         /* 헤더 스타일 */
-header {
-    background-color: #ffffff;
-    color: #9EBF86;
-    padding: 30px 0;
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    z-index: 10; 
-}
+        header {
+            background-color: #ffffff;
+            color: #9EBF86;
+            padding: 30px 0;
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            z-index: 10; 
+        }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 200px; 
-}
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 200px; 
+        }
 
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
 
-.logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
+        .header-text {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
+        .header-text a {
+            color: #9EBF86; 
+            text-decoration: none;
+            transition: color 0.3s ease; 
+        }
 
-.header-text {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+        .header-text a:hover {
+            color: #FFB45C; 
+        }
 
-.header-text a {
-    color: #9EBF86; 
-    text-decoration: none;
-    transition: color 0.3s ease; 
-}
+        .fixed-button {
+            position: fixed;
+            bottom: 80px;
+            right: 240px;
+            width: 100px;
+            height: 100px;
+            background-image: url('img/TOP.png'); 
+            background-size: cover;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 10;
+            border: none;
+            outline: none;
+        }
 
-.header-text a:hover {
-    color: #FFB45C; 
-}
+        .fixed-button:hover {
+            background-image: url('img/TOPhover.png'); 
+            z-index: 5;
+            background-color: transparent;
+        }
 
-
-.fixed-button {
-    position: fixed;
-    bottom: 80px;
-    right: 240px;
-    width: 100px;
-    height: 100px;
-    background-image: url('img/TOP.png'); 
-    background-size: cover;
-    background-color:transparent;
-    cursor: pointer;
-    z-index: 10;
-    border:none;
-    outline: none;
-}
-
-.fixed-button:hover {
-    background-image: url('img/TOPhover.png'); 
-    z-index: 5;
-    background-color:transparent;
-}
-
-
-
-
-       
-  
-
-
-
-
-#collect {
+        #collect {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            padding-left: 150px;
+            padding-left: 150px; /* 글자는 원래 위치에 유지 */
             background-color: #FBFFE5;
             color: #021502;
             width: 100%;
             height: 140rem;
             transition: background-image 2.5s ease;
             z-index: 10;
-            /*transform: translateY(-200px);*/ 
         }
+
+        .collect-title {
+            margin: 0 0px; /* 글자의 위치를 유지 */
+            margin-top: 200px;
+        }
+
+        .collect-bg {
+            position: absolute; /* 이미지를 자유롭게 배치하기 위해 absolute 설정 */
+            top: 120%;
+            left: 0;
+            width: 200%; 
+            height: auto;
+            z-index: 1;
+        }
+
+        .collect-bg img {
+            position: absolute;
+            width: 100%; 
+            height: 400px;
+            /*background-image: url('img/collectbg.png'); /* 배경 이미지 설정 */
+            background-size: cover; /* 화면에 맞게 크기 조정 */
+            background-position: left; /* 왼쪽에 맞춰서 배치 */
+            left: -100%; /* 이미지를 왼쪽으로 이동 */
+        }
+
         #collect h1 {
             font-family: 'NanumSquareRound', sans-serif;
             font-weight: 900;
@@ -144,6 +156,75 @@ header {
             margin: 0px 100px;
         }
 
+    
+        .collect-1 {
+            display: flex;
+            justify-content: space-between; /* 이미지들이 가로로 배열되도록 설정 */
+            gap: 10px; /* 이미지들 사이의 간격을 설정 */
+            display: flex;
+            margin-top: 50px;
+            flex-wrap: wrap; /* 화면이 좁아지면 이미지들이 자동으로 줄바꿈 */
+        }
+
+        /* 개별 이미지 크기 조정 */
+        .collect-1 img.collect-img1 {
+            width: 42%; /* 첫 번째 이미지 크기 */
+            height: auto;
+         
+         
+        }
+        .collect-1 img.collect-img1 img {
+            width: 30%; 
+            height: auto;
+         
+        }
+        .collect-1 img.collect-img2 {
+            width: 250.4px; 
+            height: 339.2px; 
+            margin-top: 170px;
+           margin-left: -120px;
+        }
+       
+.collect-1 img.collect-img3 {
+    width: 250.4px; 
+            height: 339.2px; 
+            margin-top: 300px;
+           margin-left: -20px;
+
+}
+
+.collect-1 img.collect-img4 {
+    width: 250.4px; 
+            height: 339.2px; 
+            margin-top: 170px;
+           margin-left: -10px; 
+
+}
+.collect-2 {
+    display: flex;            /* 이미지들을 한 줄로 배치 */
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.collect-2 img {
+    width: 36%;               /* 이미지 크기를 36%로 줄이기 */
+    height: auto;             /* 비율 유지 */
+    margin-right: -100px;    
+    object-fit: cover; /* 비율 유지 및 잘림 방지 */  /* 이미지 사이의 간격을 줄이기 위해 음수 마진 사용 */
+}
+
+.collect-2 img:last-child {
+    margin-right: 0;          
+}
+
+.collect-arrow {
+    position: absolute;
+    top: 158%; /* 위쪽으로 이동 */
+    left: 32%; /* 왼쪽으로 이동 */
+    width: 5%; /* 크기를 줄인 상태로 표시 */
+    height: auto;
+    z-index: 2;
+}
 
     </style>
 </head>
@@ -157,22 +238,13 @@ header {
 
             <!-- 오른쪽 텍스트 -->
             <div class="header-text">
-                <a href="#background"data-offset="120">Planning</a>
-                <a href="#brand"data-offset="-120">Design</a>
-                <a href="#team"data-offset="-70">Contact</a>
+                <a href="#background" data-offset="120">Planning</a>
+                <a href="#brand" data-offset="-120">Design</a>
+                <a href="#team" data-offset="-70">Contact</a>
             </div>
-           
-            
         </div>
     </header>
 
-  
-
-   
-
-    
-
-    
     <section id="collect">
         <div class="collect-title">
             <h1>
@@ -184,11 +256,21 @@ header {
         </div>
    
         <div class="collect-bg">
-            <img src="img/collectbg.png">
+            <img src="img/collectbg.png" alt="Collect Background">
         </div>
-  
+
+        <div class="collect-1">
+            <img src="img/collectmockup.png" alt="Mockup Image" class="collect-img1">
+            <img src="img/collectimg1.png" alt="Image 1" class="collect-img2">
+            <img src="img/collectimg2.png" alt="Image 2" class="collect-img3">
+            <img src="img/collectimg3.png" alt="Image 3" class="collect-img4">
+        </div>
+
+        <div class="collect-2">
+            <img src="img/collectmockup1.png" alt="Mockup 1">
+            <img src="img/collectmockup2.png" alt="Mockup 2">
+            <img src="img/collectarrow.png" alt="collect-arrow" class="collect-arrow">
+        </div>
     </section>
-
-
 </body>
 </html>
