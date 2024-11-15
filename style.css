@@ -94,7 +94,7 @@ header {
     background-size: cover;
     background-color:transparent;
     cursor: pointer;
-    z-index: 10;
+    z-index: 9999;
     border:none;
     outline: none;
 }
