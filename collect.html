@@ -221,6 +221,21 @@
            z-index: 1;
 
 }
+
+/* 기본적으로 모든 이미지는 보이지 않도록 설정 */
+.collect-1 img, .collect-2 img, .collect-3 img {
+    opacity: 0;
+    transform: translateY(100px); /* 아래에서 위로 나타나게 하기 위해 Y축 이동 */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* visible 클래스를 추가하면 이미지는 보이고, 위로 이동 */
+.collect-1 img.visible, .collect-2 img.visible, .collect-3 img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .collect-2 {
     display: flex;            /* 이미지들을 한 줄로 배치 */
     justify-content: flex-start;
@@ -341,5 +356,30 @@
         </div>
     
     </section>
+
+    <script>
+        // 이미지들이 화면에 나타날 때 'visible' 클래스를 추가하기 위한 IntersectionObserver 사용
+        document.addEventListener('DOMContentLoaded', function () {
+            // 이미지들을 선택
+            const images = document.querySelectorAll('.collect-1 img, .collect-2 img, .collect-3 img');
+            
+            // IntersectionObserver의 콜백 함수
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 화면에 보이면 'visible' 클래스를 추가
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // 더 이상 관찰할 필요 없음
+                    }
+                });
+            }, { threshold: 0.5 }); // 50% 이상 화면에 나타날 때 트리거
+    
+            // 각 이미지를 observer에 등록
+            images.forEach(image => {
+                observer.observe(image);
+            });
+        });
+    </script>
+    
 </body>
 </html>
