@@ -199,6 +199,47 @@ window.addEventListener('load', handleScroll);
 
 
 
+function onScroll() {
+    const growth1 = document.querySelector('.growth1');
+    const growth2 = document.querySelector('.growth2');
+    const growthImages = document.querySelectorAll('.growth-image-plant-1, .growth-image-plant-2, .growth-image-plant-3');
+    const growthOverlays = document.querySelectorAll('.growth-overlay, .growth-overlay1, .growth-overlay2');
+    
+    const screenPosition = window.innerHeight / 1.3; 
+    
+    // 각 growthImages의 위치 확인 후 appear 클래스 추가
+    growthImages.forEach(image => {
+        const imagePosition = image.getBoundingClientRect().top;
+        if (imagePosition < screenPosition) {
+            image.classList.add('appear'); 
+        }
+    });
+
+    // 각 growthOverlay 요소의 위치 확인 후 appear 클래스 추가
+    growthOverlays.forEach(overlay => {
+        const overlayPosition = overlay.getBoundingClientRect().top;
+        if (overlayPosition < screenPosition) {
+            overlay.classList.add('appear');
+        }
+    });
+
+    const growth1Position = growth1.getBoundingClientRect().top;
+    const growth2Position = growth2.getBoundingClientRect().top;
+
+    if (growth1Position < screenPosition) {
+        growth1.classList.add('appear');
+    }
+    if (growth2Position < screenPosition) {
+        growth2.classList.add('appear');
+    }
+}
+
+window.addEventListener('scroll', onScroll);
+
+
+
+
+
 // bg 섹션을 옵저버에 추가합니다.
 const bgSection = document.getElementById('bg');
 observer.observe(bgSection);

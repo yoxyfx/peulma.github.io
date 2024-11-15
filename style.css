@@ -2259,7 +2259,320 @@ transition-delay: 0.8s;
 }
 
 
+.growth1, .growth2 {
+    opacity: 0; /* 처음에는 보이지 않음 */
+    transition: opacity 1s ease, transform 1s ease;
+}
 
+#growth {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: #FBFFE5;
+    color: #021502;
+    width: 100%;
+    height: 200rem;
+    transition: background-image 2.5s ease;
+    z-index: 10;
+    /*transform: translateY(-200px);*/ 
+}
+#growth h1 {
+    font-family: 'NanumSquareRound', sans-serif;
+    font-weight: 900;
+    color: #3E7443;
+    font-size: 3rem;
+    margin: 0px 100px 15px 100px;
+}
+
+#growth h2 {
+    color: #3E7443;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 15px 100px;
+}
+
+#growth p {
+    color: #021502;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0px 100px;
+}
+
+.growth1{
+width:100%;
+height:auto;
+}
+
+.growth1 .growth-image-1 {
+width: 60%;
+justify-content: center;
+/*margin-left: 15%; */
+margin-top: 60px; 
+transition: transform 0.3s ease;
+height: auto; 
+position: relative; 
+}
+
+
+
+
+.growth1 .growth-image-plant-1 {
+width: 100%;
+position: absolute; 
+top: 35%;
+right:-3%; 
+z-index: 1; 
+}
+
+.growth1 .growth-image-plant-1 img {
+width: 60%;
+height: auto;
+object-fit: cover;
+}
+
+
+
+
+.growth1 .growth-image-plant-2 {
+width: 100%;
+position: absolute; 
+top: 70%;
+right: -3%; 
+z-index: 1; 
+}
+
+.growth1 .growth-image-plant-2 img {
+width: 60%;
+height: auto;
+object-fit: cover;
+}
+
+
+.growth1 .growth-image-3 {
+width: 48%;
+justify-content: center;
+margin-left: 15%;
+
+transition: transform 0.3s ease;
+height: auto;
+position: relative; 
+}
+
+.growth1 .growth-image-plant-3 {
+width: 100%;
+max-width: 450px;
+position: absolute; 
+top: 64%;
+right: -6%; 
+z-index: 1; 
+}
+
+.growth1 .growth-image-plant-3 img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+
+
+
+.growth2{
+width:100%;
+height:auto;
+}
+
+.growth2 .growth-image-2 {
+margin-top:10%;
+width: 60%;
+margin-right: 0;
+margin-left: auto; 
+margin-bottom: 20px;
+transition: transform 0.3s ease;
+height: auto;
+position: relative;
+}
+
+
+
+.growth2 .growth-base {
+width: 60%;
+height: auto;
+margin-top: 80px;
+}
+
+.growth2 .growth-overlay {
+position: absolute;
+top: 33%;
+left: -36%;
+transform: translateX(0px); 
+width: 50%;
+height: auto;
+}
+.growth2 .growth-overlay1 {
+position: absolute;
+top: 50%;
+left: -36%;
+transform: translateX(0px); 
+width: 50%;
+height: auto;
+}
+
+
+
+.growth2 .growth-overlay2 {
+position: absolute;
+top: 79%;
+left: -36%;
+transform: translateX(0px); 
+width: 50%;
+height: auto;
+}
+/* 추가된 클래스 */
+.growth-image-plant-1, .growth-image-plant-2, .growth-image-plant-3 ,.growth-overlay, .growth-overlay1,  .growth-overlay2  {
+opacity: 0; /* 처음에는 보이지 않음 */
+transform: translateY(60px); 
+transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
+}
+
+
+.growth-overlay, .growth-overlay1,  .growth-overlay2 {
+opacity: 0; /* 처음에는 보이지 않음 */
+transform: translateY(60px);  /* 처음에는 30px 아래에 위치 */
+transition: opacity 1s ease, transform 1s ease; /* opacity와 transform을 함께 애니메이션 */
+transition-delay: 0.6s; /* 다른 이미지들보다 나중에 나타나도록 설정 */
+}
+.growth-image-plant-1 {
+transition-delay: 1s; 
+}
+
+.growth-image-plant-2 {
+transition-delay: 1s; 
+}
+
+.growth-image-plant-3 {
+transition-delay: 1s;  
+}
+
+
+
+
+.appear {
+    opacity: 1; /* 화면에 도달하면 보이게 함 */
+    transform: translateY(0); /* 원래 위치로 이동 */
+}
+
+.growth1 {
+    transition-delay: 0s; 
+}
+
+.growth2 {
+    transition-delay: 0s; /* growth2가 1초 후에 나타나도록 설정 */
+}
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    #growth {
+        padding-left: 20px;
+    }
+
+    #growth h1, #growth h2 {
+        font-size: 2rem;
+        margin: 15px 20px;
+    }
+
+    #growth p {
+        font-size: 1rem;
+        margin: 0px 20px;
+    }
+
+    .growth1 .growth-image-1, .growth2 .growth-image-2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .fixed-button {
+        right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #growth h1, #growth h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fixed-button {
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+
+/* growth1 Section */
+#growth1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #FBFFE5;
+    color: #021502;
+    width: 100%;
+    height: 60rem;
+    padding: 50px;
+    
+}
+
+.growth1-content {
+display: flex;
+align-items: center; /* 수직 중앙 정렬 */
+justify-content: flex-end; /* 오른쪽 정렬 */
+margin-left: 200px;
+}
+
+.growth1-images {
+display: flex;
+gap: 30px;
+}
+
+.growth1-images img {
+width: 35%;
+height: auto;
+}
+
+.growth1-text {
+margin-left: -180px; 
+font-size: 1.5rem;
+color: #021502;
+}
+
+
+
+#growth1 h1 {
+    font-family: 'NanumSquareRound', sans-serif;
+    font-weight: 900;
+    color: #3E7443;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+#growth1 p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
 
 .greenhouse-slider-container {
     background-color: #FBFFE5;

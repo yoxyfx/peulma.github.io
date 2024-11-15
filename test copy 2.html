@@ -369,6 +369,61 @@ header {
             }
         }
 
+
+
+
+     /* growth1 Section */
+     #growth1 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #FBFFE5;
+            color: #021502;
+            width: 100%;
+            height: 60rem;
+            padding: 50px;
+            
+        }
+
+        .growth1-content {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-left: 200px;
+}
+
+.growth1-images {
+    display: flex;
+    gap: 30px;
+}
+
+.growth1-images img {
+    width: 35%;
+    height: auto;
+}
+
+.growth1-text {
+    margin-left: -180px; 
+    font-size: 1.5rem;
+    color: #021502;
+}
+
+
+
+        #growth1 h1 {
+            font-family: 'NanumSquareRound', sans-serif;
+            font-weight: 900;
+            color: #3E7443;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        #growth1 p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+        
+
     </style>
 </head>
 <body>
@@ -428,6 +483,23 @@ header {
             </div>
         </div>
     </section>
+
+ 
+    <section id="growth1">
+        <div class="growth1-content">
+            <div class="growth1-images">
+                <img src="img/growth.png" alt="성장 이미지 1">
+                <img src="img/growth1.png" alt="성장 이미지 2">
+            </div>
+            <div class="growth1-text">
+                <h1>오늘도 정말 고생했어요.</h1>
+                <p>
+                    여러분의 성장을 기록해줍니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
 
     <script>
         function onScroll() {
