@@ -319,7 +319,55 @@ header {
         .growth2 {
             transition-delay: 0s; /* growth2가 1초 후에 나타나도록 설정 */
         }
+   /* 반응형 디자인 */
+   @media (max-width: 768px) {
+            .header-container {
+                padding: 0 20px;
+                flex-direction: column;
+            }
 
+            #growth {
+                padding-left: 20px;
+            }
+
+            #growth h1, #growth h2 {
+                font-size: 2rem;
+                margin: 15px 20px;
+            }
+
+            #growth p {
+                font-size: 1rem;
+                margin: 0px 20px;
+            }
+
+            .growth1 .growth-image-1, .growth2 .growth-image-2 {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .fixed-button {
+                right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #growth h1, #growth h2 {
+                font-size: 1.5rem;
+            }
+
+            .header-text {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .fixed-button {
+                bottom: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
 
     </style>
 </head>
