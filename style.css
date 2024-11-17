@@ -33,7 +33,7 @@ h1 {
 }
 
   
-/* 헤더 스타일 */
+
 header {
     background-color: #ffffff;
     color: #9EBF86;
@@ -81,6 +81,43 @@ header {
 
 .header-text a:hover {
     color: #FFB45C; 
+}
+
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 20px;
+    }
+
+    .header-text {
+        gap: 10px; 
+        font-size: 0.9rem; 
+    }
+
+    .header-text a {
+        font-size: 0.9rem;
+    }
+
+    .logo img {
+        width: 30px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text {
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .header-container {
+        padding: 10px; 
+    }
+
+    .header-text a {
+        font-size: 0.8rem; 
+    }
 }
 
 
@@ -308,32 +345,6 @@ header {
     position: relative;
     top: -12%;
     left: -4%;
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        padding: 0 20px; /
-    }
-
-    .text-content {
-        max-width: 100%; 
-        font-size: 18px; 
-    }
-
-    .mockup img {
-        max-width: 100%; 
-        margin-left: 0; 
-    }
-
-    .fixed-button {
-        right: 20px; 
-    }
-
-    .circle {
-        width: 90%; 
-        height: auto; 
-        top: 80%; 
-    }
 }
 
 
@@ -2828,25 +2839,30 @@ transition-delay: 1s;
     
 }
 
-.growth1-content {
-display: flex;
-align-items: center; /* 수직 중앙 정렬 */
-justify-content: flex-end; /* 오른쪽 정렬 */
-margin-left: 200px;
+.growth1-images img {
+    width: 38%; /* 자동으로 너비 조정 */
+    height: auto; /* 자동으로 높이 조정 */
+  
+    object-fit: contain; /* 이미지 비율 유지하며 컨테이너에 맞춤 */
 }
 
 .growth1-images {
-display: flex;
-gap: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center; /* 이미지가 수직으로 가운데 정렬되도록 */
+    overflow: visible; /* 잘리는 문제를 방지 */
 }
 
-.growth1-images img {
-width: 35%;
-height: auto;
+.growth1-content {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    flex-wrap: wrap; /* 작은 화면에서 요소가 줄바꿈되도록 */
+    margin-left: 200px;
 }
 
 .growth1-text {
-margin-left: -180px; 
+margin-left: -120px; 
 font-size: 1.5rem;
 color: #021502;
 }
@@ -2865,6 +2881,19 @@ color: #021502;
     font-size: 1.5rem;
     line-height: 1.6;
 }
+
+
+.growth-image1 {
+    
+    height: auto;
+}
+
+.growth-image2 {
+    m
+    height: auto;
+}
+
+
 
 .greenhouse-slider-container {
     background-color: #FBFFE5;
