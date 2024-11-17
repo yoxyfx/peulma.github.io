@@ -1890,7 +1890,7 @@ ow {
     max-width: 450px;
     position: absolute; 
     top: 20%;
-    right: -5%; 
+    right: -9%; 
     z-index: 1; 
 }
 
@@ -1907,8 +1907,8 @@ ow {
     width: 100%;
     max-width: 450px;
     position: absolute; 
-    top: 43%;
-    right: -6%; 
+    top: 52%;
+    right: -9.5%; 
     z-index: 1; 
 }
 
@@ -1933,8 +1933,8 @@ ow {
     width: 100%;
     max-width: 450px;
     position: absolute; 
-    top: 64%;
-    right: -6%; 
+    top: 63.5%;
+    right: -9.5%; 
     z-index: 1; 
 }
 
@@ -1952,7 +1952,7 @@ ow {
     height: auto;
     position: relative; 
     position: absolute; 
-    top:69%;
+    top:69.5%;
     left: -29.5%; 
     z-index: 1; 
 }
@@ -1981,7 +1981,7 @@ ow {
 
 
 .habit2 .habit-base {
-    width: 60%;
+    width: 70%;
     height: auto;
     margin-top: 80px;
 }
@@ -2126,13 +2126,13 @@ ow {
     background-color: #96C155;
     color: #021502;
     width: 100%;
-    height: 2000px;
+    height: 2500px;
     margin: 0;
     margin-top: 0px;
     z-index: 10;
 }
 .help-title{
-    margin-top: 300px;
+    margin-top: 500px;
 }
 #help h1 {
     color: #ffffff;
@@ -2173,7 +2173,7 @@ transform: translateY(100px); /* 아래에서 위로 올라오는 효과 */
 }
 
 #img1 {
-    width: 35%;
+    width: 38%;
     height: auto;
     position: relative;
     left: 0;
@@ -2190,18 +2190,19 @@ transform: translateY(100px); /* 아래에서 위로 올라오는 효과 */
 
 #img2 {
     top: -51%;
-    right:10.5%;
+    right:11.5%;
 }
 
 #img3 {
+    width:65%;
     top: -42.35%;
-    left:23.5%;
+    left: 24.5%;
 }
 #img4 {
-    width:20%;
+    width:25%;
     height: auto;
-    top: -26%;
-    right:28%;
+    top: -28%;
+    right:38%;
 }
 
 .help-img {
@@ -2272,9 +2273,9 @@ transition-delay: 0.8s;
     background-color: #FBFFE5;
     color: #021502;
     width: 100%;
-    height: 3000px;
+    height: 3300px;
     transition: background-image 2.5s ease;
-    z-index: 10;
+    z-index: 5 ;
 }
 
 .collect-title {
@@ -2350,7 +2351,7 @@ transition-delay: 0.8s;
 .collect-1 img.collect-img2 {
     width: 250.4px; 
     height: 339.2px; 
-    margin-top: 170px;
+    margin-top: 190px;
    margin-left: -120px;
    z-index: 2;
 }
@@ -2358,7 +2359,7 @@ transition-delay: 0.8s;
 .collect-1 img.collect-img3 {
 width: 250.4px; 
     height: 339.2px; 
-    margin-top: 300px;
+    margin-top: 350px;
    margin-left: -20px;
    z-index: 2;
 
@@ -2367,7 +2368,7 @@ width: 250.4px;
 .collect-1 img.collect-img4 {
 width: 250.4px; 
     height: 339.2px; 
-    margin-top: 170px;
+    margin-top: 200px;
    margin-left: -10px; 
    z-index: 2;
 
@@ -2375,7 +2376,7 @@ width: 250.4px;
 .collect-1 img.collect-img4 {
 width: 250.4px; 
     height: 339.2px; 
-    margin-top: 170px;
+    margin-top: 190px;
    margin-left: -10px; 
    z-index: 2;
 }
@@ -2383,7 +2384,7 @@ width: 250.4px;
 position: absolute; /* 가장 아래 배치 */
 width: 110%; 
     height: 400px; 
-    margin-top: 140px;
+    margin-top: 180px;
    margin-left: -150px; 
    z-index: 1;
 
@@ -2426,7 +2427,7 @@ margin-right: 0;
 position: absolute;
 margin-top:605px; 
 left: 32%; /* 왼쪽으로 이동 */
-width: 22% !important; /* 크기 고정 */
+width: 22.5% !important; /* 크기 고정 */
 height: auto !important;
 z-index: 2;
 }
@@ -2435,7 +2436,7 @@ z-index: 2;
 position: absolute;
 margin-top:180px; 
 left: 56.5% !important; /* 왼쪽으로 이동 */
-width: 10% !important; /* 크기 조정 */
+width: 13% !important; /* 크기 조정 */
 height: auto;
 z-index: 2;
 }
@@ -2452,10 +2453,10 @@ z-index: 2;
 
 .collect-text {
     position: absolute;
-    left: 420px;
+    left: 460px;
     width: 30%;
     height: auto;
-    top: -25%;
+    top: 2%;
 }
 
 .collect-mockup3 {
@@ -2463,8 +2464,8 @@ z-index: 2;
     display: block;
     width: 80% !important;
     height: auto;
-    top: -15%;
-    left: 70px;
+    top: 10%;
+    left: 125px;
    
 }
 
@@ -2478,7 +2479,7 @@ z-index: 2;
     background-color: #96C155;
     color: #021502;
     width: 100%;
-    height: 2200px;
+    height: 2400px;
     margin: 0;
     /*margin-top: 1000px;*/
     z-index: 1;  /* .collect-3 보다 낮게 설정 */
@@ -2515,7 +2516,7 @@ gap: 30px; /* 이미지 사이의 간격 */
 flex-wrap: wrap; /* 화면이 좁아지면 이미지들이 자동으로 줄바꿈 */
 margin-top: 20px; /* 필요시 상단 여백 추가 */
 transition: transform 0.3s ease; /* 전체 컨테이너에 트랜지션 추가 */
-margin-top:50px;
+margin-top:200px;
 }
 
 #share .share-img img {
@@ -2541,8 +2542,9 @@ transform: scale(1.1); /* 두 번째와 세 번째 이미지는 조금 더 확�
 }
 
 #share .share-img1 img{
-width:75%;
+width:78%;
 margin-left: 140px;
+margin-top: -20px;
 }
 
 
@@ -2563,9 +2565,9 @@ margin-left: 140px;
     background-color: #FBFFE5;
     color: #021502;
     width: 100%;
-    height: 200rem;
+    height: 3000px;
     transition: background-image 2.5s ease;
-    z-index: 10;
+    z-index: 5;
     /*transform: translateY(-200px);*/ 
 }
 #growth h1 {
