@@ -86,40 +86,48 @@ header {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px 20px;
+        flex-direction: column; /* 세로로 정렬 */
+        align-items: center;
+        padding: 20px 20px; /* 여백 조정 */
     }
 
     .header-text {
-        gap: 10px; 
-        font-size: 0.9rem; 
+        gap: 15px; /* 텍스트 간격 넓힘 */
+        font-size: 1rem; /* 글자 크기 조정 */
+        justify-content: center; /* 텍스트 중앙 정렬 */
     }
 
     .header-text a {
-        font-size: 0.9rem;
+        font-size: 1rem; /* 링크 텍스트 크기 조정 */
     }
 
     .logo img {
-        width: 30px; 
+        width: 40px; /* 로고 크기 조정 */
+        margin-bottom: 20px;
     }
 }
 
+/* 480px 이하에서 적용되는 스타일 */
 @media (max-width: 480px) {
-    .header-text {
-        flex-wrap: wrap;
-        justify-content: center; 
+    .header-container {
+        padding: 10px 15px; /* 여백 조정 */
     }
 
-    .header-container {
-        padding: 10px; 
+    .header-text {
+        flex-direction: column; /* 세로로 텍스트 배치 */
+        gap: 10px; /* 텍스트 사이 간격 좁힘 */
+        font-size: 0.9rem; /* 폰트 크기 조정 */
+        justify-content: center; /* 텍스트 중앙 정렬 */
     }
 
     .header-text a {
-        font-size: 0.8rem; 
+        font-size: 0.9rem; /* 링크 텍스트 크기 조정 */
+    }
+
+    .logo img {
+        width: 35px; /* 로고 크기 더 작게 조정 */
     }
 }
-
 
 .fixed-button {
     position: fixed;
@@ -348,6 +356,116 @@ header {
 }
 
 
+@media (max-width: 768px) {
+    #main {
+        flex-direction: row; /* 텍스트와 다른 요소들이 여전히 가로로 배치 */
+        padding: 20px;
+        gap: 30px;
+        height: auto;
+    }
+
+    .flower1 img, .flower2 img, .flower3 img {
+        max-width: 35%;
+    }
+
+    .mockup img {
+        max-width: 80%;
+    }
+
+    .circle {
+        width: 700px;
+        height: 700px;
+        top: 80%;
+        left: 35%;
+    }
+
+    .circle img {
+        width: 100%;
+    }
+
+    .text-content {
+        font-size: 16px;
+        max-width: 90%;
+        flex: 0 0 60%; /* 텍스트가 다른 요소들과 함께 위치하도록 */
+    }
+
+    .text-content img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #main {
+        flex-direction: column; /* 텍스트와 다른 요소들이 세로로 배치 */
+        padding: 10px;
+        height: auto;
+    }
+
+    .flower1 img, .flower2 img, .flower3 img {
+        max-width: 50%;
+    }
+
+    .mockup img {
+        max-width: 70%;
+    }
+
+    .circle {
+        width: 600px;
+        height: 600px;
+        top: 75%;
+        left: 40%;
+    }
+
+    .circle img {
+        width: 90%;
+    }
+
+    .text-content {
+        font-size: 14px;
+        max-width: 95%;
+        flex: 0 0 100%; /* 텍스트가 화면 전체 너비를 차지하도록 */
+    }
+
+    .text-content img {
+        max-width: 60%;
+    }
+}
+@media (max-width: 480px) {
+    #main {
+        flex-direction: column; /* 텍스트와 다른 요소들이 세로로 배치 */
+        padding: 10px;
+        height: auto;
+    }
+
+    .flower1 img, .flower2 img, .flower3 img {
+        max-width: 50%;
+    }
+
+    .mockup img {
+        max-width: 70%;
+    }
+
+    .circle {
+        width: 600px;
+        height: 600px;
+        top: 75%;
+        left: 40%;
+    }
+
+    .circle img {
+        width: 90%;
+    }
+
+    .text-content {
+        font-size: 14px;
+        max-width: 95%;
+        flex: 0 0 100%; /* 텍스트가 화면 전체 너비를 차지하도록 */
+    }
+
+    .text-content img {
+        max-width: 60%;
+    }
+}
 
 #background {
     position: relative; 
@@ -395,28 +513,71 @@ header {
 
 
 @media (max-width: 768px) {
-    .header-container {
-        padding: 0 20px; /* Less padding on smaller screens */
+    #main {
+        padding: 20px;
+        gap: 30px;
+        height: auto;
+    }
+
+    .flower1 img, .flower2 img, .flower3 img ,.mockup img  {
+        max-width: 30%;
+    }
+
+
+
+
+    .circle {
+        width: 500px;
+        height: 500px;
+        top: 80%;
+        left: 35%;
+    }
+
+    .circle img {
+        width: 100%;
     }
 
     .text-content {
-        max-width: 100%; /* Allow full width for text */
-        font-size: 18px; /* Slightly smaller font size */
+        font-size: 16px;
+        max-width: 90%;
+        flex: 0 0 60%;
     }
 
-    .mockup img {
-        max-width: 100%; /* Ensure images are responsive */
-        margin-left: 0; /* Remove margin on small screens */
+    .text-content img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #main {
+        padding: 10px;
+        height: auto;
     }
 
-    .fixed-button {
-        right: 20px;
+    .flower1 img, .flower2 img, .flower3 img ,.mockup img  {
+        max-width: 30%;
     }
+
+   
 
     .circle {
-        width: 90%; 
-        height: auto; 
-        top: 80%;
+        width: 600px;
+        height: 600px;
+        top: 75%;
+        left: 40%;
+    }
+
+    .circle img {
+        width: 90%;
+    }
+
+    .text-content {
+        max-width: 95%;
+        flex: 0 0 100%;
+    }
+
+    .text-content img {
+        max-width: 80%;
     }
 }
 
@@ -658,40 +819,62 @@ header {
 }
 
 
-@media (max-width: 768px) {
-    #background {
-        padding: 20px; /* Reduce padding on small screens */
-        height: auto; /* Allow the height to be flexible */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        max-width: 100%;
+        transform: translateX(0);
     }
 
-    .alpapa {
-        width: 80%; /* Increase width for smaller screens */
-        top: 10%; /* Adjust position */
+    .circles-container {
+        flex-direction: column;  /* 세로로 배치 */
+        gap: 20px;
     }
 
-    .lines1 {
-        font-size: 1.5em; /* Smaller font size */
-        margin-top: 20px; /* Adjust margin */
-    }
-
-    .lines2 {
-        margin-top: 300px; /* Reduce top margin */
-        font-size: 1.2em; /* Smaller font size */
-    }
-
-    .subtext-container {
-        flex-direction: column; /* Stack items vertically */
-        gap: 20px; /* Reduce gap */
+    .sub {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .sub img {
-        width: 100%; /* Ensure images are responsive */
-        margin-left: 0; /* Center image */
+        width: 100%;
+        margin-left: 0;
     }
 
     .circlebg {
-        width: 150px; /* Smaller circles on smaller screens */
-        height: 150px;
+        width: 20vw;  /* 원의 크기를 뷰포트 너비에 비례하여 설정 */
+        height: 20vw;
+        display: flex; /* flex로 자식 요소를 중앙 정렬 */
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* 이미지가 넘치지 않도록 설정 */
+    }
+
+    .circlebg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 이미지 비율을 유지하면서 원에 맞게 잘라냄 */
+    }
+
+    .subtext-container {
+        font-size: 1.2em;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lines1 {
+        font-size: 1.2em;
+    }
+
+    .alpapa {
+        position: relative;
+    }
+
+    .alpapa img {
+        width: 30%;
+        left: -10vw;
     }
 }
 
@@ -863,7 +1046,14 @@ ow {
         flex: 1 1 100%; /* Stack sections vertically */
         margin-bottom: 20px; /* Add spacing between sections */
     }
+    .talk{
+        margin-top: 8px;
+        margin-left:10px;
+    }
+.content a.talk img{
+    width:50%;
 
+}
     .graph {
         margin-left: 0; /* Reset margin on smaller screens */
     }
@@ -1081,37 +1271,26 @@ ow {
     width: 300px;
     height: auto;
 }
-/* Responsive Adjustments */
+/* 모바일 화면 크기 (768px 이하) */
 @media (max-width: 768px) {
-    #survey, #stress, #user {
-        padding: 20px; /* Reduce padding on smaller screens */
-        min-height: auto; /* Allow sections to adjust */
-    }
-
-    .survey-container {
-        flex-direction: column; /* Stack survey items */
-        align-items: center;
-    }
-
-    .survey {
-        width: 90%; /* Full width on smaller screens */
-    }
-
-    .stress-subtitle, .stress-highlight {
-        font-size: 24px; /* Reduce font size */
+    #user {
+        padding: 20px; /* 모바일 화면에서 여백 줄이기 */
     }
 
     .make {
-        flex-direction: column; /* Stack characters vertically */
-        margin-top: 50px; /* Adjust spacing */
+        flex-direction: column; /* 세로로 배치 */
+        margin-top: 50px; /* 여백 조정 */
+        max-width: 100%; /* .make가 부모 영역을 넘지 않도록 설정 */
     }
 
     .charac, .charac2, .charac1 {
-        width: 50px; /* Adjust character size */
+        width: 10px; /* 작은 화면에서 캐릭터 크기 줄이기 */
+        max-width: 80%; /* 크기가 부모를 넘지 않도록 설정 */
     }
 
     .rectangle img {
-        width: 100%; /* Make images responsive */
+        width: 30%; /* 작은 화면에서 이미지 크기 줄이기 */
+        max-width: 50%; /* 이미지가 부모 영역을 넘지 않도록 설정 */
     }
 }
 
@@ -1242,6 +1421,38 @@ ow {
             height: auto;
             z-index: 1;
         }
+
+
+
+/* 모바일 화면 크기 (768px 이하) */
+@media (max-width: 768px) {
+    #problemsolution {
+        padding: 20px; /* 여백 줄이기 */
+        height: auto; /* 높이 자동 조정 */
+    }
+
+    #problemsolution h2 {
+        font-size: 1rem; /* 작은 화면에서 폰트 크기 줄이기 */
+    }
+
+    #problemsolution p {
+        font-size: 1.2rem; /* 작은 화면에서 폰트 크기 줄이기 */
+    }
+
+  
+
+    .image-container2 img {
+        width: 50%; /* 이미지 크기 조정 */
+        margin: 20px; /* 여백 줄이기 */
+    }
+
+    .carnation {
+        right: 10px; /* 더 작은 화면에서 위치 조정 */
+        width: 40px; /* 이미지 크기 더 줄이기 */
+    }
+
+ 
+}
         #white {
            
             background-color: #ffffff; /* Background color: white */
@@ -1711,6 +1922,30 @@ ow {
             position: relative; 
         }
        
+
+/* 모바일 화면 크기 (768px 이하) */
+@media (max-width: 768px) {
+    #explanation {
+        padding: 100px; /* 여백 줄이기 */
+        height: auto; /* 높이 자동 조정 */
+    }
+
+    .imockup img {
+        width: 80%; /* 이미지 크기 줄이기 */
+        max-width: 100%; /* 최대 크기 조정 */
+        margin-top: 50px; /* 여백 조정 */
+    }
+
+    .bgcircle img {
+        width: 1200px; /* 원형 배경 크기 줄이기 */
+        top: 90%; /* 위치 조정 */
+    }
+
+    .explanation img {
+        max-width: 90%; /* 이미지 크기 줄이기 */
+    }
+}
+
         #video-player {
             display: flex;
             align-items: center;
@@ -1726,7 +1961,17 @@ ow {
             transform: translateX(-220px); /* 왼쪽으로 10px 이동 */
         }
         
-      
+        @media (max-width: 768px) {
+            #video-player {
+                height: 800px; /* 높이 줄이기 */
+                padding: 10px; /* 여백 줄이기 */
+            }
+        
+            .video-container video {
+                width: 100%; /* 비디오 크기를 화면 크기에 맞게 조정 */
+                transform: translateX(0); /* 왼쪽 이동 취소 */
+            }
+        }
 
 
         #introduce {
@@ -2050,72 +2295,67 @@ ow {
         }
 
 
+/* 반응형: habit2 이미지 크기 조정 */
+@media (max-width: 768px) {
 
-
-        @media (max-width: 768px) {
-    
-
-    #habit {
-        padding-left: 20px;
-        padding-right: 20px;
+    .habit-image-plant-1{
+left:30%;
+margin-top: 12px;
     }
-
-    #habit h1 {
-        font-size: 2rem;
-        margin: 0px 30px 15px 30px;
-    }
-
-    #habit h2 {
-        font-size: 2rem;
-        margin: 15px 30px;
-    }
-
-    #habit p {
-        font-size: 1.2rem;
-        margin: 0px 30px;
-    }
-
-    .habit1 .habit-image-1, .habit1 .habit-image-plant-1, .habit1 .habit-image-plant-2, .habit1 .habit-image-plant-3, .habit1 .habit-image-plant-4 {
-        width: 100%;
-        max-width: none;
-        position: relative;
-        margin: 10px 0;
-    }
-
-    .habit1 .habit-image-1 img, .habit1 .habit-image-plant-1 img, .habit1 .habit-image-plant-2 img, .habit1 .habit-image-plant-3 img, .habit1 .habit-image-plant-4 img {
-        width: 100%;
-        height: auto;
-    }
-
-  
+.habit-image-plant-2{
+    left:30%;
+    margin-top: 9px;
 }
-
-@media (max-width: 480px) {
- 
-
-    #habit h1 {
-        font-size: 1.8rem;
+.habit-image-plant-3{
+    left:30%;
+    margin-top: 10px;
+}
+.habit-image-plant-4{
+    right:30%;
+    margin-top: 5px;
+}
+    .habit2 .habit-image-2 {
+        width: 100%; /* 모바일에서 크기를 100%로 설정 */
+        margin-top: 20px; /* 모바일에서 여백 조정 */
     }
 
-    #habit h2 {
-        font-size: 1.8rem;
+    .habit2 .habit-base {
+        width: 50%; /* habit2에서 base 이미지 크기 조정 */
     }
 
-    #habit p {
-        font-size: 1rem;
-    }
-
-    .habit1 .habit-image-1 img {
-        width: 100%;
-        height: auto;
-    }
-
-    .habit2 .habit-image-2 img {
-        width: 100%;
-        height: auto;
+    .habit2 .habit-overlay {
+        width: 60%; /* 오버레이 이미지 크기 조정 */
+        left: 0%; /* 위치 조정 */
+        top:100%;
     }
 }
 
+/* appear 클래스: 화면에 도달하면 보이게 */
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 각 식물 이미지에 transition-delay 추가 */
+.habit-image-plant-1,
+.habit-image-plant-2,
+.habit-image-plant-3,
+.habit-image-plant-4 {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 1s;
+}
+
+/* .habit-overlay에 transition-delay 추가 */
+.habit-overlay {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.6s; /* 다른 이미지들보다 나중에 나타나도록 설정 */
+}
+
+       
 #yellow{
     display: flex;
     align-items: center;
@@ -2479,6 +2719,141 @@ z-index: 2;
     left: 125px;
    
 }
+@media (max-width: 768px) {
+    /* #collect 스타일 */
+    #collect {
+        padding-left: 20px;  /* 왼쪽 여백을 줄여서 공간을 효율적으로 활용 */
+        height: auto;  /* 높이를 자동으로 조정 */
+        margin-top: 20px;  /* 마진 조정 */
+    }
+
+    .collect-title {
+        margin: 0;
+        margin-top: 150px; /* 제목 위치 조정 */
+        font-size: 1.8rem;  /* 제목 크기 조정 */
+    }
+
+    /* .collect-bg 이미지 */
+    .collect-bg {
+        position: absolute;
+        top: 100%; /* 위치 조정 */
+        left: 0;
+        width: 120%;  /* 100% 너비로 설정 */
+        height: auto;
+        z-index: 1;
+        margin-left: -50px;
+    }
+
+    .collect-bg img {
+        width: 120%;  /* 이미지 너비를 100%로 조정 */
+        height: auto;
+    }
+
+    /* #collect 제목 크기 조정 */
+    #collect h1 {
+        font-size: 2rem;
+        margin: 0 20px 15px 20px;
+    }
+
+    #collect h2 {
+        font-size: 1.6rem;
+        margin: 15px 20px;
+    }
+
+    #collect p {
+        font-size: 1.2rem;
+        margin: 0 20px;
+    }
+
+    /* .collect-1 이미지 설정 */
+    .collect-1 {
+        display: flex;
+        flex-direction: column;  /* 세로로 배치 */
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .collect-1 img.collect-img1 {
+        width: 80%;  /* 이미지 크기를 화면에 맞게 조정 */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .collect-1 img.collect-img2,
+    .collect-1 img.collect-img3,
+    .collect-1 img.collect-img4 {
+        width: 80%;  /* 이미지 크기 조정 */
+        height: auto;
+        margin: 10px auto;
+    }
+   
+    .collect-1 .Collect-Background {
+        position: absolute;
+        width: 100%;  /* 100% 너비 */
+        height: 400px;
+        margin-top: 180px;
+        margin-left: -20px;
+        z-index: 1;
+    }
+
+    /* .collect-2 설정 */
+    .collect-2 {
+        display: flex;
+        flex-direction: column;  /* 세로로 배치 */
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .collect-2 img {
+        width: 90%;  /* 이미지 크기 조정 */
+        margin-right: 0;
+    }
+
+    /* .collect-arrow 위치 조정 */
+    .collect-arrow {
+        position: absolute;
+        margin-top: 300px;  /* 화살표 위치 조정 */
+        left: 50%;
+        width: 20%; /* 크기 조정 */
+        height: auto;
+        z-index: 2;
+        transform: translateX(-50%);
+    }
+
+    .collect-arrow1 {
+        position: absolute;
+        margin-top: 180px;
+        left: 50%;
+        width: 20%; /* 크기 조정 */
+        height: auto;
+        z-index: 2;
+        transform: translateX(-50%);
+    }
+
+    /* .collect-3 스타일 조정 */
+    .collect-3 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 200px;
+    }
+
+    .collect-text {
+        position: relative;
+        width: 90%;  /* 텍스트 너비 조정 */
+        margin: 0 auto;
+        font-size: 1.2rem;  /* 텍스트 크기 조정 */
+    }
+
+    .collect-mockup3 {
+        position: relative;
+        width: 100%;  /* 100% 너비로 맞추기 */
+        height: auto;
+        margin-top: 20px;
+    }
+}
 
 #share {
     display: flex;
@@ -2565,6 +2940,47 @@ margin-top: -20px;
     opacity: 0; /* 처음에는 보이지 않음 */
     transition: opacity 1s ease, transform 1s ease;
 }
+
+
+/* 모바일 화면에서 글자 크기, 이미지 크기 조정 */
+@media (max-width: 768px) {
+    #share {
+        padding-left: 20px;  /* 모바일 화면에서 왼쪽 여백 줄이기 */
+    }
+
+    #share h1 {
+        font-size: 2.5rem;  /* 글자 크기 줄이기 */
+        margin: 20px 20px;
+    }
+
+    #share h2 {
+        font-size: 1.8rem;  /* 글자 크기 줄이기 */
+        margin: 15px 20px;
+    }
+
+    #share p {
+        font-size: 1rem;  /* 글자 크기 줄이기 */
+        margin: 10px 20px;
+    }
+
+    /* 이미지 컨테이너 크기 조정 */
+    #share .share-img img {
+        width: 45%;  /* 모바일에서 이미지 크기 증가 */
+        margin-bottom: 15px;  /* 이미지 간격 줄이기 */
+    }
+
+    #share .share-img {
+        gap: 20px;  /* 이미지 간격 조정 */
+        margin-top: 100px;  /* 상단 여백 줄이기 */
+    }
+
+    /* 첫 번째 이미지 크기 조정 */
+    #share .share-img1 img {
+        width: 60%;
+        margin-left: 0;  /* 왼쪽 여백 제거 */
+    }
+}
+
 
 #growth {
     display: flex;
