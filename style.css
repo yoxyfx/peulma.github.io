@@ -1,15 +1,15 @@
-@font-face {
+/*@font-face {
     font-family: 'NanumSquareRound';
     src: url('font/NanumSquareRoundOTFR.woff2') format('woff2'),
          url('font/NanumSquareRoundOTFR.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('font/NanumSquareRoundOTFB.woff2') format('woff2'),
          url('font/NanumSquareRoundOTFB.otf') format('opentype');
-    font-weight: bold;
+    font-weight: 900;
     font-style: normal;
 }
 
