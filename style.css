@@ -1268,15 +1268,15 @@ ow {
     height: auto;  
 }
 .charac1 {
-    top: 40%; /* 상단에서의 위치 조정 (예: 35%에서 20%로 변경) */
-    left: 50%;
+    top: 39.5%; /* 상단에서의 위치 조정 (예: 35%에서 20%로 변경) */
+    left:50%;
     transform: translate(-50%, -50%); /* 중앙 정렬을 위해 수정 */
-    width: 40px;  /* 크기를 조정 (예: 20px에서 80px로 변경) */
+    width: 50px;  /* 크기를 조정 (예: 20px에서 80px로 변경) */
     height: auto;  
 }
 .charac1 img{
   
-    width: 220px;  /* 크기를 조정 (예: 20px에서 80px로 변경) */
+    width: 250px;  /* 크기를 조정 (예: 20px에서 80px로 변경) */
     height: auto;  
 }
 .charac2 {
