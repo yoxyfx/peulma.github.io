@@ -244,9 +244,9 @@ header {
 
 .flower2 img {
     z-index: 2;
-    top: 55%;
+    top: 60%;
     left: 5%;
-    width: 15%;
+    width: 13%;
     height: auto;
     animation-delay: 0.2s;
     animation: fadeIn 0.8s ease forwards, moveUpDown 2s infinite alternate;
@@ -324,7 +324,7 @@ header {
         top: 0;
     }
     100% {
-        top: 5px; /
+        top: 3px; /
     }
 }
 
