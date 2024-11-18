@@ -914,8 +914,8 @@ header {
 
 
 .highlight {
-    color: #ffffff; 
-    background-color: #388e3c;
+    color: #388e3c; 
+    /*background-color: #388e3c;*/
 }
 
 
