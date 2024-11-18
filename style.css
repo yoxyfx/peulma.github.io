@@ -1493,7 +1493,7 @@ ow {
        /* Move the headings to the right */
 #servicekeyword h2 {
     font-size: 1.2em; 
-    color: #333; 
+    color: #3E7443;  
     /*margin-left: 20px;*/
    
 }
@@ -1501,7 +1501,7 @@ ow {
 #servicekeyword h3 {
     font-size: 1.5em; 
     text-align: center;
-    color: #3E7443; /
+    color: #333;/
     /*margin-left: 20px;*/
    
 }
@@ -1779,7 +1779,7 @@ ow {
             flex-direction: column; /* 세로 정렬 */
             text-align: center;
             background-color: #ffffff;
-            color: #000000;
+            color: #388e3c;
             width: 100%;
             margin: 0;
             box-sizing: border-box;
@@ -1795,7 +1795,7 @@ ow {
         #brand h2 {
           
             margin: 0;
-            color: #388e3c;
+            color: #000000;
             margin-top: 30px;
         }
 
@@ -1828,7 +1828,7 @@ ow {
     height: auto; 
     width:1200px;
     margin-top: 100px;
-    margin-bottom: 120px;
+    margin-bottom: 10px;
 }
 
 .Typography h8 {
@@ -1838,7 +1838,7 @@ ow {
 }
 .Typography h2 {
     margin: 0;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 
