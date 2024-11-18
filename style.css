@@ -977,10 +977,11 @@ a {
     margin-top:-75px;
 }
 .content a.talk img {
-    max-width: 280px;
+    max-width: 260px;
     height: auto;
 }
 #second-talk-img {
+    max-width: 230px;
     margin-left: -150px; /* 왼쪽으로 이동할 거리 */
 }
 
@@ -1196,7 +1197,7 @@ ow {
         #user h1 {
             margin: 0; /* 불필요한 여백 제거 */
             text-align: center;
-            margin-top: 300px;
+            margin-top: -200px;
             margin-bottom: 100px;
         }
        
