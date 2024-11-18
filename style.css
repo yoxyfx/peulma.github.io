@@ -257,10 +257,11 @@ header {
     position: absolute; 
     z-index: 1;
     top: 1500px; /* 기존 값에서 더 크게 설정 */
-    right: 40%; 
+    right: 38%; 
     width: 15%;
     height: auto;
-    animation-delay: 0.2s;
+    transform:translateY(530px);
+   
     animation: fadeIn 0.8s ease forwards, moveRotate 3s infinite alternate;
 }
 
@@ -349,11 +350,11 @@ header {
     }
     50% {
         top: 0px;
-        transform: rotate(1deg) translateY(530px); /* 원래 상태 + 아래로 이동 */
+        transform: rotate(4deg) translateY(530px); /* 원래 상태 + 아래로 이동 */
     }
     75% {
         top: 0px;
-        transform: rotate(-1deg) translateY(530px); /* 반시계방향 회전 + 위로 */
+        transform: rotate(1deg) translateY(530px); /* 반시계방향 회전 + 위로 */
     }
     100% {
         top: 0px;
