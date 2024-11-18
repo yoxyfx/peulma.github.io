@@ -344,18 +344,18 @@ header {
         top: 0;
         transform: rotate(0deg) translateY(530px); /* 초기 상태 */
     }
-    25% {
+    /*25% {
         top: 0px;
         transform: rotate(2deg) translateY(530px); /* 시계방향 회전 + 살짝 위로 */
-    }
+    
     50% {
         top: 0px;
         transform: rotate(3deg) translateY(530px); /* 원래 상태 + 아래로 이동 */
     }
-    75% {
+    /*75% {
         top: 0px;
         transform: rotate(2deg) translateY(530px); /* 반시계방향 회전 + 위로 */
-    }
+    
     100% {
         top: 0px;
         transform: rotate(0deg) translateY(530px); /* 원래 위치 */
