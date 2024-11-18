@@ -338,28 +338,7 @@ header {
         left: 5%; 
     }
 }
-@keyframes parabolicMotion {
-    0% {
-        left: 47%; /* 시작 위치 */
-        top: 500px;
-    }
-    25% {
-        left: 48%; /* 조금 오른쪽 이동 */
-        top: 500px; /* 아래로 이동 */
-    }
-    50% {
-        left: 49%; /* 더 오른쪽 이동 */
-        top: 550px; /* 최대 아래 */
-    }
-    75% {
-        left: 50%; /* 오른쪽 이동 유지 */
-        top: 550px; /* 위로 상승 */
-    }
-    100% {
-        left: 51%; /* 끝 위치 */
-        top: 500; /* 원래 높이로 돌아감 */
-    }
-}
+
 
 .circle {
     position: absolute;
