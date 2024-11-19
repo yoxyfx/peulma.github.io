@@ -3068,6 +3068,7 @@ margin-top: -20px;
 .growth1{
 width:100%;
 height:auto;
+margin-left: 80px;
 }
 
 .growth1 .growth-image-1 {
@@ -3151,7 +3152,7 @@ height:auto;
 .growth2 .growth-image-2 {
 margin-top:10%;
 width: 60%;
-margin-right: 0;
+margin-right: -150px;
 margin-left: auto; 
 margin-bottom: 20px;
 transition: transform 0.3s ease;
