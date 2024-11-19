@@ -3038,7 +3038,7 @@ margin-top: -20px;
     background-color: #FBFFE5;
     color: #021502;
     width: 100%;
-    height: 3000px;
+    height: 2800px;
     transition: background-image 2.5s ease;
     z-index: 5;
     /*transform: translateY(-200px);*/ 
@@ -3150,7 +3150,7 @@ height:auto;
 }
 
 .growth2 .growth-image-2 {
-margin-top:10%;
+margin-top:0%;
 width: 60%;
 margin-right: -150px;
 margin-left: auto; 
@@ -3297,12 +3297,14 @@ transition-delay: 1s;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position:relative;
     background-color: #FBFFE5;
     color: #021502;
     width: 100%;
-    height: 60rem;
+    height: 50rem;
     padding: 50px;
-    
+    z-index: 50;
+ 
 }
 
 .growth1-images img {
@@ -3325,6 +3327,7 @@ transition-delay: 1s;
     justify-content: flex-start; /* 왼쪽 정렬 */
     flex-wrap: wrap; /* 작은 화면에서 요소가 줄바꿈되도록 */
     margin-left: 200px;
+    margin-top: -150px;
 }
 
 .growth1-text {
