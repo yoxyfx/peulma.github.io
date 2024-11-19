@@ -245,7 +245,7 @@ header {
 .flower2 img {
     z-index: 2;
     top: 60%;
-    left: 5%;
+    left: 10%;
     width: 13%;
     height: auto;
     animation-delay: 0.2s;
