@@ -114,31 +114,26 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleImage(clickedImage) {
     const images = document.querySelectorAll('.images-containers img');
     const captions = document.querySelectorAll('.images-captions');
-    
+
     images.forEach(image => {
         image.classList.remove('active');
         image.classList.add('inactive');
+        image.style.transform = ""; // transform 초기화
     });
 
     captions.forEach(caption => {
         caption.classList.remove('active');
     });
 
+    // 클릭된 이미지 활성화
     clickedImage.classList.add('active');
     clickedImage.classList.remove('inactive');
 
+    // 클릭된 이미지의 부모 래퍼 찾기
     const parentWrapper = clickedImage.closest('.images-wrappers');
     const caption = parentWrapper.querySelector('.images-captions');
     caption.classList.add('active');
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    const firstImage = document.querySelector('.images-containers .images-wrappers img');
-    const firstCaption = document.querySelector('.images-containers .images-wrappers .images-captions');
-    firstImage.classList.add('active');
-    firstCaption.classList.add('active');
-});
-
 
  // 이미지들이 화면에 나타날 때 'visible' 클래스를 추가하기 위한 IntersectionObserver 사용
  document.addEventListener('DOMContentLoaded', function () {

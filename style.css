@@ -2041,27 +2041,26 @@ ow {
             margin-top: 0px;
             transition: background-image 2.5s ease;
             z-index: 10;
-            transform: translateY(-200px); 
+            overflow: hidden;
         }
         .introduce {
             transform: translateY(-100px); /* 위로 20px 이동 */
         }
-        
+
         #introduce h1 {
-    font-family: 'NanumSquareRound', sans-serif;
-    font-weight: 900;
-    color: #3E7443;
-    font-size: 3rem;
-    margin: 0px 100px 15px 100px;
-}
+            font-family: 'NanumSquareRound', sans-serif;
+            font-weight: 900;
+            color: #3E7443;
+            font-size: 3rem;
+            margin: 0px 100px 15px 100px;
+        }
 
         #introduce h2 {
-    color: #3E7443;
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin: 15px 100px;
-}
-
+            color: #3E7443;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 15px 100px;
+        }
 
         #introduce p {
             color: #021502;
@@ -2073,49 +2072,41 @@ ow {
 
         .images-containers {
             display: flex;
-            /*justify-content: center;*/
-            gap: 25px;
+            gap: 50px;  /* 이미지 간의 기본 간격을 늘림 */
             flex-wrap: nowrap;
             width: 120%;
-            max-width: 1500px;
+            max-width: 1920px;
             margin: 0 auto;
-            margin-left:150px;
+            margin-left: 0px;
             align-items: center;
             position: relative;
             top: 160px;
+            justify-content: center;
         }
 
-        .images-containers .images-wrappers {
+        .images-wrappers {
             position: relative;
             width: 200px;
             height: 400px;
             transition: transform 0.5s ease, margin 0.5s ease;
         }
 
-        .images-containers img {
-           
+        .images-wrappers img {
             height: 400px;
-            object-fit: cover;
             transition: transform 0.5s ease, opacity 0.5s ease;
             cursor: pointer;
-            max-width: 200%;
-            max-height: 200%;
-            will-change: transform;
-        }
-
-        .images-containers img.active {
-            transform: scale(1.4);
-            opacity: 1;
             z-index: 1;
-           /* margin: 0 50px;*/
-            gap:100px;
+            position: absolute; /* 위치를 절대적으로 설정 */
         }
 
-        .images-containers img.inactive {
-            transform: scale(0.9);
+        .images-wrappers img.active {
+            transform: scale(1.4); /* 확대 */
+            z-index: 2;
+        }
+
+        .images-wrappers img.inactive {
             opacity: 0.7;
-           margin: 0 50 0 50px;
-            margin-top :100px;
+            margin-top: 80px;
         }
 
         .images-captions {
@@ -2124,18 +2115,14 @@ ow {
             color: #07603c;
             font-weight: bold;
             display: none;
-        }
-
-        .caption-loading, .caption-home, .caption-routine, .caption-greenhouse, .caption-growth {
-            top: -35%;
+            top: -30%; /* 캡션을 이미지 중앙에 배치 */
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
         }
 
         .images-captions.active {
             display: block;
         }
-
 
    
         .habit1, .habit2 {
