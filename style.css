@@ -1,10 +1,10 @@
-/*@font-face {
+@font-face {
     font-family: 'NanumSquareRound';
-    src: url('font/NanumSquareRoundOTFR.woff2') format('woff2'),
-         url('font/NanumSquareRoundOTFR.otf') format('opentype');
-    font-weight: normal;
+    src: url('font/NanumSquareRoundRegular.woff2') format('woff2'),
+         url('font/NanumSquareRoundRegular.otf') format('opentype');
+    font-weight: 400; /* 기본 폰트 굵기 */
     font-style: normal;
-}*/
+}
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('font/NanumSquareRoundOTFB.woff2') format('woff2'),
@@ -1532,12 +1532,14 @@ ow {
    
 }
 
-        #servicekeyword h5 {
-            font-size: 1.1em; /* 원하는 크기로 설정 */
-            line-height: 1.8em;
-            text-align: center;
-            color: #000000; /* 원하는 색으로 설정 */
-        }
+#servicekeyword h5 {             
+    font-size: 1.0em; /* 원하는 크기로 설정 */             
+    line-height: 1.8em;             
+    text-align: center;             
+    font-weight: 500; /* 더 얇게 설정 */             
+    color: #000000; /* 원하는 색으로 설정 */         
+}
+
         .servicekeyword-container {
             display: flex;
             justify-content: flex-start; /* Change to flex-start to align items to the left */
@@ -1545,14 +1547,15 @@ ow {
             margin: 0 auto; /* Center the entire container */
             padding-left: -20px; /* Add padding to the left if needed to create space */
             margin-left: 50px;
+            margin-top: -50px;
         }
         
         
         /* h5 스타일 */
-        .servicekeyword-container h5 {
-            font-size: 2.0em; /* 원하는 크기 */
-            font-weight: 300; /* 얇은 글자 */
-        }
+        /*.servicekeyword-container h5 {
+            font-size: 1.0em;
+            font-weight: 500; 
+        }*/
         /* wrapper1 스타일 */
         .wrapper1 {
             display: flex;
@@ -1597,10 +1600,10 @@ ow {
 }
 
 .keyword1 h4 {
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: #3E7443;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 0px;
 }
 
@@ -1610,9 +1613,12 @@ ow {
     align-items: center;
     text-align: center;
     font-size: 1em;
+    font-weight: 400; /* 최대한 얇게 설정 */
     line-height: 1.4;
     color: #555555;
     margin-left: 0px;
+    margin-top: 5px;
+   
 }
 
 /* Keyword 2 스타일 */
@@ -1627,19 +1633,21 @@ ow {
 }
 
 .keyword2 h4 {
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: #3E7443;
     font-weight: bold;
-    margin-bottom: 12px;
-    margin-left: 0px; /* Adjusted to move it slightly more to the left */
+    margin-bottom: 5px;
+    margin-left: 0px; 
 }
 
-/* Adjust the h5 styles for Keyword 2 */
+
 .keyword2 h5 {
     font-size: 1em;
     line-height: 1.6;
     color: #666666;
-    margin-left: 0; /* Center within its container */
+    font-weight: 400; /* 최대한 얇게 설정 */
+    margin-left: 0; 
+    margin-top: 5px;
 }
 
 /* Keyword 3 스타일 */
@@ -1655,10 +1663,10 @@ ow {
 
 
 .keyword3 h4 {
-    font-size: 1.4em;
+    font-size: 1.8em;
     color: #3E7443;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-left: 0; /* Center within its container */
 }
 
@@ -1667,7 +1675,9 @@ ow {
     font-size: 1em;
     line-height: 1.8;
     color: #777777;
-    margin-left: 0; /* Center within its container */
+    font-weight: 400; 
+    margin-left: 0; 
+     margin-top: 5px;
 }
 
 
@@ -2047,7 +2057,7 @@ ow {
         #introduce h2 {
     color: #3E7443;
     font-size: 2.5rem;
-    font-weight: 900;
+    font-weight: 500;
     margin: 15px 100px;
 }
 
