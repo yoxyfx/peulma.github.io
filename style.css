@@ -3174,7 +3174,7 @@ margin-top: 80px;
 position: absolute;
 top: 33%;
 left: -36%;
-transform: translateX(0px); 
+
 width: 50%;
 height: auto;
 }
@@ -3182,7 +3182,7 @@ height: auto;
 position: absolute;
 top: 50%;
 left: -36%;
-transform: translateX(0px); 
+
 width: 50%;
 height: auto;
 }
@@ -3193,7 +3193,6 @@ height: auto;
 position: absolute;
 top: 79%;
 left: -36%;
-transform: translateX(0px); 
 width: 50%;
 height: auto;
 }
