@@ -396,7 +396,7 @@ document.addEventListener('scroll', function() {
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.05 // 5%가 보일 때 트리거
+                threshold: 0.1 
             };
         
             const observer = new IntersectionObserver((entries) => {

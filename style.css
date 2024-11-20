@@ -35,7 +35,7 @@ h1 {
   
 
 header {
-    background-color: rgba(223, 241, 211, 0.8); /* 흰색 배경, 투명도 80% */
+    background-color: rgba(255, 255, 255, 0.8); /* 흰색 배경, 투명도 80% */
     color: #9EBF86;
     padding: 20px 0;
     position: fixed; 
@@ -43,7 +43,7 @@ header {
     top: 0; 
     left: 0; 
     right: 0; 
-    z-index: 10; 
+    z-index: 999; 
 }
 
 .header-container {
@@ -163,10 +163,10 @@ header {
     background-color: #96C155;
     color: #ffffff;
     width: 100%;
-    height: 950px;
+    height: 1000px;
     margin: 0;
-    margin-top: 85px;
-    padding-top: 100px;
+ 
+    padding-top: 300px;
     padding: 50px;
     gap: 50px;
     overflow: hidden;
@@ -679,7 +679,7 @@ header {
 
 #background {
     opacity: 0;
-    transform: translateY(50px); 
+    transform: translateY(80px); 
     transition: opacity 1s ease-out, transform 1s ease-out; 
 }
 
