@@ -166,12 +166,18 @@ header {
     height: 1000px;
     margin: 0;
  
-    padding-top: 300px;
+
     padding: 50px;
+    padding-top: 150px;
     gap: 50px;
     overflow: hidden;
     position: relative;
 }
+
+.content-wrapper {
+    display: contents; /* 요소를 묶되 레이아웃 변경 없음 */
+}
+
 
 
 @keyframes fadeIn {
