@@ -109,7 +109,29 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealImages);
 });
 
+const visibilityObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // 화면에 보이면 'visible' 클래스 추가
+        }
+    });
+});
 
+// 애니메이션 대상 요소 선택
+const elementsToAnimate = document.querySelectorAll('.animate');
+elementsToAnimate.forEach(element => {
+    visibilityObserver.observe(element); // 각 요소를 Observer에 등록
+});
+
+
+
+
+
+// 애니메이션 대상 요소 선택
+const animatedElements = document.querySelectorAll('.animate');
+animatedElements.forEach(element => {
+    observer.observe(element); // 각 요소를 Observer에 등록
+});
 
 function toggleImage(clickedImage) {
     const images = document.querySelectorAll('.images-containers img');
