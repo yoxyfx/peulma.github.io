@@ -157,8 +157,8 @@ function toggleImage(clickedImage) {
     caption.classList.add('active');
 }
 
- // 이미지들이 화면에 나타날 때 'visible' 클래스를 추가하기 위한 IntersectionObserver 사용
- document.addEventListener('DOMContentLoaded', function () {
+// 이미지들이 화면에 나타날 때 'visible' 클래스를 추가하기 위한 IntersectionObserver 사용
+document.addEventListener('DOMContentLoaded', function () {
     // 이미지들을 선택
     const images = document.querySelectorAll('.collect-1 img, .collect-2 img, .collect-3 img');
     
@@ -177,7 +177,14 @@ function toggleImage(clickedImage) {
     images.forEach(image => {
         observer.observe(image);
     });
+
+    // 초기 활성화: 기본 선택될 이미지 및 캡션 설정
+    const defaultImage = document.querySelector('.images-containers img'); // 기본 이미지를 선택
+    if (defaultImage) {
+        toggleImage(defaultImage);
+    }
 });
+
 
 
 function onScroll() {
